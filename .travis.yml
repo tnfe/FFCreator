@@ -3,3 +3,6 @@ node_js:
   - node
 script:
   - npm run travis
+branches:
+  only:
+    - master

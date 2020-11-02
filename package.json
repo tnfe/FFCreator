@@ -1,12 +1,13 @@
 {
   "name": "ffcreator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "FFCreator is a lightweight and flexible short video production library",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ./lib --ext .js",
     "travis": "npm run lint",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "examples": "node ./examples/",
     "doc": "docsify serve ./docs"
   },
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "coveralls": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
