@@ -1,6 +1,5 @@
-<p>
-  <img src="../_media/logo/logo.png" />
-</p>
+![img](/_media/logo/logo.png)
+
 
 # FFCreator 介绍
 
@@ -42,7 +41,7 @@
 也许有人用过类似[MAKA](https://www.maka.im/muban/t2152-sp320.html)平台的制作短视频功能, 用户只要上传图片拖拽位置、调整样式并添加一些 css 动画, 制作平台就可以合成一个精美的短视频。
 对于可视化搭建类网站来说这是个很吸引人的功能, 使用`FFCreator`配合前端界面的一些操作就可以轻松的把 h5 动画转换为小视频。
 
-![img](../_media/imgs/el.jpg)
+![img](/_media/imgs/el.jpg)
 
 - 制作相册影集小程序
 
@@ -57,7 +56,7 @@
 对于处理更强的动画效果，业内有一种比价流行的方案就是基于`After Effects`（`aerender.exe`）的模板方案。但是这种方案也有不少问题(后续会有详细的比较说明)
 `FFCreator`使用`opengl`来处理图形渲染并使用`shader`后处理来生成转场效果，最后使用`FFmpeg`合成视频，基于`opengl`既十分高效又可以支持各种丰富的图形动画。
 
-![img](../_media/imgs/logotwo.jpg)
+![img](/_media/imgs/logotwo.jpg)
 
 ## 关于 Lite 版
 

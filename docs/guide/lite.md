@@ -1,6 +1,4 @@
-<p>
-  <img src="../_media/logo/logo2.png" />
-</p>
+![img](../_media/logo/logo2.png)
 
 # FFCreatorLite
 
