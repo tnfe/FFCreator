@@ -1,0 +1,33 @@
+# FFCreatorLite DEMO
+
+* #### 图片动画
+
+source: [https://github.com/tnfe/FFCreatorLite/examples/image.js](https://github.com/tnfe/FFCreatorLite/examples/image.js)
+
+<video controls="controls" width="400" height="270" >
+    <source type="video/mp4" src="./_media/video/lite/01.mp4"></source>
+</video>
+
+* #### 文字动画
+
+source: [https://github.com/tnfe/FFCreatorLite/examples/text.js](https://github.com/tnfe/FFCreatorLite/examples/text.js)
+
+<video controls="controls" width="400" height="270" >
+    <source type="video/mp4" src="./_media/video/lite/02.mp4"></source>
+</video>
+
+* #### 各种组合动画
+
+source: [https://github.com/tnfe/FFCreatorLite/examples/animate.js](https://github.com/tnfe/FFCreatorLite/examples/animate.js)
+
+<video controls="controls" width="350" height="622" >
+    <source type="video/mp4" src="./_media/video/lite/03.mp4"></source>
+</video>
+
+* #### 视频动画
+
+source: [https://github.com/tnfe/FFCreatorLite/examples/video.js](https://github.com/tnfe/FFCreatorLite/examples/video.js)
+
+<video controls="controls" width="350" height="622" >
+    <source type="video/mp4" src="./_media/video/lite/04.mp4"></source>
+</video>

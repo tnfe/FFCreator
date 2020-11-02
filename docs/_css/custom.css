@@ -1,0 +1,12 @@
+section.cover .cover-main > p:last-child a {
+  border-radius: 4px !important;
+}
+
+.cover {
+  background-image: url(../_media/imgs/bg.jpg) !important;
+  background-size: cover !important;
+}
+
+video{
+  outline: 0;
+}

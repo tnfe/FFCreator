@@ -1,0 +1,49 @@
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# next.js build output
+.next
+
+# Lerna
+lerna-debug.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# node modules
+node_modules
+
+# documentation
+build/docs/
+
+package-lock.json
+.DS_Store
+source/build/
+static/
+examples/cache
+examples/output
+
+# testing
+coverage/**
+dwt*
