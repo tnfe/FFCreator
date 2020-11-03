@@ -232,6 +232,12 @@ The node app should be started as follows.
 xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 ```
 
+3. Npm install error `ERR! command sh -c node-pre-gyp install --fallback-to-build`
+
+#### Solution
+
+It may be caused by your node version. If it is nodev15, there will be this problem. [https://github.com/Automattic/node-canvas/issues/1645](https://github.com/Automattic/node-canvas/issues/1645) . Please downgrade to node v14.
+
 ## Contribute
 
 You are very welcome to join us in developing `FFCreator`, if you want to contribute code, please read [here](./CONTRIBUTING.md).

@@ -24,11 +24,16 @@ The node app should be started as follows.
 xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 ```
 
-3. #### `FFCreator`在3个以上视频片段合成时速度不如图片快
+3. #### Npm 安装报错 `ERR! command sh -c node-pre-gyp install --fallback-to-build`
+
+#### 解决
+
+这可能是由您的node版本引起的。如果是node`v15`，会出现此问题 [https://github.com/Automattic/node-canvas/issues/1645](https://github.com/Automattic/node-canvas/issues/1645)。请把node版本降低到`v14`。
+
+4. #### `FFCreator`在3个以上视频片段合成时速度不如图片快
 
 `FFCreator`在3个以上视频片段合成时速度不如图片快, 此时`FFCreatorLite`是更好的选择.
 
 #### 解决
 
-这种情况请使用`FFCreatorLite`, `FFCreatorLite`并不是`FFCreator`的简化版。
-在视频加工方面`FFCreatorLite`的效率超高。
+这种情况请使用`FFCreatorLite`, `FFCreatorLite`并不是`FFCreator`的简化版。在视频加工方面`FFCreatorLite`的效率超高。
