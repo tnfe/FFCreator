@@ -40,12 +40,12 @@ When you need to process a lot of video without special cool transition animatio
 ## Demo
 
 <p align="center">
-  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/01.gif" /></a>   
-  <img width="4%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/foo.png" />     
-  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/04.gif" /></a>
-  <img width="4%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/foo.png" />  
-  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/03.gif" /></a>
-</p>
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/01.gif?raw=true" /></a>   
+  <img width="4%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />     
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/04.gif?raw=true" /></a>
+  <img width="4%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/03.gif?raw=true" /></a>
+</p> 
 
 ## Useage
 
