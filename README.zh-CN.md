@@ -8,7 +8,7 @@
 <a href="https://www.npmjs.com/ffcreator" target="_blank"><img src="https://img.shields.io/npm/v/ffcreator.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/ffcreator" target="_blank"><img src="https://img.shields.io/npm/l/ffcreator.svg" alt="Package License" /></a>
 <a href="https://travis-ci.org/github/tnfe/FFCreator" target="_blank"><img src="https://travis-ci.org/tnfe/FFCreator.svg?branch=master" alt="Travis CI" /></a>
-<a href="https://github.com/prettier/prettier" target="_blank"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Code Style"></a>
+<a href="https://github.com/prettier/prettier" target="_blank"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="Code Style"></a>
 <a href="https://github.com/tnfe/FFCreator/pulls" target="_blank"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs"/></a>
 <a href="https://nodejs.org" target="_blank"><img src="https://img.shields.io/badge/node-%3E%3D%208.0.0-brightgreen.svg" alt="Node Version" /></a>
 </div>
