@@ -37,6 +37,16 @@ When you need to process a lot of video without special cool transition animatio
 - Support simple (expandable) `VTuber`, you can add `YouTuber` based on sequence frames.
 - `FFCreatorLite` has faster speed, sometimes it is more suitable for you than `FFCreator`.
 
+## Demo
+
+<p align="center">
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/01.gif" /></a>   
+  <img width="4%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/foo.png" />     
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/04.gif" /></a>
+  <img width="4%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/foo.png" />  
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/03.gif" /></a>
+</p>
+
 ## Useage
 
 ### Install npm Package

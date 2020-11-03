@@ -38,6 +38,16 @@
 - 包含`animate.css`90%的动画效果，可以将 css 动画转换为视频。
 - `FFCreatorLite`具有更快的速度，有时它比`FFCreator`更适合你。
 
+## Demo
+
+<p align="center">
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/01.gif" /></a>   
+  <img width="4%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/foo.png" />     
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/04.gif" /></a>
+  <img width="4%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/foo.png" />  
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://tnfe.github.io/FFCreator/_media/imgs/demo/03.gif" /></a>
+</p>
+
 ## 使用
 
 ### Install npm Package
