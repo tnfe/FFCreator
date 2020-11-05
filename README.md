@@ -236,7 +236,7 @@ xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 
 #### Solution
 
-It may be caused by your node version. If it is nodev15, there will be this problem. [https://github.com/Automattic/node-canvas/issues/1645](https://github.com/Automattic/node-canvas/issues/1645) . Please downgrade to node v14.
+It may be caused by your node version. If it is node`v15`, there will be this problem. [https://github.com/Automattic/node-canvas/issues/1645](https://github.com/Automattic/node-canvas/issues/1645) . Please use the stable version of node.js. For example, node`v14` (even version).
 
 ## Contribute
 
