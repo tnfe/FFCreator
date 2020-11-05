@@ -1,6 +1,6 @@
 {
   "name": "ffcreator",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "FFCreator is a lightweight and flexible short video production library",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "examples": "node ./examples/",
     "doc": "docsify serve ./docs"
   },
-  "repository": "koajs/koa",
+  "repository": "https://github.com/tnfe/FFCreator",
+  "homepage": "homepage",
   "keywords": [
     "video",
     "nodejs",
