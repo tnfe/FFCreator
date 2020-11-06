@@ -1,7 +1,7 @@
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
 <p align="center">
-  <img src="https://tnfe.github.io/FFCreator/_media/logo/logo.png" />
+  <img width="650px" src="https://tnfe.github.io/FFCreator/_media/logo/logo.png" />
 </p>
 
 <div align="center">
@@ -40,12 +40,12 @@ When you need to process a lot of video without special cool transition animatio
 ## Demo
 
 <p align="center">
-  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/01.gif?raw=true" /></a>   
-  <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />     
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/01.gif?raw=true" /></a>
+  <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
   <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/04.gif?raw=true" /></a>
   <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
   <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/03.gif?raw=true" /></a>
-</p> 
+</p>
 
 ## Useage
 
