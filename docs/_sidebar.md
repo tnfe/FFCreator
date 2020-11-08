@@ -19,4 +19,4 @@
   
 - __<span class="iconfont icon-mix"></span> 常见问题__
   - [<span class="iconfont icon-mix"></span> QA](qa/qa.md)
-  - [<span class="iconfont icon-magic"></span> 如果加入](qa/CONTRIBUTING.md)
+  - [<span class="iconfont icon-magic"></span> 如何加入](qa/CONTRIBUTING.md)
