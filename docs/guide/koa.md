@@ -16,7 +16,7 @@
 
 ```javascript
 // 可以在service中实现并执行一次
-FFCreatorCenter.createTemplate(({ image })=>{
+FFCreatorCenter.createTemplate(tempid, ({ image })=>{
     const creator = new FFCreator({...});
     const scene = new FFScene();
     scene.setBgColor('#b33771');
