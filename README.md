@@ -35,7 +35,7 @@ When you need to process a lot of video without special cool transition animatio
 - Contains most animation effects of [`animate.css`](https://animate.style/), css animation is converted to video.
 - Support subtitle components, can combine subtitles to speech to produce audio news.
 - Support simple (expandable) `VTuber`, you can add `YouTuber` based on sequence frames.
-- `FFCreatorLite` has faster speed, sometimes it is more suitable for you than `FFCreator`.
+- [`FFCreatorLite`](https://github.com/tnfe/FFCreatorLite) has faster speed, sometimes it is more suitable for you than `FFCreator`.
 
 ## Demo
 
