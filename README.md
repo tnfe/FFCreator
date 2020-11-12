@@ -21,7 +21,7 @@ Nowadays, short video is an increasingly popular form of media communication. Li
 
 `FFCreator` is a lightweight and flexible solution that requires few dependencies and low machine configuration to start working quickly. And it simulates 90% animation effects of [`animate.css`](https://animate.style/). You can easily convert the animation effects on the web page side into videos.
 
-When you need to process a lot of video without special cool transition animations, `FFCreatorLite` is a better choice, please click [*here*](https://tnfe.github.io/FFCreator/#/guide/lite) for details.
+When you need to process a lot of video without special cool transition animations, `FFCreatorLite` is a better choice, please click [__here__](https://github.com/tnfe/FFCreatorLite) for details.
 
 #### For more introduction, please see [here](https://tnfe.github.io/FFCreator/#/README)
 
