@@ -22,7 +22,7 @@
 
 `FFCreator`是一种轻量又简单的解决方案，只需要很少的依赖和较低的机器配置就可以快速开始工作。并且它模拟实现了[`animate.css`](https://animate.style/)90%的动画效果，您可以轻松地把 web 页面端的动画效果转为视频。
 
-当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择, 详情请点击[*这里*](https://tnfe.github.io/FFCreator/#/guide/lite)。
+当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择, 详情请点击[__这里__](https://github.com/tnfe/FFCreatorLite)。
 
 #### 更多介绍请查看[这里](https://tnfe.github.io/FFCreator/#/README)
 
