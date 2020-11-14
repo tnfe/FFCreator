@@ -1,6 +1,6 @@
 # Contribute to FFCreator
 
-You are welcome to [ask questions](https://github.com/tnfe/FFCreator/issues) or [merge requests](https://github.com/tnfe/FFCreator/merge_requests), I suggest you contribute to FFCreator First read the following FFCreator contribution guide.
+You are welcome to [ask questions](https://github.com/tnfe/FFCreator/issues) or [merge requests](https://github.com/tnfe/FFCreator/pull_requests), I suggest you contribute to FFCreator First read the following FFCreator contribution guide.
 
 ## issues
 

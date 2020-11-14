@@ -15,10 +15,10 @@ Everyone should be familiar with the small program that uploads pictures from te
 
 ![img](../../_media/imgs/01.jpg)
 
-`After Effects` This professional video editing software provides developers with a tool for automated batch processing `aerender.exe` (see [article](https://helpx.adobe.com/cn/after) -effects/user-guide.html/cn/after-effects/using/automated-rendering-network-rendering.ug.html)).
+`After Effects` This professional video editing software provides developers with a tool for automated batch processing `aerender.exe` (see [article](https://helpx.adobe.com/after-effects/user-guide.html/cn/after-effects/using/automated-rendering-network-rendering.ug.html)).
 
 Use the combination of `aerender.exe` or `aerender.exe`, `ffmpeg`, `opengl` and other technologies to develop popular photo album applications.
-(Related technical articles [Article 1](http://www.360doc.com/content/20/0506/03/36367108_910463236.shtml), [Article 2](https://www.jianshu.com/p/ dc7ba3c78180))
+(Related technical articles [Article 1](http://www.360doc.com/content/20/0506/03/36367108_910463236.shtml), [Article 2](https://www.jianshu.com/p/dc7ba3c78180))
 
 ##### ✔ Advantages
 

@@ -65,7 +65,7 @@ npm i ffcreator --save
 ```shell
 npm start
 ```
-  - For servers without display devices, please use the `xvfb-run` command to start the program. For more parameters of the `xvfb-run` command, click [here](http://manpages.ubuntu.com/manpages/trusty/man1/xvfb -run.1.html) view.
+  - For servers without display devices, please use the `xvfb-run` command to start the program. For more parameters of the `xvfb-run` command, click [here](http://manpages.ubuntu.com/manpages/trusty/man1/xvfb-run.1.html) view.
 ```shell
 xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 ```
