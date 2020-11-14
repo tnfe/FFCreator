@@ -11,7 +11,7 @@
   
 - __<span class="iconfont icon-alert"></span> Case show__
   - [<span class="iconfont icon-crown"></span> Basic DEMO](en/demo/normal.md)
-  - [<span class="iconfont icon-router"></span> Wonderful case](en/demo/wonderful.md)
+  - [<span class="iconfont icon-router"></span> Wonderful Case](en/demo/wonderful.md)
   - [<span class="iconfont icon-satellite"></span> Lite version DEMO](en/demo/lite.md)
   
 - __<span class="iconfont icon-atom"></span> API document__

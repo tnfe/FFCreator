@@ -1,4 +1,4 @@
-# Wonderful case
+# Wonderful Case
 
 - #### Street fighter
 

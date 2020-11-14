@@ -1,4 +1,4 @@
-![img](../../_media/logo/logo.png)
+![img](/_media/logo/logo.png)
 
 
 # FFCreator introduction
@@ -41,7 +41,7 @@ Compared with the `aerender.exe` (AE template) solution, it is faster and more f
 
 Some people may have used the short video production function of some visualization platforms. Users only need to upload pictures and drag the position, adjust the style and add some css animations, and the production platform can synthesize a beautiful short video.
 
-![img](../../_media/imgs/el.jpg)
+![img](/_media/imgs/el.jpg)
 
 - Video Album APP
 
@@ -57,7 +57,7 @@ To deal with more cool animation effects, there is a popular solution based on `
 
 `FFCreator` uses `opengl` to process graphics rendering and uses `shader` post-processing to generate transition effects, and finally uses `FFmpeg` to synthesize the video. Based on ʻopengl`, it is very efficient and can support various rich graphics animations.
 
-![img](../../_media/imgs/logotwo.jpg)
+![img](/_media/imgs/logotwo.jpg)
 
 ## About Lite version
 
