@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="./_css/vue.css" />
     <link rel="stylesheet" href="./_css/custom.css" />
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_539333_ah8wb2hv6yknvcxr.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_539333_ah8wb2hv6yknvcxr.css" />
   </head>
   <body>
     <div id="app"></div>
@@ -20,11 +20,20 @@
         coverpage: true,
         themeColor: '#007be8',
         auto2top: true,
-        loadSidebar:true,
+        loadNavbar: true,
+        loadSidebar: true,
+        mergeNavbar: true,
         maxLevel: 6,
         name: 'FFCreator',
         repo: '',
-        homepage: 'guide/introduce.md'
+        homepage: 'guide/introduce.md',
+        alias: {
+          '/en/.*/_navbar.md': '/en/_navbar.md',
+          '/en/.*/_sidebar.md': '/en/_sidebar.md',
+          '/(qa|api|demo|guide)/_navbar.md': '/_navbar.md',
+          '/(qa|api|demo|guide)/_sidebar.md': '/_sidebar.md',
+          '/en/': '/en/guide/introduce.md',
+        },
       };
     </script>
     <script src="./_js/docsify.min.js"></script>
