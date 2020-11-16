@@ -180,7 +180,7 @@ Install[`Xvfb`](https://linux.die.net/man/1/xvfb) and [`Mesa`](http://www.sztemp
 sudo yum install mesa-dri-drivers Xvfb libXi-devel libXinerama-devel libX11-devel
 ```
 
-If you are using `Debian`, ʻubuntu` system, you can use ʻapt` to install.
+If you are using `Debian`, `ubuntu` system, you can use `apt` to install.
 
 ```shell
 sudo apt-get install libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++
