@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - node
+install:
+  - npm install --only=dev
 script:
   - npm run travis
 branches:
