@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - node
 before_install:
-  - npm install --only=dev
+  - sudo apt-get -y install libgl1-mesa-dev xvfb libxi-dev libx11-dev
 install:
-  - npm install jest
+  - npm install --only=dev
 script:
   - npm run travis
 branches:
