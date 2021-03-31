@@ -36,7 +36,7 @@
 - 支持字幕组件、可以将字幕与语音 tts 结合合成音频新闻。
 - 支持简单（可扩展）的虚拟主播，您可以制作自己的虚拟主播。
 - 包含`animate.css`90%的动画效果，可以将 css 动画转换为视频。
-- [`FFCreatorLite`](https://github.com/tnfe/FFCreatorLite)具有更快的速度，有时它比`FFCreator`更适合你。
+- [`FFCreatorLite`](https://github.com/tnfe/FFCreatorLite) 具有更快的速度，有时它比`FFCreator`更适合你去使用。
 
 ## Demo
 
@@ -52,8 +52,10 @@
 
 ### Install npm Package
 
-```javascript
+```
 npm install ffcreator --save
+or
+yarn add ffcreator
 ```
 
 Note: To run the preceding commands, Node.js and npm must be installed.
