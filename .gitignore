@@ -39,6 +39,8 @@ build/docs/
 
 package-lock.json
 .DS_Store
+.idea
+dist
 source/build/
 static/
 examples/cache
