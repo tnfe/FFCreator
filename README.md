@@ -162,6 +162,27 @@ scene.addAudio(path);
 scene.addAudio({path, loop, start});
 ```
 
+### About Cache
+
+FFCreator uses raw format cache by default, raw can make the processing speed is fast and the video quality is also very good.
+If your server does not have a large storage space, and you do not have a high demand for processing speed. Then you can set the cache format to save disk space.
+
+#### Cache settings
+
+- Use `jpg`(or `png`) format cache, Set the `cacheQuality` option to modify the quality.
+> Note: The use of jpg format compared to raw will greatly save the cache space, most of the time it is about one-tenth. the processing speed will be a little bit slower.
+
+```javascript
+cacheType: 'jpg', // (or png)
+cacheQuality: 70, // default 80
+```
+
+- By setting `cacheClarity`, it is used to improve the cache clarity of transition animation.
+
+```javascript
+cacheClarity: 80,
+```
+
 ## Installation
 
 ### 1. Install `node-canvas` and `headless-gl` dependencies

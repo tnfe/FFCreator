@@ -164,6 +164,27 @@ scene.addAudio(path);
 scene.addAudio({path, loop, start});
 ```
 
+### 关于缓存
+
+FFCreator默认使用raw格式缓存，raw可以使处理速度更快并且视频质量也非常好。
+如果你的服务器并没有大的存储空间，同时您对加工速度也没有高需求。那么您可以设置缓存格式来节省磁盘空间。
+
+#### 缓存设置
+
+- 使用`jpg`(or `png`) 格式的缓存，设置`cacheQuality`选项以修改质量。
+> 注：使用jpg格式对比原始将会极大的节省缓存空间，大多时候是十分之一左右。png质量会更好一些但是占用空间也会变大。
+
+```javascript
+cacheType: 'jpg', // (or png)
+cacheQuality: 70, // default 80
+```
+
+- 通过设置`cacheClarity`, 用来提升过渡动画的缓存清晰度。
+
+```javascript
+cacheClarity: 80,
+```
+
 ## 安装
 
 ### 1. 安装`node-canvas`及`headless-gl`依赖

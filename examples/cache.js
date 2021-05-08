@@ -27,6 +27,7 @@ const createFFTask = () => {
     debug: true,
     cacheType: 'jpg',
     cacheQuality: 70,
+    cacheClarity: 80,
     audio,
   });
 
