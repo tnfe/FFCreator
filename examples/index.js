@@ -4,6 +4,7 @@ const colors = require('colors');
 const inquirer = require('inquirer');
 const imageDemo = require('./image');
 const albumDemo = require('./album');
+const cacheDemo = require('./cache');
 const videoDemo = require('./video');
 const subtitleDemo = require('./subtitle');
 const transitionDemo = require('./transition');
@@ -35,6 +36,10 @@ const initCommand = () => {
           {
             name: 'Video animation demo',
             value: 'video',
+          },
+          {
+            name: 'Cache settings save disk',
+            value: 'cache',
           },
           {
             name: 'Clear all caches and videos',
@@ -71,6 +76,11 @@ const runDemo = answer => {
     case 'video':
       printRestartInfo();
       videoDemo();
+      break;
+
+    case 'cache':
+      printRestartInfo();
+      cacheDemo();
       break;
 
     case 'clear':
