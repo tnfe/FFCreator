@@ -6,88 +6,9 @@ const imageDemo = require('./image');
 const albumDemo = require('./album');
 const cacheDemo = require('./cache');
 const videoDemo = require('./video');
+const effectDemo = require('./effect');
 const subtitleDemo = require('./subtitle');
 const transitionDemo = require('./transition');
-
-const initCommand = () => {
-  inquirer
-    .prompt([
-      {
-        type: 'rawlist',
-        message: 'Please select the demo you want to run:',
-        name: 'val',
-        choices: [
-          {
-            name: 'Picture animation video',
-            value: 'image',
-          },
-          {
-            name: 'Album transition video',
-            value: 'album',
-          },
-          {
-            name: 'Subtitle and voice demo',
-            value: 'subtitle',
-          },
-          {
-            name: 'Scene transition effect',
-            value: 'transition',
-          },
-          {
-            name: 'Video animation demo',
-            value: 'video',
-          },
-          {
-            name: 'Cache settings save disk',
-            value: 'cache',
-          },
-          {
-            name: 'Clear all caches and videos',
-            value: 'clear',
-          },
-        ],
-      },
-    ])
-    .then(runDemo);
-};
-
-const runDemo = answer => {
-  switch (answer.val) {
-    case 'image':
-      printRestartInfo();
-      imageDemo();
-      break;
-
-    case 'album':
-      printRestartInfo();
-      albumDemo();
-      break;
-
-    case 'subtitle':
-      printRestartInfo();
-      subtitleDemo();
-      break;
-
-    case 'transition':
-      printRestartInfo();
-      transitionDemo();
-      break;
-
-    case 'video':
-      printRestartInfo();
-      videoDemo();
-      break;
-
-    case 'cache':
-      printRestartInfo();
-      cacheDemo();
-      break;
-
-    case 'clear':
-      clearAllFiles();
-      break;
-  }
-};
 
 const printRestartInfo = () =>
   console.log(colors.green(`\n --- You can press the s key or the w key to restart! --- \n`));
@@ -95,6 +16,86 @@ const printRestartInfo = () =>
 const clearAllFiles = () => {
   fs.remove(path.join(__dirname, './output'));
   fs.remove(path.join(__dirname, './cache'));
+};
+
+const choices = [
+  {
+    name: 'Picture animation video',
+    value: 'image',
+    func: imageDemo,
+  },
+  {
+    name: 'Album transition video',
+    value: 'album',
+    func: albumDemo,
+  },
+  {
+    name: 'Subtitle and voice demo',
+    value: 'subtitle',
+    func: subtitleDemo,
+  },
+  {
+    name: 'Scene transition effect',
+    value: 'transition',
+    func: transitionDemo,
+  },
+  {
+    name: 'Video animation demo',
+    value: 'video',
+    func: videoDemo,
+  },
+  {
+    name: 'Custom effect demo',
+    value: 'effect',
+    func: effectDemo,
+  },
+  {
+    name: 'Cache settings save disk',
+    value: 'cache',
+    func: cacheDemo,
+  },
+  {
+    name: 'Clear all caches and videos',
+    value: 'clear',
+    func: clearAllFiles,
+  },
+  new inquirer.Separator(),
+];
+
+const runDemo = answer => {
+  for (let i = 0; i < choices.length; i++) {
+    const choice = choices[i];
+    if (choice.value === answer.val) {
+      if (answer.val !== 'clear') printRestartInfo();
+      choice.func();
+      break;
+    }
+  }
+};
+
+const initCommand = () => {
+  for (let i = 0; i < choices.length; i++) {
+    const choice = choices[i];
+    choice.name = `(${i + 1}) ${choice.name}`;
+  }
+
+  inquirer
+    .prompt([
+      {
+        type: 'list',
+        message: 'Please select the demo you want to run:',
+        name: 'val',
+        choices,
+        pageSize: choices.length,
+        validate: function(answer) {
+          if (answer.length < 1) {
+            return 'You must choose at least one topping.';
+          }
+          return true;
+        },
+      },
+    ])
+    .then(runDemo);
 };
 
 initCommand();
