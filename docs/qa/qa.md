@@ -37,3 +37,18 @@ xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 #### 解决
 
 这种情况请使用`FFCreatorLite`, `FFCreatorLite`并不是`FFCreator`的简化版。在视频加工方面`FFCreatorLite`的效率超高。
+
+5. #### 为什么合成一分钟以上的视频的时候会生成几个G的缓存
+
+#### 解决
+
+FFCreator默认使用的是raw格式缓存，使用raw可以确保处理速度极快并且视频质量也非常好。
+如果你的服务器并没有大的存储空间, 那么您可以通过设置缓存格式来节省磁盘空间。
+
+- 使用`jpg`(or `png`) 格式的缓存，设置`cacheQuality`选项以修改质量。
+> 注：使用jpg格式对比原始将会极大的节省缓存空间，大多时候是十分之一甚至几十分之一。png质量会更好一些但是占用空间也会变大。
+
+```javascript
+cacheType: 'jpg', // (or png)
+cacheQuality: 70, // default 80
+```

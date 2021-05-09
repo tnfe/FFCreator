@@ -37,3 +37,19 @@ This may be caused by your node version. If it is node`v15`, this issue will occ
 #### Solve
 
 In this case, please use `FFCreatorLite`, `FFCreatorLite` is not a simplified version of `FFCreator`. In terms of video processing, FFCreatorLite is extremely efficient.
+
+
+5. #### Why is a 2G cache generated when synthesizing a video of more than one minute?
+
+#### Solve
+
+FFCreator uses raw format cache by default, raw can make the processing speed is fast and the video quality is also very good.
+If your server does not have a large storage space, and you do not have a high demand for processing speed. Then you can set the cache format to save disk space.
+
+- Use `jpg`(or `png`) format cache, Set the `cacheQuality` option to modify the quality.
+> Note: The use of jpg format compared to raw will greatly save the cache space, most of the time it is about one-tenth. the processing speed will be a little bit slower.
+
+```javascript
+cacheType: 'jpg', // (or png)
+cacheQuality: 70, // default 80
+```
