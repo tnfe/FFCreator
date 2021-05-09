@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const {FFCreatorCenter, FFScene, FFImage, FFCreator} = require('../');
+const { FFCreatorCenter, FFScene, FFImage, FFCreator } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/05.jpg');
@@ -35,30 +35,30 @@ const createFFTask = () => {
   scene2.setBgColor('#b33771');
 
   // add scene1 background
-  const fbg1 = new FFImage({path: bg1, x: width / 2, y: height / 2});
+  const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
   scene1.addChild(fbg1);
 
   // add bottom cloud
-  const fcloud = new FFImage({path: cloud, x: width});
+  const fcloud = new FFImage({ path: cloud, x: width });
   fcloud.setAnchor(1);
   fcloud.addAnimate({
-    from: {y: height + 180},
-    to: {y: height},
+    from: { y: height + 180 },
+    to: { y: height },
     time: 0.8,
     ease: 'Back.Out',
   });
   scene1.addChild(fcloud);
 
   // add mars ball
-  const fmars = new FFImage({path: mars, x: width / 2, y: height / 2});
+  const fmars = new FFImage({ path: mars, x: width / 2, y: height / 2 });
   fmars.addEffect('rotateIn', 1, 0.8);
   scene1.addChild(fmars);
 
   // add rock image
-  const frock = new FFImage({path: rock, x: width / 2 + 100});
+  const frock = new FFImage({ path: rock, x: width / 2 + 100 });
   frock.addAnimate({
-    from: {y: height / 2 + 720},
-    to: {y: height / 2 + 80},
+    from: { y: height / 2 + 720 },
+    to: { y: height / 2 + 80 },
     time: 1,
     delay: 2.3,
     ease: 'Cubic.InOut',
@@ -66,12 +66,12 @@ const createFFTask = () => {
   scene1.addChild(frock);
 
   // add rock image
-  const ftitle = new FFImage({path: title, x: width / 2, y: height / 2 - 300});
+  const ftitle = new FFImage({ path: title, x: width / 2, y: height / 2 - 300 });
   ftitle.addEffect('fadeInUp', 1, 4);
   scene1.addChild(ftitle);
 
   // add logo
-  const flogo1 = new FFImage({path: logo2, x: width / 2, y: 50});
+  const flogo1 = new FFImage({ path: logo2, x: width / 2, y: 50 });
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
@@ -80,10 +80,10 @@ const createFFTask = () => {
   creator.addChild(scene1);
 
   // add scene2 background
-  const fbg2 = new FFImage({path: bg2, x: width / 2, y: height / 2});
+  const fbg2 = new FFImage({ path: bg2, x: width / 2, y: height / 2 });
   scene2.addChild(fbg2);
   // add logo
-  const flogo2 = new FFImage({path: logo2, x: width / 2, y: height / 2 - 80});
+  const flogo2 = new FFImage({ path: logo2, x: width / 2, y: height / 2 - 80 });
   flogo2.setScale(0.9);
   flogo2.addEffect('fadeInDown', 1, 1.2);
   scene2.addChild(flogo2);

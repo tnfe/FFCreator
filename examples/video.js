@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const {FFCreatorCenter, FFScene, FFVideo, FFText, FFImage, FFCreator} = require('../');
+const { FFCreatorCenter, FFScene, FFVideo, FFText, FFImage, FFCreator } = require('../');
 
 const createFFTask = () => {
   const bg2 = path.join(__dirname, './assets/imgs/bg/06.jpg');
@@ -41,13 +41,13 @@ const createFFTask = () => {
   scene1.addChild(fvideo);
 
   // add dragon image
-  const fdragon = new FFImage({path: dragon, x: 100, y: height / 2 + 100});
+  const fdragon = new FFImage({ path: dragon, x: 100, y: height / 2 + 100 });
   fdragon.setScale(0.7);
   fdragon.addEffect('fadeInUp', 1, 3);
   scene1.addChild(fdragon);
 
   // add logo
-  const flogo1 = new FFImage({path: logo2, x: width / 2, y: 50});
+  const flogo1 = new FFImage({ path: logo2, x: width / 2, y: 50 });
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
@@ -56,10 +56,10 @@ const createFFTask = () => {
   creator.addChild(scene1);
 
   // add scene2 background
-  const fbg2 = new FFImage({path: bg2, x: width / 2, y: height / 2});
+  const fbg2 = new FFImage({ path: bg2, x: width / 2, y: height / 2 });
   scene2.addChild(fbg2);
   // add logo
-  const flogo2 = new FFImage({path: logo2, x: width / 2, y: height / 2 - 20});
+  const flogo2 = new FFImage({ path: logo2, x: width / 2, y: height / 2 - 20 });
   flogo2.setScale(0.9);
   flogo2.addEffect('zoomIn', 1, 1.2);
   scene2.addChild(flogo2);

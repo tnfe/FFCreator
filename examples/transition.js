@@ -2,7 +2,7 @@ const path = require('path');
 const colors = require('colors');
 const shuffle = require('lodash/shuffle');
 const startAndListen = require('./listen');
-const {FFCreatorCenter, FFScene, FFText, FFImage, FFCreator} = require('../');
+const { FFCreatorCenter, FFScene, FFText, FFImage, FFCreator } = require('../');
 
 const width = 600;
 const height = 400;
@@ -29,7 +29,7 @@ const transitionDemoTask = () => {
   for (let i = 1; i < 6; i++) {
     const transition = trans[i - 1];
     const text = `这是第 ${order[i - 1]} 屏`;
-    const scene = creatScene({index: i, transition, text});
+    const scene = creatScene({ index: i, transition, text });
     creator.addChild(scene);
   }
 
@@ -59,7 +59,7 @@ const transitionDemoTask = () => {
   return creator;
 };
 
-const creatScene = ({index, transition, text}) => {
+const creatScene = ({ index, transition, text }) => {
   const scene = new FFScene();
   scene.setBgColor('#3b3a98');
   scene.setDuration(5);
@@ -67,21 +67,21 @@ const creatScene = ({index, transition, text}) => {
 
   // bg img
   const img = path.join(__dirname, `./assets/imgs/trans/0${index}.jpeg`);
-  const bg = new FFImage({path: img, resetXY: true});
+  const bg = new FFImage({ path: img, resetXY: true });
   scene.addChild(bg);
 
   // title text
-  const ftext = new FFText({text, x: width / 2, y: height / 2 + 50, fontSize: 38});
+  const ftext = new FFText({ text, x: width / 2, y: height / 2 + 50, fontSize: 38 });
   ftext.setColor('#30336b');
   ftext.alignCenter();
   ftext.setBackgroundColor('#ffffff');
   ftext.addEffect('fadeInRight', 1, 1.3);
-  ftext.setStyle({padding: [4, 12, 6, 12]});
+  ftext.setStyle({ padding: [4, 12, 6, 12] });
   scene.addChild(ftext);
 
   // add logo2
   const logo = index === 1 ? logo2 : logo1;
-  const flogo = new FFImage({path: logo, x: width / 2, y: height / 2 - 100});
+  const flogo = new FFImage({ path: logo, x: width / 2, y: height / 2 - 100 });
   flogo.setScale(0.6);
   flogo.addEffect('fadeInLeft', 1, 1);
   scene.addChild(flogo);

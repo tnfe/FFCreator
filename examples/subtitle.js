@@ -1,7 +1,15 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const {FFCreatorCenter, FFScene, FFAlbum, FFSubtitle, FFText, FFImage, FFCreator} = require('../');
+const {
+  FFCreatorCenter,
+  FFScene,
+  FFAlbum,
+  FFSubtitle,
+  FFText,
+  FFImage,
+  FFCreator,
+} = require('../');
 
 const createFFTask = () => {
   const bg = path.join(__dirname, './assets/imgs/bg/04.jpeg');
@@ -46,16 +54,16 @@ const createFFTask = () => {
   scene1.addChild(album);
 
   // add title text
-  const text = new FFText({text: 'FFCreator字幕DEMO', x: width / 2, y: 150, fontSize: 40});
+  const text = new FFText({ text: 'FFCreator字幕DEMO', x: width / 2, y: 150, fontSize: 40 });
   text.setColor('#ffffff');
   text.setBackgroundColor('#019333');
   text.addEffect('fadeInUp', 1, 1);
   text.alignCenter();
-  text.setStyle({padding: [4, 20, 6, 20]});
+  text.setStyle({ padding: [4, 20, 6, 20] });
   scene1.addChild(text);
 
   // add logo
-  const flogo2 = new FFImage({path: logo, x: width / 2, y: 60});
+  const flogo2 = new FFImage({ path: logo, x: width / 2, y: 60 });
   flogo2.setScale(0.6);
   scene1.addChild(flogo2);
 
@@ -84,12 +92,12 @@ const createFFTask = () => {
   creator.addChild(scene1);
 
   // add scene2 background
-  const fbg = new FFImage({path: bg});
+  const fbg = new FFImage({ path: bg });
   fbg.setXY(width / 2, height / 2);
   scene2.addChild(fbg);
 
   // logo
-  const flogo = new FFImage({path: logo, x: width / 2, y: height / 2 - 150});
+  const flogo = new FFImage({ path: logo, x: width / 2, y: height / 2 - 150 });
   flogo.addEffect('fadeInDown', 1, 1.2);
   scene2.addChild(flogo);
 
