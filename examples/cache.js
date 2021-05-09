@@ -96,11 +96,6 @@ const createFFTask = () => {
   creator.addChild(scene2);
 
   creator.start();
-  // creator.openLog();
-
-  creator.on('start', () => {
-    console.log(`FFCreator start`);
-  });
 
   creator.on('error', e => {
     console.log(`FFCreator error: ${e.error}`);
@@ -111,10 +106,13 @@ const createFFTask = () => {
   });
 
   creator.on('complete', e => {
+    let info = FFCreatorCenter.getInfo();
+    info = JSON.stringify(info);
     console.log(
-      colors.magenta(`FFCreator completed: \n USEAGE: ${e.useage} \n PATH: ${e.output} `),
+      colors.magenta(
+        `FFCreator completed: \n USEAGE: ${e.useage} \n PATH: ${e.output} \n ${info} `,
+      ),
     );
-
     console.log(colors.green(`\n --- You can press the s key or the w key to restart! --- \n`));
   });
 
