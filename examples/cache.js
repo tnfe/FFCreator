@@ -17,8 +17,9 @@ const createFFTask = () => {
   const cacheDir = path.join(__dirname, './cache/');
 
   // create creator instance
-  const width = 576;
-  const height = 1024;
+  const width = (576 * Math.random()) >> 0;
+  const height = (1024 * Math.random()) >> 0;
+
   const creator = new FFCreator({
     cacheDir,
     outputDir,
