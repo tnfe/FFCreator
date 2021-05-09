@@ -5,7 +5,7 @@
 - ## 添加`effect`动画
 
 可以往元素(node)上添加`effect`动画效果。
-`FFCreator`effect 实现了著名 css 动画库[`animate.css`*4.1.0*](https://animate.style/) 版本的绝大多数功能, 也就是说您可以轻松把 html 的动画效果转换为视频影片。
+`FFCreator`effect 实现了著名 css 动画库[`animate.css`_4.1.0_](https://animate.style/) 版本的绝大多数功能, 也就是说您可以轻松把 html 的动画效果转换为视频影片。
 
 ### 使用
 
@@ -20,6 +20,17 @@ image.addEffect({
   type: 'fadeInDown',
   time: 1,
   delay: 1,
+});
+```
+
+### 创建自定义 effect
+
+```javascript
+// add custom effect
+creator.createEffect('customEffect', {
+  from: { opacity: 0, y: 350, rotate: 190, scale: 0.3 },
+  to: { opacity: 1, y: 200, rotate: 0, scale: 1 },
+  ease: 'Back.Out',
 });
 ```
 
