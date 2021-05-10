@@ -20,13 +20,14 @@ const createFFTask = () => {
   const width = (576 * Math.random()) >> 0;
   const height = (1024 * Math.random()) >> 0;
 
+  console.log('wxh', width, height);
   const creator = new FFCreator({
     cacheDir,
     outputDir,
     width,
     height,
     debug: true,
-    cacheType: 'jpg',
+    cacheType: 'raw',
     cacheQuality: 70,
     cacheClarity: 80,
     audio,
