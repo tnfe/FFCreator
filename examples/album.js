@@ -88,7 +88,7 @@ const createFFTask = () => {
   });
 
   creator.on('progress', e => {
-    console.log(colors.yellow(`FFCreator progress: ${e.state} ${(e.percent * 100) >> 0}%`));
+    console.log(colors.yellow(`FFCreator progress: ${(e.percent * 100) >> 0}%`));
   });
 
   creator.on('complete', e => {

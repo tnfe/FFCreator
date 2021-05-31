@@ -23,6 +23,9 @@ const transitionDemoTask = () => {
     width,
     height,
     audio,
+    //cacheFormat:'jpg',
+    highWaterMark: '10mb',
+    frames: 6,
     debug: false,
   });
 
@@ -45,7 +48,7 @@ const transitionDemoTask = () => {
   });
 
   creator.on('progress', e => {
-    // console.log(colors.yellow(`FFCreator progress: ${e.state} ${(e.percent * 100) >> 0}%`));
+    // console.log(colors.yellow(`FFCreator progress: ${(e.percent * 100) >> 0}%`));
   });
 
   creator.on('complete', e => {
@@ -63,7 +66,7 @@ const creatScene = ({ index, transition, text }) => {
   const scene = new FFScene();
   scene.setBgColor('#3b3a98');
   scene.setDuration(5);
-  scene.setTransition(transition, 1);
+  scene.setTransition(transition, 1.5);
 
   // bg img
   const img = path.join(__dirname, `./assets/imgs/trans/0${index}.jpeg`);

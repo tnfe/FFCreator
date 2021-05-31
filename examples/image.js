@@ -24,7 +24,9 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    debug: false,
+    debug: true,
+    highWaterMark: "3mb",
+    parallel: 8,
     audio,
   });
 
@@ -92,18 +94,18 @@ const createFFTask = () => {
   creator.addChild(scene2);
 
   creator.start();
-  // creator.openLog();
+  //creator.openLog();
 
   creator.on('start', () => {
     console.log(`FFCreator start`);
   });
 
   creator.on('error', e => {
-    console.log(`FFCreator error: ${e.error}`);
+    console.log(colors.red(`FFCreator error: ${e.error}`));
   });
 
   creator.on('progress', e => {
-    console.log(colors.yellow(`FFCreator progress: ${e.state} ${(e.percent * 100) >> 0}%`));
+    console.log(colors.yellow(`FFCreator progress: ${(e.percent * 100) >> 0}%`));
   });
 
   creator.on('complete', e => {

@@ -26,10 +26,9 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    debug: true,
-    cacheType: 'raw',
-    cacheQuality: 70,
-    cacheClarity: 80,
+    highWaterMark: '10mb',
+    parallel: 12,
+    pool: true,
     audio,
   });
 
@@ -103,7 +102,7 @@ const createFFTask = () => {
   });
 
   creator.on('progress', e => {
-    console.log(colors.yellow(`FFCreator progress: ${e.state} ${(e.percent * 100) >> 0}%`));
+    console.log(colors.yellow(`FFCreator progress: ${(e.percent * 100) >> 0}%`));
   });
 
   creator.on('complete', e => {

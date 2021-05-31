@@ -50,7 +50,7 @@ const choices = [
     func: effectDemo,
   },
   {
-    name: 'Cache settings save disk',
+    name: 'Random size video',
     value: 'cache',
     func: cacheDemo,
   },
