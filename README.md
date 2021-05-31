@@ -21,7 +21,7 @@ Nowadays, short video is an increasingly popular form of media communication. Li
 
 `FFCreator` is a lightweight and flexible solution that requires few dependencies and low machine configuration to start working quickly. And it simulates 90% animation effects of [`animate.css`](https://animate.style/). You can easily convert the animation effects on the web page side into videos.
 
-When you need to process a lot of video without special cool transition animations, `FFCreatorLite` is a better choice, please click [__here__](https://github.com/tnfe/FFCreatorLite) for details.
+When you need to process a lot of video without special cool transition animations, `FFCreatorLite` is a better choice, please click [**here**](https://github.com/tnfe/FFCreatorLite) for details.
 
 #### For more introduction, please see [here](https://tnfe.github.io/FFCreator/#/README)
 
@@ -128,7 +128,6 @@ creator.on('complete', e => {
 
 #### For a more detailed tutorial, please check [here](https://tnfe.github.io/FFCreator/#/guide/useage)
 
-
 ### About Audio
 
 Sound is the soul of a video. FFCreator supports multiple ways to add audio. You can not only add global background music, but also set your own voice or soundtrack for each individual scene.
@@ -136,7 +135,7 @@ Sound is the soul of a video. FFCreator supports multiple ways to add audio. You
 - In FFVideo - Turn on video background music (default off).
 
 ```javascript
-const video = new FFVideo({path, x: 100, y: 150, width: 500, height: 350});
+const video = new FFVideo({ path, x: 100, y: 150, width: 500, height: 350 });
 video.setTimes('00:00:18', '00:00:33');
 video.setAudio(true); // Turn on
 ```
@@ -151,7 +150,7 @@ const creator = new FFCreator({
 });
 
 // or
-creator.addAudio({path, loop, start});
+creator.addAudio({ path, loop, start });
 ```
 
 - Add your own separate music for each scene.
@@ -159,28 +158,32 @@ creator.addAudio({path, loop, start});
 ```javascript
 scene.addAudio(path);
 // or
-scene.addAudio({path, loop, start});
+scene.addAudio({ path, loop, start });
 ```
 
 ### About Cache
 
-FFCreator uses raw format cache by default, raw can make the processing speed is fast and the video quality is also very good.
-If your server does not have a large storage space, and you do not have a high demand for processing speed. Then you can set the cache format to save disk space.
+FFCreator3.0+ uses `node Stream` for data caching. The original version frees up disk space and further improves the speed.
 
-#### Cache settings
+#### Stream settings
 
-- Use `jpg`(or `png`) format cache, Set the `cacheQuality` option to modify the quality.
-> Note: The use of jpg format compared to raw will greatly save the cache space, most of the time it is about one-tenth. the processing speed will be a little bit slower.
+- By setting `parallel` (or `frames`) to modify the number of video frames for a single parallel rendering.
+  > Note: This should be set reasonably according to the actual configuration of your machine, not that the larger the value, the better.
 
 ```javascript
-cacheType: 'jpg', // (or png)
-cacheQuality: 70, // default 80
+parallel: 10,
 ```
 
-- By setting `cacheClarity`, it is used to improve the cache clarity of transition animation.
+- Set `highWaterMark`, you can learn about the highWaterMark water mark from [here](http://nodejs.cn/api/stream/buffering.html).
 
 ```javascript
-cacheClarity: 80,
+highWaterMark: '6mb',
+```
+
+- Set the `pool` to turn on or off the object pool mode, which should be set reasonably according to the actual configuration of your machine.
+
+```javascript
+pool: true,
 ```
 
 ## Installation

@@ -1,6 +1,6 @@
 {
   "name": "ffcreator",
-  "version": "2.0.8",
+  "version": "3.0.1",
   "description": "FFCreator is a lightweight and flexible short video production library",
   "main": "lib/index.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "ndarray": "^1.0.19",
     "node-canvas-webgl": "0.2.6",
     "rmfr": "^2.0.0",
+    "siz": "^1.2.2",
     "spritejs": "3.7.25"
   },
   "devDependencies": {

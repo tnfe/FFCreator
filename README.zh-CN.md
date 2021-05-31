@@ -17,12 +17,12 @@
 
 `FFCreator`是一个基于<a href="http://nodejs.org" target="_blank">node.js</a>的轻量、灵活的短视频加工库。您只需要添加几张图片或视频片段再加一段背景音乐，就可以快速生成一个很酷的视频短片。
 
-今天，短视频已成为一种越来越流行的媒体传播形式。像[微视](https://weishi.qq.com/)和抖音这种app每天都会生产成千上万个精彩短视频, 而这些视频也为产品带来了巨大的流量和人气。
+今天，短视频已成为一种越来越流行的媒体传播形式。像[微视](https://weishi.qq.com/)和抖音这种 app 每天都会生产成千上万个精彩短视频, 而这些视频也为产品带来了巨大的流量和人气。
 随之而来，如何让用户可以快速生产一个短视频；或者产品平台如何利用已有的图片、视频、音乐素材批量合成大量视频就成为一个技术难点。
 
 `FFCreator`是一种轻量又简单的解决方案，只需要很少的依赖和较低的机器配置就可以快速开始工作。并且它模拟实现了[`animate.css`](https://animate.style/)90%的动画效果，您可以轻松地把 web 页面端的动画效果转为视频。
 
-当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择, 详情请点击[__这里__](https://github.com/tnfe/FFCreatorLite)。
+当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择, 详情请点击[**这里**](https://github.com/tnfe/FFCreatorLite)。
 
 #### 更多介绍请查看[这里](https://tnfe.github.io/FFCreator/#/README)
 
@@ -138,7 +138,7 @@ creator.on('complete', e => {
 - In FFVideo - 打开视频背景音乐（默认关闭）。
 
 ```javascript
-const video = new FFVideo({path, x: 100, y: 150, width: 500, height: 350});
+const video = new FFVideo({ path, x: 100, y: 150, width: 500, height: 350 });
 video.setTimes('00:00:18', '00:00:33');
 video.setAudio(true); // Turn on
 ```
@@ -153,7 +153,7 @@ const creator = new FFCreator({
 });
 
 // or
-creator.addAudio({path, loop, start});
+creator.addAudio({ path, loop, start });
 ```
 
 - 为每个场景添加自己的单独音乐, 多用在自动配音场景。
@@ -161,28 +161,32 @@ creator.addAudio({path, loop, start});
 ```javascript
 scene.addAudio(path);
 // or
-scene.addAudio({path, loop, start});
+scene.addAudio({ path, loop, start });
 ```
 
 ### 关于缓存
 
-FFCreator默认使用raw格式缓存，raw可以使处理速度更快并且视频质量也非常好。
-如果你的服务器并没有大的存储空间，同时您对加工速度也没有高需求。那么您可以设置缓存格式来节省磁盘空间。
+FFCreator3.0+使用`node Stream`进行数据缓存，相比之前版本不但节省了磁盘空间而且加工速度得到进一步提升。
 
-#### 缓存设置
+#### Stream 设置
 
-- 使用`jpg`(or `png`) 格式的缓存，设置`cacheQuality`选项以修改质量。
-> 注：使用jpg格式对比原始将会极大的节省缓存空间，大多时候是十分之一左右。png质量会更好一些但是占用空间也会变大。
+- 通过设置`parallel`(or `frames`)来修改单次并行渲染的视频分帧数目。
+  > 注：这里要根据您的机器实际配置情况来合理设置，并不是数值越大越好。
 
 ```javascript
-cacheType: 'jpg', // (or png)
-cacheQuality: 70, // default 80
+parallel: 10,
 ```
 
-- 通过设置`cacheClarity`, 用来提升过渡动画的缓存清晰度。
+- 设置`highWaterMark`, 关于 highWaterMark 水位线您可以通过[这里](http://nodejs.cn/api/stream/buffering.html)了解。
 
 ```javascript
-cacheClarity: 80,
+highWaterMark: '6mb',
+```
+
+- 通过设置`pool`来开启或者关闭对象池方式，要根据您的机器实际配置情况来合理设置。
+
+```javascript
+pool: true,
 ```
 
 ## 安装
@@ -210,7 +214,6 @@ sudo apt-get install libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-
 sudo apt-get install libgl1-mesa-dev xvfb libxi-dev libx11-dev
 ```
 
-
 ### 2. 由于`FFCreator`依赖于`FFmpeg`，因此您需要安装`FFmpeg`的常规版本
 
 - How to Install and Use FFmpeg on CentOS [https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/](https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/)
@@ -223,10 +226,13 @@ sudo apt-get install libgl1-mesa-dev xvfb libxi-dev libx11-dev
 - ### 启动项目
 
   - 若是有显示设备的电脑, 比如个人`pc`电脑或者有显卡或显示设备的`server`服务器, 正常启动。
+
 ```shell
 npm start
 ```
-  - 无显示设备的服务器请使用`xvfb-run`命令启动程序, 关于`xvfb-run`命令更多的参数可以点击[这里](http://manpages.ubuntu.com/manpages/trusty/man1/xvfb-run.1.html)查看。
+
+- 无显示设备的服务器请使用`xvfb-run`命令启动程序, 关于`xvfb-run`命令更多的参数可以点击[这里](http://manpages.ubuntu.com/manpages/trusty/man1/xvfb-run.1.html)查看。
+
 ```shell
 xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 ```
@@ -261,7 +267,7 @@ xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 
 #### 解决
 
-这可能是由您的node版本引起的。如果是node`v15`，会出现此问题 [https://github.com/Automattic/node-canvas/issues/1645](https://github.com/Automattic/node-canvas/issues/1645)。请把node版本降低到`v14`。
+这可能是由您的 node 版本引起的。如果是 node`v15`，会出现此问题 [https://github.com/Automattic/node-canvas/issues/1645](https://github.com/Automattic/node-canvas/issues/1645)。请把 node 版本降低到`v14`。
 
 ## 贡献代码
 
