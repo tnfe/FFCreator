@@ -180,7 +180,7 @@ parallel: 10,
 highWaterMark: '6mb',
 ```
 
-- Set the `pool` to turn on or off the object pool mode, which should be set reasonably according to the actual configuration of your machine.
+- Set the `pool` to turn on or off the object pool mode.
 
 ```javascript
 pool: true,
