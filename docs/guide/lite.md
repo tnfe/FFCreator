@@ -4,12 +4,12 @@
 
 > `FFCreatorLite`是`FFCreator`套装中的 lite 版本。当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择。
 
-FFCreator [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)  
+FFCreator [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)
 FFCreatorLite [https://github.com/tnfe/FFCreatorLite](https://github.com/tnfe/FFCreatorLite)
 
 ## 介绍
 
-不要把`FFCreatorLite`简单理解为`FFCreator`的精简版或者功能阉割版，事实上这两者的实现原理完全不同。`FFCreatorLite`具备`FFCreator`70%的功能，但是处理速度却更快(快到你无法想象)并且安装异常简单。所以请您根据实际的使用情况，来选择具体使用哪个版本的库。
+不要把`FFCreatorLite`简单理解为`FFCreator`的精简版或者功能阉割版，事实上这两者的实现原理完全不同。`FFCreatorLite`具备`FFCreator`80%的功能，但是处理速度却更快(快到你无法想象)并且安装异常简单。所以请您根据实际的使用情况，来选择具体使用哪个版本的库。
 
 - `FFCreator`使用`opengl`来处理图形渲染并使用`shader`后处理来生成转场效果，最后使用`FFmpeg`合成视频。
 - `FFCreatorLite`则完全基于`FFmpeg`开发，通过拼接`FFmpeg`命令参数来生成动画和视频。事实上编写它花费了更多的时间, 因为这并不是一项简单的工作。
@@ -29,7 +29,7 @@ FFCreatorLite [https://github.com/tnfe/FFCreatorLite](https://github.com/tnfe/FF
 | 包含组件          | 支持图片、文字、视频、字幕、相册、虚拟主播等 | 不支持字幕、相册、虚拟主播(可扩展)    |
 | 支持动画          | 支持模拟`animate.css`动画和任意自定义动画    | 支持模拟`animate.css`动画和自定义动画 |
 | 动画品质          | 动画品质极其精细                             | 动画略显粗糙(日常需求足够用)          |
-| 转场特效          | 支持近百种转场动画特效                       | 不支持转场动画                        |
+| 转场特效          | 支持近百种转场动画特效                       | 支持30多种转场动画                        |
 | 视频处理          | 有视频处理能力, 但是不算强                   | 视频处理速度超快                      |
 | 制作速度          | 5 分钟视频 1-2min                            | 速度为前者 2-3 倍                     |
 | 机器配置          | 双核 1G 即可，有显卡更好                     | 配置要求更低                          |
@@ -51,6 +51,325 @@ FFCreatorLite [https://github.com/tnfe/FFCreatorLite](https://github.com/tnfe/FF
 
 - [案例一](https://h5.weishi.qq.com/weishi/feed/747vExjcQ1JuzGKpE) 图片动画+文字动画，适合`FFCreator`开发。
 - [案例二](https://h5.weishi.qq.com/weishi/feed/747vExjcQ1JuSxWyE) 视频+文字排版，适合`FFCreatorLite`开发。
+
+## 转场动画
+
+最新版本的ffcreatorlite已经支持场景过渡动画, 这意味着您可以像ffcreator一样用它制作炫酷效果。
+
+当然您需要安装[4.3.0](https://stackoverflow.com/questions/60704545/xfade-filter-not-available-with-ffmpeg)以上版本的ffmpeg. 因为这里使用的是[Xfade](https://trac.ffmpeg.org/wiki/Xfade)滤镜来实现的动画。
+
+#### 使用
+```javascript
+// https://trac.ffmpeg.org/wiki/Xfade
+scene.setTransition('diagtl', 1.5);
+```
+
+<table class="wiki">
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fade.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fade.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fadeblack.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fadeblack.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fadewhite.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fadewhite.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/distance.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/distance.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center"><strong>fade</strong> (default)</td>
+    <td style="text-align: center">fadeblack</td>
+    <td style="text-align: center">fadewhite</td>
+    <td style="text-align: center">distance</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipeleft.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipeleft.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wiperight.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wiperight.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipeup.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipeup.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipedown.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipedown.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center"><strong>wipeleft</strong></td>
+    <td style="text-align: center"><strong>wiperight</strong></td>
+    <td style="text-align: center"><strong>wipeup</strong></td>
+    <td style="text-align: center"><strong>wipedown</strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slideleft.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slideleft.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slideright.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slideright.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slideup.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slideup.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slidedown.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/slidedown.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center"><strong>slideleft</strong></td>
+    <td style="text-align: center"><strong>slideright</strong></td>
+    <td style="text-align: center"><strong>slideup</strong></td>
+    <td style="text-align: center"><strong>slidedown</strong></td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothleft.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothleft.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothright.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothright.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothup.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothup.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothdown.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/smoothdown.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">smoothleft</td>
+    <td style="text-align: center">smoothright</td>
+    <td style="text-align: center">smoothup</td>
+    <td style="text-align: center">smoothdown</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/circlecrop.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/circlecrop.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/rectcrop.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/rectcrop.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/circleclose.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/circleclose.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/circleopen.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/circleopen.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">rectcrop</td>
+    <td style="text-align: center">circlecrop</td>
+    <td style="text-align: center">circleclose</td>
+    <td style="text-align: center">circleopen</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/horzclose.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/horzclose.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/horzopen.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/horzopen.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vertclose.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vertclose.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vertopen.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vertopen.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">horzclose</td>
+    <td style="text-align: center">horzopen</td>
+    <td style="text-align: center">vertclose</td>
+    <td style="text-align: center">vertopen</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagbl.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagbl.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagbr.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagbr.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagtl.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagtl.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagtr.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/diagtr.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">diagbl</td>
+    <td style="text-align: center">diagbr</td>
+    <td style="text-align: center">diagtl</td>
+    <td style="text-align: center">diagtr</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/hlslice.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/hlslice.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/hrslice.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/hrslice.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vuslice.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vuslice.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vdslice.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/vdslice.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">hlslice</td>
+    <td style="text-align: center">hrslice</td>
+    <td style="text-align: center">vuslice</td>
+    <td style="text-align: center">vdslice</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/dissolve.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/dissolve.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/pixelize.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/pixelize.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/radial.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/radial.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/hblur.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/hblur.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">dissolve</td>
+    <td style="text-align: center">pixelize</td>
+    <td style="text-align: center">radial</td>
+    <td style="text-align: center">hblur</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipetl.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipetl.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipetr.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipetr.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipebl.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipebl.gif?raw=true"
+      /></a>
+    </td>
+    <td>
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipebr.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/wipebr.gif?raw=true"
+      /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center">wipetl</td>
+    <td style="text-align: center">wipetr</td>
+    <td style="text-align: center">wipebl</td>
+    <td style="text-align: center">wipebr</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fadegrays.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/fadegrays.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/squeezev.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/squeezev.gif?raw=true"
+      /></a>
+    </td>
+    <td style="text-align: center">
+      <a href="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/squeezeh.gif?raw=true" style="padding:0; border:none"
+        ><img src="https://github.com/tnfe/FFCreatorLite/blob/master/examples/assets/gif/squeezeh.gif?raw=true"
+      /></a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="text-align: center">fadegrays</td>
+    <td style="text-align: center">squeezev</td>
+    <td style="text-align: center">squeezeh</td>
+    <td></td>
+  </tr>
+</table>
 
 ## 如何使用
 

@@ -42,13 +42,17 @@ xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 
 #### 解决
 
-FFCreator默认使用的是raw格式缓存，使用raw可以确保处理速度极快并且视频质量也非常好。
-如果你的服务器并没有大的存储空间, 那么您可以通过设置缓存格式来节省磁盘空间。
+FFCreator3.0+使用`node Stream`进行数据缓存，相比之前版本不但节省了磁盘空间而且加工速度得到进一步提升。
 
-- 使用`jpg`(or `png`) 格式的缓存，设置`cacheQuality`选项以修改质量。
-> 注：使用jpg格式对比原始将会极大的节省缓存空间，大多时候是十分之一甚至几十分之一。png质量会更好一些但是占用空间也会变大。
+- 通过设置`parallel`(or `frames`)来修改单次并行渲染的视频分帧数目。
+  > 注：这里要根据您的机器实际配置情况来合理设置，并不是数值越大越好。
 
 ```javascript
-cacheType: 'jpg', // (or png)
-cacheQuality: 70, // default 80
+parallel: 10,
+```
+
+- 设置`highWaterMark`, 关于 highWaterMark 水位线您可以通过[这里](http://nodejs.cn/api/stream/buffering.html)了解。
+
+```javascript
+highWaterMark: '6mb',
 ```
