@@ -115,10 +115,14 @@ scene.addChild(video);
 ```javascript
 // 1. 添加全局背景音
 creator.addAudio('../audio/bg.mp3');  // 俩种配置方式
-creator.addAudio({ loop: false, path: ... }); 
+creator.addAudio({ loop: false, path: ... , volume:1.5}); 
 // 2. 为每个场景添加单独音乐
 scene.addAudio('../audio/bg.mp3');  // 俩种配置方式
-scene.addAudio({ loop: false,path: ... , start: 20});
+scene.addAudio({ loop: false,path: ... , start: 20, volume:"20dB"});
+
+// volume 音量调整参数 
+// 0.5:音量减半  1.5:音量为原来的150% 20dB:增加10分贝 -20dB:减小20分贝
+// https://trac.ffmpeg.org/wiki/AudioVolume
 ```
 
 - ### 创建虚拟主播
