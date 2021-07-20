@@ -24,6 +24,7 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
+    //log: true,
     debug: true,
     highWaterMark: "3mb",
     parallel: 8,
