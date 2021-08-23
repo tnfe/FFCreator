@@ -31,7 +31,7 @@
     "gl-texture2d": "^2.1.0",
     "gl-transition": "^1.13.0",
     "gl-transitions": "^1.43.0",
-    "inkpaint": "^2.1.6",
+    "inkpaint": "^2.1.7",
     "left-pad": "^1.3.0",
     "lodash": "^4.17.20",
     "mtempy": "^1.0.0",
