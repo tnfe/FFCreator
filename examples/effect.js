@@ -28,14 +28,14 @@ const createFFTask = () => {
 
   // add custom effect
   creator.createEffect('customEffect1', {
-    from: { opacity: 0, y: 350, rotate: 190, scale: 0.3 },
-    to: { opacity: 1, y: 200, rotate: 0, scale: 1 },
+    from: { alpha: 0, y: 350, rotate: Math.PI / 2, scale: 0.3 },
+    to: { alpha: 1, y: 200, rotate: 0, scale: 1 },
     ease: 'Back.Out',
   });
 
   creator.createEffect('customEffect2', {
-    from: { opacity: 0, x: -300, scale: 0.2 },
-    to: { opacity: 1, x: 0, scale: 1 },
+    from: { alpha: 0, x: -300, scale: 0.2, rotate: Math.PI },
+    to: { alpha: 1, x: 0, scale: 1, rotate: 0 },
     ease: 'Back.InOut',
   });
 

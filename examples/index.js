@@ -2,13 +2,6 @@ const path = require('path');
 const fs = require('fs-extra');
 const colors = require('colors');
 const inquirer = require('inquirer');
-const imageDemo = require('./image');
-const albumDemo = require('./album');
-const cacheDemo = require('./cache');
-const videoDemo = require('./video');
-const effectDemo = require('./effect');
-const subtitleDemo = require('./subtitle');
-const transitionDemo = require('./transition');
 
 const printRestartInfo = () =>
   console.log(colors.green(`\n --- You can press the s key or the w key to restart! --- \n`));
@@ -22,37 +15,50 @@ const choices = [
   {
     name: 'Picture animation video',
     value: 'image',
-    func: imageDemo,
   },
   {
     name: 'Album transition video',
     value: 'album',
-    func: albumDemo,
   },
   {
-    name: 'Subtitle and voice demo',
+    name: 'Some GIF animation components',
+    value: 'gif',
+  },
+  {
+    name: 'Effects and animation of FFText',
+    value: 'text',
+  },
+  {
+    name: 'Subtitle and Voice demo',
     value: 'subtitle',
-    func: subtitleDemo,
   },
   {
-    name: 'Scene transition effect',
+    name: 'Multiple scene transition effects',
     value: 'transition',
-    func: transitionDemo,
   },
   {
-    name: 'Video animation demo',
+    name: 'Animation of video clips',
     value: 'video',
-    func: videoDemo,
   },
   {
-    name: 'Custom effect demo',
+    name: 'Custom animation effect demo',
     value: 'effect',
-    func: effectDemo,
   },
   {
-    name: 'Random size video',
-    value: 'cache',
-    func: cacheDemo,
+    name: 'Various ways to add animation',
+    value: 'animate',
+  },
+  {
+    name: 'Randomly varying video size',
+    value: 'resize',
+  },
+  {
+    name: 'Demo of pre-loaded network material',
+    value: 'preload',
+  },
+  {
+    name: 'rfps high-speed rendering',
+    value: 'fps',
   },
   {
     name: 'Clear all caches and videos',
@@ -77,6 +83,8 @@ const initCommand = () => {
   for (let i = 0; i < choices.length; i++) {
     const choice = choices[i];
     choice.name = `(${i + 1}) ${choice.name}`;
+    if (choice.type !== 'separator' && choice.value)
+      choice.func = choice.func || require(path.join(__dirname, `./${choice.value}`));
   }
 
   inquirer

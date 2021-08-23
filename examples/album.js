@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFScene, FFAlbum, FFText, FFImage, FFCreator } = require('../');
+const { FFCreatorCenter, FFScene, FFAudio, FFAlbum, FFText, FFImage, FFCreator } = require('../');
 
 const createFFTask = () => {
   const bg = path.join(__dirname, './assets/imgs/bg/02.jpeg');
@@ -25,8 +25,9 @@ const createFFTask = () => {
     width,
     height,
     debug: false,
-    audio,
   });
+
+  creator.addAudio(new FFAudio({ path: audio, volume: 0.9, fadeIn: 4, fadeOut: 4 }));
 
   // create FFScene
   const scene1 = new FFScene();
@@ -41,19 +42,31 @@ const createFFTask = () => {
     y: height / 2,
     width: width,
     height: 384,
+    showCover: false,
   });
   album.setTransition('zoomIn');
   album.setDuration(2);
   scene1.addChild(album);
 
   // add title
-  const text = new FFText({ text: '多图相册DEMO', x: width / 2, y: 150, fontSize: 40 });
-  text.setColor('#ffffff');
-  text.setBackgroundColor('#01003c');
-  text.addEffect('fadeInUp', 1, 1);
-  text.alignCenter();
-  text.setStyle({ padding: [4, 20, 6, 20] });
-  scene1.addChild(text);
+  const text1 = new FFText({ text: '多图相册DEMO', x: width / 2, y: 150, fontSize: 40 });
+  text1.setColor('#ffffff');
+  text1.setBackgroundColor('#01003c');
+  text1.addEffect('fadeInUp', 1, 1);
+  text1.alignCenter();
+  text1.setStyle({ padding: 10 });
+  scene1.addChild(text1);
+
+  const text2 = new FFText({
+    text: '可以支持多种动画切换和自定义动画效果',
+    x: width / 2,
+    y: 250,
+    fontSize: 24,
+  });
+  text2.setColor('#ffffff');
+  text2.addEffect('fadeInUp', 1, 2);
+  text2.alignCenter();
+  scene1.addChild(text2);
 
   // add logo
   const flogo2 = new FFImage({ path: logo2, x: width / 2, y: 60 });
