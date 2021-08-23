@@ -6,6 +6,7 @@ const { FFCreatorCenter, FFScene, FFImage, FFCreator } = require('../');
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/05.jpg');
   const bg2 = path.join(__dirname, './assets/imgs/bg/04.jpeg');
+  const cover = path.join(__dirname, './assets/imgs/cover/cover1.jpg');
   const logo1 = path.join(__dirname, './assets/imgs/logo/logo1.png');
   const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
   const cloud = path.join(__dirname, './assets/imgs/cloud.png');
@@ -22,11 +23,11 @@ const createFFTask = () => {
   const creator = new FFCreator({
     cacheDir,
     outputDir,
+    cover,
     width,
     height,
     //log: true,
-    debug: true,
-    highWaterMark: "3mb",
+    highWaterMark: '3mb',
     parallel: 8,
     audio,
   });
@@ -34,7 +35,7 @@ const createFFTask = () => {
   // create FFScene
   const scene1 = new FFScene();
   const scene2 = new FFScene();
-  scene1.setBgColor('#000000');
+  scene1.setBgColor('#0b0be6');
   scene2.setBgColor('#b33771');
 
   // add scene1 background

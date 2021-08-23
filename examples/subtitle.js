@@ -19,6 +19,7 @@ const createFFTask = () => {
   const img4 = path.join(__dirname, './assets/imgs/album/03.jpeg');
   const img5 = path.join(__dirname, './assets/imgs/album/02.jpeg');
   const logo = path.join(__dirname, './assets/imgs/logo/logo2.png');
+  const font1 = path.join(__dirname, './assets/font/font1.ttf');
   const tts = path.join(__dirname, './assets/audio/tts.wav');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
@@ -59,7 +60,7 @@ const createFFTask = () => {
   text.setBackgroundColor('#019333');
   text.addEffect('fadeInUp', 1, 1);
   text.alignCenter();
-  text.setStyle({ padding: [4, 20, 6, 20] });
+  text.setStyle({ padding: 10 });
   scene1.addChild(text);
 
   // add logo
@@ -82,6 +83,7 @@ const createFFTask = () => {
     y: height / 2 + 300,
   });
   subtitle.setText(title);
+  subtitle.setFont(font1)
   subtitle.setSpeech(tts); // 语音配音-tts
   subtitle.frameBuffer = 24;
   // subtitle.setDuration(album.getTotalDuration() + 1); 没有tts配音时候可以手动设置
