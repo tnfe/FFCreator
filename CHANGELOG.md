@@ -15,6 +15,7 @@
 ## v3.0.2
 
 * FFCreator3.0+ uses node Stream for data caching. The original version frees up disk space and further improves the speed.
+* Refactor the center class, Split into 3 categories.
 
 
 ## v2.0.8
@@ -28,6 +29,8 @@
 ## v1.4.5 release
 
 * This is a relatively stable version, optimized for many bugs under windows.
+* Add center test
+* TaskQueue appends task id by default
 
 ## v1.3.10
 
