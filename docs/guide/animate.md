@@ -23,6 +23,12 @@ image.addEffect({
 });
 ```
 
+当然也可以组合多个动画
+
+```javascript
+text.addEffect(['fadeInUp', 'rotateIn', 'blurIn', 'zoomIn'], 1, 0.5);
+```
+
 ### 创建自定义 effect
 
 ```javascript

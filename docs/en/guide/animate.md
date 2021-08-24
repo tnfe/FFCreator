@@ -21,6 +21,9 @@ image.addEffect({
   time: 1,
   delay: 1,
 });
+
+// Combine multiple animations
+text.addEffect(['fadeInUp', 'rotateIn', 'blurIn', 'zoomIn'], 1, 0.5);
 ```
 
 ### Unrealized effect

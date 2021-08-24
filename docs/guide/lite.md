@@ -2,7 +2,7 @@
 
 # FFCreatorLite
 
-> `FFCreatorLite`是`FFCreator`套装中的 lite 版本。当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择。
+> `FFCreatorLite`是`FFCreator`套装中的 lite 版本。当您要大量处理视频同时又追求更快的速度时, `FFCreatorLite`也许是更好的选择。
 
 FFCreator [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)
 FFCreatorLite [https://github.com/tnfe/FFCreatorLite](https://github.com/tnfe/FFCreatorLite)

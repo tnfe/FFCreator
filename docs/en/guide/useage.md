@@ -17,6 +17,7 @@ const creator = new FFCreator({
   output, // output file name (can not be set in FFCreatorCenter)
   width: 500, // width of the video
   height: 680, // video height
+  cover: 'a.jpg', // Set cover
   audioLoop: true, // Music loop
   fps: 24, // fps
   threads: 4, // Multi-threaded (fake) parallel rendering
@@ -38,7 +39,7 @@ creator.addChild(scene);
 - ### Create picture elements
 
 ```javascript
-const img = new FFImage({path: imgpath});
+const img = new FFImage({ path: imgpath });
 img.setXY(250, 340); // set position
 img.setScale(2); // set zoom
 img.setRotate(45); // set rotation
@@ -47,7 +48,7 @@ img.setWH(100, 200); // set width and height
 img.addEffect('fadeInDown', 1, 1); // set animation effect
 scene.addChild(img);
 // You can also put the parameters in the constructor conf, where resetXY is to recalculate the position
-const img = new FFImage({path, width, height, x, y, resetXY: false});
+const img = new FFImage({ path, width, height, x, y, resetXY: false });
 ```
 
 - ### Create album elements
@@ -66,6 +67,15 @@ album.setTransTime(1.5); // Set the duration of a single animation
 scene.addChild(album);
 ```
 
+- ### Create GIF Image
+
+```javascript
+const fgirl = new FFGifImage({ path: 'a.gif', x: 300 });
+fgirl.addEffect('backInUp', 1.2, 1.5);
+fgirl.setAnchor(0.5, 1);
+scene1.addChild(fgirl);
+```
+
 - ### Create text elements
 
 ```javascript
@@ -74,7 +84,7 @@ text.setColor('#ffffff'); // text color
 text.setBackgroundColor('#b33771'); // background color
 text.addEffect('fadeInDown', 1, 1); // Animation
 text.alignCenter(); // text is centered
-text.setStyle({padding: [4, 12, 6, 12]}); // Set the style object
+text.setStyle({ padding: [4, 12, 6, 12] }); // Set the style object
 scene.addChild(text);
 ```
 
@@ -127,7 +137,7 @@ scene.addAudio({ loop: false,path: ..., start: 20});
 Note: `FFVtuber` is a simple cartoon animation based on sequence frames, based on which you can realize your own more delicate anchor image
 
 ```javascript
-const vtuber = new FFVtuber({x: 100, y: 400});
+const vtuber = new FFVtuber({ x: 100, y: 400 });
 // Set the animation time cycle
 vtuber.setPeriod([
   [0, 3],
