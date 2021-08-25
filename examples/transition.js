@@ -70,16 +70,15 @@ const creatScene = ({ index, transition, text }) => {
 
   // bg img
   const img = path.join(__dirname, `./assets/imgs/trans/0${index}.jpeg`);
-  const bg = new FFImage({ path: img, resetXY: true });
+  const bg = new FFImage({ path: img, x: width / 2, y: height / 2 });
+  bg.addEffect({ type: 'zoomingIn', time: 5 });
   scene.addChild(bg);
 
   // title text
   const ftext = new FFText({ text, x: width / 2, y: height / 2 + 50, fontSize: 38 });
-  ftext.setColor('#30336b');
   ftext.alignCenter();
-  ftext.setBackgroundColor('#ffffff');
   ftext.addEffect('fadeInRight', 1, 1.3);
-  ftext.setStyle({ padding: [4, 12, 6, 12] });
+  ftext.setStyle({ color: '#30336b', backgroundColor: '#ffffff', padding: 10 });
   scene.addChild(ftext);
 
   // add logo2

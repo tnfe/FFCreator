@@ -17,6 +17,7 @@ const creator = new FFCreator({
   output,                   // 输出文件名(FFCreatorCenter中可以不设)
   width: 500,               // 影片宽
   height: 680,              // 影片高
+  cover: 'a.jpg',           // 设置封面
   audioLoop: true,          // 音乐循环
   fps: 24,                  // fps
   threads: 4,               // 多线程(伪造)并行渲染
@@ -29,8 +30,8 @@ const creator = new FFCreator({
 
 ```javascript
 const scene = new FFScene();
-scene.setBgColor('#30336b');        // 设置背景色         
-scene.setDuration(8.5);             // 设置停留时长   
+scene.setBgColor('#30336b');        // 设置背景色
+scene.setDuration(8.5);             // 设置停留时长
 scene.setTransition('Fat', 1.5);    // 设置过渡动画(类型, 时间)
 creator.addChild(scene);
 ```
@@ -39,15 +40,15 @@ creator.addChild(scene);
 
 ```javascript
 const img = new FFImage({path: imgpath});
-img.setXY(250, 340);                // 设置位置   
-img.setScale(2);                    // 设置缩放   
-img.setRotate(45);                  // 设置旋转   
-img.setOpacity(0.3);                // 设置透明度 
+img.setXY(250, 340);                // 设置位置
+img.setScale(2);                    // 设置缩放
+img.setRotate(45);                  // 设置旋转
+img.setOpacity(0.3);                // 设置透明度
 img.setWH(100, 200);                // 设置宽高
 img.addEffect('fadeInDown', 1, 1);  // 设置动画效果
 scene.addChild(img);
 // 也可以把参数放到构造函数conf中 ,这里的resetXY是重新计算位置
-const img = new FFImage({path, width, height, x, y, resetXY: false}); 
+const img = new FFImage({path, width, height, x, y, resetXY: false});
 ```
 
 - ### 创建相册元素
@@ -66,6 +67,15 @@ album.setTransTime(1.5);            // 设置单张动画时长
 scene.addChild(album);
 ```
 
+- ### 创建GIF图
+
+```javascript
+const fgirl = new FFGifImage({ path: 'a.gif', x: 300 });
+fgirl.addEffect('backInUp', 1.2, 1.5);
+fgirl.setAnchor(0.5, 1);
+scene1.addChild(fgirl);
+```
+
 - ### 创建文字元素
 
 ```javascript
@@ -74,7 +84,7 @@ text.setColor('#ffffff');                   // 文字颜色
 text.setBackgroundColor('#b33771');         // 背景色
 text.addEffect('fadeInDown', 1, 1);         // 动画
 text.alignCenter();                         // 文字居中
-text.setStyle({padding: [4, 12, 6, 12]});   // 设置样式object 
+text.setStyle({padding: [4, 12, 6, 12]});   // 设置样式object
 scene.addChild(text);
 ```
 
@@ -115,12 +125,12 @@ scene.addChild(video);
 ```javascript
 // 1. 添加全局背景音
 creator.addAudio('../audio/bg.mp3');  // 俩种配置方式
-creator.addAudio({ loop: false, path: ... , volume:1.5}); 
+creator.addAudio({ loop: false, path: ... , volume:1.5});
 // 2. 为每个场景添加单独音乐
 scene.addAudio('../audio/bg.mp3');  // 俩种配置方式
 scene.addAudio({ loop: false,path: ... , start: 20, volume:"20dB"});
 
-// volume 音量调整参数 
+// volume 音量调整参数
 // 0.5:音量减半  1.5:音量为原来的150% 20dB:增加10分贝 -20dB:减小20分贝
 // https://trac.ffmpeg.org/wiki/AudioVolume
 ```
@@ -178,7 +188,7 @@ const taskId = FFCreatorCenter.addTask(() => {
 FFCreatorCenter.onTaskComplete(taskId, result => {
     console.log(result.file);
 });
-                                              
+
 // 错误
 FFCreatorCenter.onTaskError(taskId, error => {
     console.error(error);

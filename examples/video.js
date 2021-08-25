@@ -4,7 +4,8 @@ const startAndListen = require('./listen');
 const { FFCreatorCenter, FFScene, FFVideo, FFText, FFImage, FFCreator } = require('../');
 
 const createFFTask = () => {
-  const bg2 = path.join(__dirname, './assets/imgs/bg/06.jpg');
+  const bg1 = path.join(__dirname, './assets/imgs/bg/h03.jpg');
+  const bg2 = path.join(__dirname, './assets/imgs/bg/h02.jpg');
   const logo1 = path.join(__dirname, './assets/imgs/logo/logo1.png');
   const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
   const dragon = path.join(__dirname, './assets/imgs/dragon.png');
@@ -29,6 +30,8 @@ const createFFTask = () => {
   scene1.setBgColor('#7e5fff');
   scene2.setBgColor('#2c3a47');
 
+  const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
+  scene1.addChild(fbg1);
   // add bottom cloud
   const fvideo = new FFVideo({
     path: video1,
@@ -58,6 +61,7 @@ const createFFTask = () => {
   // add scene2 background
   const fbg2 = new FFImage({ path: bg2, x: width / 2, y: height / 2 });
   scene2.addChild(fbg2);
+
   // add logo
   const flogo2 = new FFImage({ path: logo2, x: width / 2, y: height / 2 - 20 });
   flogo2.setScale(0.9);
