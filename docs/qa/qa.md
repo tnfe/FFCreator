@@ -38,17 +38,16 @@ xvfb-run -s "-ac -screen 0 1280x1024x24" npm start
 
 这种情况请使用`FFCreatorLite`, `FFCreatorLite`并不是`FFCreator`的简化版。在视频加工方面`FFCreatorLite`的效率超高。
 
-5. #### 为什么合成一分钟以上的视频的时候会生成几个G的缓存
+5. #### Error: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found
 
 #### 解决
 
-FFCreator3.0+使用`node Stream`进行数据缓存，相比之前版本不但节省了磁盘空间而且加工速度得到进一步提升。
+I think this is a possible problem? If you find it, you can refer to this issue. [https://github.com/Automattic/node-canvas/issues/1796](https://github.com/Automattic/node-canvas/issues/1796)
 
-- 通过设置`parallel`(or `frames`)来修改单次并行渲染的视频分帧数目。
-  > 注：这里要根据您的机器实际配置情况来合理设置，并不是数值越大越好。
+Maybe this can be solved
 
-```javascript
-parallel: 10,
+```shell
+npx node-pre-gyp rebuild -C ./node_modules/canvas
 ```
 
 - 设置`highWaterMark`, 关于 highWaterMark 水位线您可以通过[这里](http://nodejs.cn/api/stream/buffering.html)了解。
