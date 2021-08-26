@@ -218,7 +218,7 @@ sudo apt-get install libgl1-mesa-dev xvfb libxi-dev libx11-dev
 
 - How to Install and Use FFmpeg on CentOS [https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/](https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/)
 - How to Install FFmpeg on Debian [https://linuxize.com/post/how-to-install-ffmpeg-on-debian-9/](https://linuxize.com/post/how-to-install-ffmpeg-on-debian-9/)
-- How to compiling from Source on Linux [tecmint.com/install-ffmpeg-in-linux/](tecmint.com/install-ffmpeg-in-linux/)
+- How to compiling from Source on Linux [https://www.tecmint.com/install-ffmpeg-in-linux/](https://www.tecmint.com/install-ffmpeg-in-linux/)
 
 #### 更详细的教程请查看[这里](https://tnfe.github.io/FFCreator/#/guide/installation)
 
