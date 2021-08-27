@@ -1,3 +1,6 @@
+## v4.0.1
+* No other reason, because of a user. Thank him https://github.com/tnfe/FFCreator/issues/87
+
 ## v3.6.2
 
 * Upgrade [inkpaint](https://github.com/drawcall/inkpaint) rendering engine, double the rendering speed.
