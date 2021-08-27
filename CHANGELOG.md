@@ -1,6 +1,13 @@
+## v3.6.2
+
+* Upgrade [inkpaint](https://github.com/drawcall/inkpaint) rendering engine, double the rendering speed.
+* Set the default rendering method of FFCreator to cairo lib.
+* Fix the bug that the size of the FFVideo component is incorrect.
+* Fix the issue of emit error bubbling in FFCreatorCenter.
+
 ## v3.5.1
 
-* Replace the rendering kernel, https://github.com/tnfe/inkpaint. inkpaint has higher rendering speed and performance, and supports more features.
+* Replace the rendering kernel, https://github.com/drawcall/inkpaint. inkpaint has higher rendering speed and performance, and supports more features.
 * Add FFGifImage component that supports gif, which can render gif flexibly.
 * The text component supports features such as line wrapping, bolding, and stroke.
 * Support sound volume, fade in, fade out and other effects.
