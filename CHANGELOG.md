@@ -15,6 +15,7 @@
 * The text component supports features such as line wrapping, bolding, and stroke.
 * Support sound volume, fade in, fade out and other effects.
 * Add animation sisters such as blurIn blurOut.
+* Support setting cover picture.
 
 ## v3.1.2
 
