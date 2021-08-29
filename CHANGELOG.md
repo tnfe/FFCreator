@@ -1,3 +1,8 @@
+## v4.1.1
+* Optimize the FFGifImage component and increase the rendering speed by 30%.
+* Upgrade inkpaint version.
+* Refactor FFAudio class.
+
 ## v4.0.1
 * No other reason, because of a user. Thank him https://github.com/tnfe/FFCreator/issues/87
 
