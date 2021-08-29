@@ -23,7 +23,7 @@ const createFFTask = () => {
     height,
     rfps: 30,
     log: true,
-    debug: false,
+    debug: true,
     highWaterMark: '3mb',
   });
 
@@ -43,6 +43,7 @@ const createFFTask = () => {
     x: width / 2,
     y: height / 2,
     audio: true,
+    clarity: 10,
   });
   fvideo.addEffect('fadeInUp', 1, 1);
   fvideo.setDuration('00:00:03', '00:00:13');
