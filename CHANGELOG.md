@@ -1,3 +1,7 @@
+## v4.1.6
+* FFVideo adds precise startTime and endtime control.
+* FFNode adds getDurationTime method.
+
 ## v4.1.1
 * Optimize the FFGifImage component and increase the rendering speed by 30%.
 * Upgrade inkpaint version.
