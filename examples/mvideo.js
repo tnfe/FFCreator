@@ -23,7 +23,8 @@ const createFFTask = () => {
     height,
     rfps: 30,
     log: true,
-    highWaterMark: "3mb",
+    debug: false,
+    highWaterMark: '3mb',
   });
 
   // create FFScene
@@ -41,8 +42,10 @@ const createFFTask = () => {
     height: 423 * 0.7,
     x: width / 2,
     y: height / 2,
+    audio: true,
   });
-  fvideo.setAudio(true);
+  fvideo.addEffect('fadeInUp', 1, 1);
+  fvideo.setDuration('00:00:03', '00:00:13');
   scene1.addChild(fvideo);
 
   // add dragon image
@@ -56,7 +59,7 @@ const createFFTask = () => {
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(8);
+  scene1.setDuration(10);
   scene1.setTransition('Magnifier', 1.5);
   creator.addChild(scene1);
 
