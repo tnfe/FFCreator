@@ -23,7 +23,7 @@ const createFFTask = () => {
     height,
     rfps: 30,
     log: true,
-    highWaterMark: "3mb",
+    highWaterMark: '3mb',
   });
 
   // create FFScene
@@ -41,6 +41,8 @@ const createFFTask = () => {
     height: 423 * 0.7,
     x: width / 2,
     y: height / 2,
+    ss: '00:00:03',
+    to: '00:00:13',
   });
   fvideo.setAudio(true);
   scene1.addChild(fvideo);

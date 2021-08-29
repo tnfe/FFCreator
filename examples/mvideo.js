@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFScene, FFVideo, FFText, FFImage, FFCreator } = require('../');
+const { FFCreatorCenter, FFScene, FFVideoAlbum, FFText, FFImage, FFCreator } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/h03.jpg');
@@ -10,6 +10,7 @@ const createFFTask = () => {
   const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
   const dragon = path.join(__dirname, './assets/imgs/dragon.png');
   const video1 = path.join(__dirname, './assets/video/video1.mp4');
+  const video2 = path.join(__dirname, './assets/video/video2.mp4');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
 
@@ -21,8 +22,8 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    rfps: 30,
-    log: true,
+    rfps: 24,
+    log: false,
     debug: true,
     highWaterMark: '3mb',
   });
@@ -35,19 +36,20 @@ const createFFTask = () => {
 
   const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
   scene1.addChild(fbg1);
-  // add bottom cloud
-  const fvideo = new FFVideo({
-    path: video1,
-    width: width * 0.7,
-    height: 423 * 0.7,
+
+  // add new album
+  const album = new FFVideoAlbum({
+    list: [video1, video2],
     x: width / 2,
     y: height / 2,
-    audio: true,
-    clarity: 10,
+    width: width * 0.7,
+    height: 423 * 0.7,
+    ss: '00:00:00',
+    to: '00:00:06',
   });
-  fvideo.addEffect('fadeInUp', 1, 1);
-  fvideo.setDuration('00:00:03', '00:00:13');
-  scene1.addChild(fvideo);
+
+  album.addEffect('fadeInUp', 1, 1);
+  scene1.addChild(album);
 
   // add dragon image
   const fdragon = new FFImage({ path: dragon, x: 100, y: height / 2 + 100 });
@@ -60,8 +62,8 @@ const createFFTask = () => {
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(10);
-  scene1.setTransition('Magnifier', 1.5);
+  scene1.setDuration(12);
+  scene1.setTransition('Windows4', 2);
   creator.addChild(scene1);
 
   // add scene2 background
