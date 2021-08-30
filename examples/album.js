@@ -12,6 +12,7 @@ const createFFTask = () => {
   const img3 = path.join(__dirname, './assets/imgs/album/03.jpeg');
   const img4 = path.join(__dirname, './assets/imgs/album/04.jpeg');
   const img5 = path.join(__dirname, './assets/imgs/album/05.jpeg');
+  const cover = path.join(__dirname, './assets/imgs/cover/cover1.jpg')
   const audio = path.join(__dirname, './assets/audio/03.wav');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
@@ -20,6 +21,7 @@ const createFFTask = () => {
   const width = 576;
   const height = 1024;
   const creator = new FFCreator({
+    cover,
     cacheDir,
     outputDir,
     width,
