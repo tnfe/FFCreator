@@ -1,7 +1,15 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFGifImage, FFText, FFScene, FFImage, FFCreator } = require('../');
+const {
+  FFCreatorCenter,
+  FFGifImage,
+  FFText,
+  FFAudio,
+  FFScene,
+  FFImage,
+  FFCreator,
+} = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/h04.jpg');
@@ -26,8 +34,20 @@ const createFFTask = () => {
     width,
     height,
     parallel: 8,
-    audio,
+    //log: true,
+    //ffmpeglog: true,
   });
+
+  creator.addAudio(
+    new FFAudio({
+      path: audio,
+      volume: 1,
+      fadeIn: 4,
+      loop: true,
+      // ss: '00:00:00',
+      // to: '00:00:05',
+    }),
+  );
 
   // create FFScene
   const scene1 = new FFScene();
