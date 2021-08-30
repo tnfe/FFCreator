@@ -8,6 +8,7 @@ const {
   FFTween,
   FFScene,
   FFImage,
+  FFAudio,
   FFCreator,
 } = require('../');
 
@@ -35,9 +36,9 @@ const createFFTask = () => {
     width,
     height,
     parallel: 8,
-    audio,
   });
 
+  creator.addAudio(new FFAudio({ path: audio, volume: 0.9, fadeIn: 4, fadeOut: 4, loop: true }));
   // create FFScene
   const scene1 = new FFScene();
   const scene2 = new FFScene();
