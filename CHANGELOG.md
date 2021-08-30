@@ -1,3 +1,7 @@
+## v4.2.6
+* Add FFVideoAlbum Component. Support multiple video stitching into one album.
+* Optimize ffmpeg command performance.
+
 ## v4.1.6
 * FFVideo adds precise startTime and endtime control.
 * FFNode adds getDurationTime method.
