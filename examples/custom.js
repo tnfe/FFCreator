@@ -23,6 +23,7 @@ const createFFTask = () => {
     width,
     height,
     debug: false,
+    //threads: 4,
     audio,
   });
 
