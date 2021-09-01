@@ -18,7 +18,7 @@ const createFFTask = () => {
   const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
   const cover = path.join(__dirname, './assets/imgs/cover/cover2.jpg');
   const money = path.join(__dirname, './assets/imgs/gif/m.gif');
-  const audio = path.join(__dirname, './assets/audio/02.wav');
+  const audio = path.join(__dirname, './assets/audio/long.mp3');
   const font1 = path.join(__dirname, './assets/font/font1.ttf');
   const font2 = path.join(__dirname, './assets/font/font2.ttf');
   const outputDir = path.join(__dirname, './output/');
@@ -33,9 +33,7 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    parallel: 8,
-    //log: true,
-    //ffmpeglog: true,
+    parallel: 8
   });
 
   creator.addAudio(
@@ -44,8 +42,8 @@ const createFFTask = () => {
       volume: 1,
       fadeIn: 4,
       loop: true,
-      // ss: '00:00:00',
-      // to: '00:00:05',
+      ss: '00:00:07',
+      to: '00:00:20',
     }),
   );
 
