@@ -57,8 +57,12 @@ const choices = [
     value: 'preload',
   },
   {
-    name: 'rfps high-speed rendering',
+    name: 'Set rfps high-speed rendering',
     value: 'fps',
+  },
+  {
+    name: 'Multiple video stitching animation',
+    value: 'mvideo',
   },
   {
     name: 'Clear all caches and videos',

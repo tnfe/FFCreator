@@ -1,10 +1,34 @@
+## v4.2.6
+* Add FFVideoAlbum Component. Support multiple video stitching into one album.
+* Optimize ffmpeg command performance.
+
+## v4.1.6
+* FFVideo adds precise startTime and endtime control.
+* FFNode adds getDurationTime method.
+
+## v4.1.1
+* Optimize the FFGifImage component and increase the rendering speed by 30%.
+* Upgrade inkpaint version.
+* Refactor FFAudio class.
+
+## v4.0.1
+* No other reason, because of a user. Thank him https://github.com/tnfe/FFCreator/issues/87
+
+## v3.6.2
+
+* Upgrade [inkpaint](https://github.com/drawcall/inkpaint) rendering engine, double the rendering speed.
+* Set the default rendering method of FFCreator to cairo lib.
+* Fix the bug that the size of the FFVideo component is incorrect.
+* Fix the issue of emit error bubbling in FFCreatorCenter.
+
 ## v3.5.1
 
-* Replace the rendering kernel, https://github.com/tnfe/inkpaint. inkpaint has higher rendering speed and performance, and supports more features.
+* Replace the rendering kernel, https://github.com/drawcall/inkpaint. inkpaint has higher rendering speed and performance, and supports more features.
 * Add FFGifImage component that supports gif, which can render gif flexibly.
 * The text component supports features such as line wrapping, bolding, and stroke.
 * Support sound volume, fade in, fade out and other effects.
 * Add animation sisters such as blurIn blurOut.
+* Support setting cover picture.
 
 ## v3.1.2
 
