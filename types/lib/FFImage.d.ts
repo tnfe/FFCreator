@@ -15,7 +15,7 @@ declare namespace FFCreatorSpace {
    *     img.addEffect("slideInDown", 1.2, 0);
    *     scene.addChild(img);
    */
-  class FFImage extends FFNode {ß
+  class FFImage extends FFNode {
     constructor(conf: FFImageConf);
 
     /**

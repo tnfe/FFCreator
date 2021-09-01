@@ -1,10 +1,10 @@
 declare namespace FFCreatorSpace {
   interface FFAudioConf extends FFBaseConf {
-    src: string;
     path?: string;
     loop?: boolean;
     start?: number;
     volume?: number;
+    fadeIn?: number;
     /**
      * 与start 一样
      */

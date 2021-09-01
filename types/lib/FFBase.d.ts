@@ -11,7 +11,7 @@ declare namespace FFCreatorSpace {
      * 配置种类
      * @default base
      */
-    type?: ConfType;ß
+    type?: ConfType;
   }
 
   /**

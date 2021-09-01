@@ -42,7 +42,7 @@ declare namespace FFCreatorSpace {
   class FFCreator extends FFCon {
     constructor(conf: FFCreatorConf);
 
-    on<K extends keyof FFCreatorEventMap>(name: K, fn: (ev: FFCreatorEventMap[K]) => any);
+    on<K extends keyof FFCreatorEventMap>(name: K, fn: (ev: FFCreatorEventMap[K]) => any): void;
 
     /**
      *  Create output path, only used when using FFCreatorCenter.
@@ -81,6 +81,7 @@ declare namespace FFCreatorSpace {
      */
     getConf(key: string): any;
 
+    addAudio(args: FFAudio): void;
     addAudio(args: FFAudioConf): void;
 
     addVtuber(vtuber: FFVtuber): void;
