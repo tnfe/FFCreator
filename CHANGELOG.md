@@ -1,3 +1,7 @@
+## v4.3.3
+* FFAudio supports the interception and playback of long audio.
+* When the ffmpeg command is abnormal, kill the process.
+
 ## v4.2.6
 * Add FFVideoAlbum Component. Support multiple video stitching into one album.
 * Optimize ffmpeg command performance.
