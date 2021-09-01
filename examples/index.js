@@ -42,7 +42,7 @@ const choices = [
   },
   {
     name: 'Custom animation effect demo',
-    value: 'effect',
+    value: 'custom',
   },
   {
     name: 'Various ways to add animation',
