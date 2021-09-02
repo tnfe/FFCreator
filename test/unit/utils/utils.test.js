@@ -42,7 +42,7 @@ describe('utils/utils', ()=> {
     expect(result).toEqual({1:1,2:2})
   })
 
-  test('floor ', ()=> {
+  test('floor', ()=> {
     const result = utils.floor(10)
     expect(result).toBe(10)
   })
@@ -56,11 +56,4 @@ describe('utils/utils', ()=> {
     const result = utils.getErrStack('测试')
     expect(result).toBe('测试')
   })
-
-
-
-
-
-
-
 })
