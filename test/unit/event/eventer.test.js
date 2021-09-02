@@ -14,18 +14,17 @@ describe('event/eventer', () => {
   });
 
   test('emit: should called target.emit', () => {
-    eventer.on('hello', str => {
-      expect(str).toBe('world');
+    eventer.on('hello', obj => {
+      expect(obj.key).toBe('world');
     });
-    eventer.emit({ type: 'hello' }, 'world');
+    eventer.emit('hello', { key: 'world' });
   });
 
   test('emitError: should called target.emit', () => {
     eventer.on('error', error => {
-      console.log(error);
-      expect(error).toBe('world');
+      expect(error.error).toBe('a js error');
     });
-    eventer.emitError({ pos: 'here', error: new Error('here error') });
+    eventer.emitError({ pos: 'here', error: new Error('a js error') });
   });
 
   test('destroy: target should be null', () => {
