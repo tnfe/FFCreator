@@ -4,9 +4,10 @@ const center = require('@/center/center');
 const ffmpegUtil = require('@/utils/ffmpeg');
 /** @type {import('../../../lib/utils/logger')} */
 const FFLogger = require('@/utils/logger');
+const FFCreator = require('@/creator');
 const EventEmitter = require('eventemitter3');
 
-const noop = () => {};
+const noop = () => new FFCreator();
 
 describe('center/center', () => {
   test('FFCreatorCenter initial params', () => {
