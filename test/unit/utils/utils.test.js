@@ -2,12 +2,12 @@ const utils = require('@/utils/utils')
 
 describe('utils/utils', ()=> {
   test('generateID: Generate auto-increment id based on type ', ()=> {
-    const result = utils.generateID()
-    expect(result).toBe("undefined_1")
+    const result = utils.genId('hello')
+    expect(result).toBe("hello_1")
   })
 
   test('uid: Generate 24-bit random number ', ()=> {
-    const result = utils.uid()
+    const result = utils.genUuid()
     expect(result).toStrictEqual(expect.any(String))
   })
 
