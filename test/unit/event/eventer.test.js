@@ -28,7 +28,8 @@ describe('event/eventer', () => {
   });
 
   test('destroy: target should be null', () => {
-    expect(eventer.removeAllListeners).toHaveBeenCalled();
+    eventer.removeAllListeners = jest.fn();
     eventer.destroy();
+    expect(eventer.removeAllListeners).toHaveBeenCalled();
   });
 });
