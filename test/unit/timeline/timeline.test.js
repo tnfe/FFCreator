@@ -1,8 +1,9 @@
-const timeline = require('@/utils/timeline')
+const Timeline = require('@/timeline/timeline')
 
-describe('utils/timeline', ()=> {
+describe('timeline/timeline', ()=> {
   test('update: Timeline update function ', ()=> {
-    const result = timeline.update()
+    const timeline = new Timeline(60);
+    timeline.annotate(scenes);
     expect(result).toBeUndefined()
   })
 
