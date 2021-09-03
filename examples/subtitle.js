@@ -83,13 +83,13 @@ const createFFTask = () => {
     y: height / 2 + 300,
   });
   subtitle.setText(title);
-  subtitle.setFont(font1)
+  subtitle.setFont(font1);
   subtitle.setSpeech(tts); // 语音配音-tts
   subtitle.frameBuffer = 24;
   // subtitle.setDuration(album.getTotalDuration() + 1); 没有tts配音时候可以手动设置
   scene1.addChild(subtitle);
 
-  scene1.setDuration(album.getTotalDuration());
+  scene1.setDuration(album.getTotalDuration() + 1);
   scene1.setTransition('FastSwitch', 1.5);
   creator.addChild(scene1);
 
