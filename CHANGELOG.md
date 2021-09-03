@@ -1,3 +1,7 @@
+## v4.5.1
+* Fix the background problem of FFSubtitle when there is no text.
+* Add the initScale property, fix the problem of animation reset size.
+
 ## v4.3.3
 * FFAudio supports the interception and playback of long audio.
 * When the ffmpeg command is abnormal, kill the process.
