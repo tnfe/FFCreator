@@ -88,6 +88,11 @@ const createFFTask = () => {
     },
   );
 
+  const fdragon2 = new FFImage({ path: dragon, x: 700, y: 300, width: 320 / 2, height: 402 / 2 });
+  fdragon2.addBlend('Add');
+  fdragon2.addEffect('bounceIn', 1, 1);
+  scene1.addChild(fdragon2);
+
   const fmario = new FFImage({ path: mario, x: 500, y: 400, alpha: 0 });
   scene1.addChild(fmario);
   fmario.addAnimate({
