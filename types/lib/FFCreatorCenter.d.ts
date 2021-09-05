@@ -18,35 +18,98 @@ declare namespace FFCreatorSpace {
    * @description
    *     On the server side, you only need to start FFCreatorCenter,
    *     remember to add error logs to the events in it
-   *ß
+   *
    */
-  class FFCreatorCenter {
-    static closeLog(): void;
+  interface FFCreatorCenter {
 
-    static openLog(): void;
+    /**
+     * Close logger switch
+     */
+    closeLog(): void;
 
-    static addTask(task: () => void): string;
+    /**
+     * Open logger switch
+     */
+    openLog(): void;
 
-    static addTaskByTemplate(id: string, params: Record<string, any>): string;
+    /**
+     * Add a production task
+     * @param task a production task
+     */
+    addTask(task: () => void): string;
 
-    static onTask(id: string, eventName: string, fun: EventListener): void;
+    /**
+     * Add a production task by template
+     * @param id a template id
+     * @param params
+     */
+    addTaskByTemplate(id: string, params: Record<string, any>): string;
 
-    static onTaskError(id: string, fun: EventListener): void;
+    /**
+     * Listen to production task events
+     * @param id  a task id
+     * @param eventName task name
+     * @param fun task event handler
+     */
+    onTask(id: string, eventName: string, fun: EventListener): void;
 
-    static onTaskComplete(id: string, fun: EventListener): void;
+    /**
+     * Listen to production task Error events
+     * @param id a task id
+     * @param fun task event handler
+     */
+    onTaskError(id: string, fun: EventListener): void;
 
-    static onTaskComplete(id): void;
+    /**
+     * Listen to production task Complete events
+     * @param id a task id
+     * @param fun task event handler
+     */
+    onTaskComplete(id: string, fun: EventListener): void;
 
-    static start(): Promise<unknown>;
+    /**
+     * Start a task
+     */
+    start(): Promise<unknown>;
 
-    static getTaskState(id: string): FFCreatorTaskState;
+    /**
+     * Get the status of a task by id
+     * @param id task id
+     */
+    getTaskState(id: string): FFCreatorTaskState;
 
-    static setFFmpegPath(path: string): void;
+    /**
+     * add a creator task template
+     * @param id task template id name
+     * @param fun task template
+     */
+    createTemplate(id: string, fun: EventListener): void;
 
-    static setFFprobePath(path: string): void;
+    /**
+     * Set the installation path of the current server ffmpeg.
+     * If not set, the ffmpeg command of command will be found by default.
+     * @param path installation path of the current server ffmpeg
+     */
+    setFFmpegPath(path: string): void;
 
-    static getProgress(id: string): void;
+    /**
+     * Set the installation path of the current server ffprobe.
+     * If not set, the ffprobe command of command will be found by default.
+     * @param path installation path of the current server ffprobe
+     */
+    setFFprobePath(path: string): void;
 
-    static resetTasks(): void;
+    /**
+     * get task progress by task id
+     * @param id
+     */
+    getProgress(id: string): number;
+
+    /**
+     * reset all tasks
+     */
+    resetTasks(): void;
   }
+
+  const FFCreatorCenter:FFCreatorCenter;
 }
