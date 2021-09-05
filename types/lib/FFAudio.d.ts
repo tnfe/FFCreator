@@ -1,12 +1,26 @@
 declare namespace FFCreatorSpace {
-  interface FFAudioConf extends FFBaseConf {
-    path?: string;
+  interface FFAudioConf {
+    path: string;
+    /**
+     * same path
+     */
+    src?: string;
+    /**
+     * @default false
+     */
+    bg?: boolean;
+    /**
+     * @default false
+     */
     loop?: boolean;
-    start?: number;
     volume?: number;
     fadeIn?: number;
+    fadeOut?: number;
+    ss?: number;
+    to?: number;
+    start?: number;
     /**
-     * 与start 一样
+     * same start
      */
     startTime?: number;
   }
