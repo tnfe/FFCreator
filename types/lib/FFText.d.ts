@@ -1,19 +1,20 @@
 declare namespace FFCreatorSpace {
-  interface FFTextConf extends FFNodeConf {
+  interface FFTextConf extends FFNodeCommonConf {
     text?: string;
     /**
-     * 字号
+     * fontSize
      * @default 36
      */
     fontSize?: number;
     color?: string;
     backgroundColor?: string;
     /**
-     * 字体文件路径
+     * font file path
      */
     font?: string;
     /**
-     * 样式传入，目前支持的属性有限需要测试
+     * css style
+     * @description not support all css style
      */
     style?: Record<string, any>;
   }
@@ -31,5 +32,16 @@ declare namespace FFCreatorSpace {
      * @param style
      */
     setStyle(style: any): void;
+
+    /**
+     * Set text font file path
+     * @param path text font file path
+     */
+    setFont(path: string): void;
+
+    /**
+     * Set Text horizontal center function
+     */
+    alignCenter(): void;
   }
 }

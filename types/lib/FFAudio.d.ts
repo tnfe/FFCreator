@@ -16,8 +16,14 @@ declare namespace FFCreatorSpace {
     volume?: number;
     fadeIn?: number;
     fadeOut?: number;
-    ss?: number;
-    to?: number;
+    /**
+     * string example hh:mm:ss
+     */
+    ss?: number | string;
+    /**
+     * string example hh:mm:ss
+     */
+    to?: number | string;
     start?: number;
     /**
      * same start

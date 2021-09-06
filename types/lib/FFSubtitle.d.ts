@@ -17,7 +17,11 @@ declare namespace FFCreatorSpace {
   class FFSubtitle extends FFNode {
     constructor(conf: FFSubtitleConf);
 
-    setFrameBuffer(buffer): void;
+    /**
+     * Set frame buffer
+     * @param buffer frame buffer
+     */
+    setFrameBuffer(buffer: number): void;
 
     /**
      * Set up voice narration

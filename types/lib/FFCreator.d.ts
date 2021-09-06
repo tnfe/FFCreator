@@ -5,11 +5,6 @@
 
 declare namespace FFCreatorSpace {
   interface FFCreatorConf extends ConfOptions {
-    /**
-     * 配置种类
-     * @default creator
-     */
-    type?: ConfType;
   }
 
   interface FFCreatorEventMap {
@@ -81,11 +76,23 @@ declare namespace FFCreatorSpace {
      */
     getConf(key: string): any;
 
-    addAudio(args: FFAudio): void;
-    addAudio(args: FFAudioConf): void;
+    /**
+     * add audio
+     * @param args FFAudio or audio config
+     */
+    addAudio(args: FFAudio | FFAudioConf): void;
 
+    /**
+     * add vtuber
+     * @param vtuber
+     */
     addVtuber(vtuber: FFVtuber): void;
 
+    /**
+     * set width and height
+     * @param width
+     * @param height
+     */
     setSize(width: number, height: number): void;
 
     /**
@@ -105,8 +112,14 @@ declare namespace FFCreatorSpace {
      */
     output(output: string): void;
 
+    /**
+     * Close logger switch
+     */
     closeLog(): void;
 
+    /**
+     * Open logger switch
+     */
     openLog(): void;
 
     /**
@@ -116,10 +129,22 @@ declare namespace FFCreatorSpace {
      */
     setInputOptions(options: Record<string, unknown>): void;
 
-    start(): Promise<unknown>;
+    /**
+     * Start video processing
+     * @param delay default 25
+     */
+    start(delay?: number): Promise<unknown>;
 
+    /**
+     * Set the installation path of the current server ffmpeg.
+     * @param path
+     */
     static setFFmpegPath(path: string): void;
 
+    /**
+     * Set the installation path of the current server ffprobe.
+     * @param path
+     */
     static setFFprobePath(path: string): void;
 
     /**

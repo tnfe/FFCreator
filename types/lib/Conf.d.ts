@@ -100,17 +100,17 @@ declare namespace FFCreatorSpace {
     renderFps?: number;
     /**
      * setting outputfile dir
-     * @default 当前根目录
+     * @default current root
      */
     outputDir?: string;
     /**
      * setting outputfile dir
-     * @default 当前根目录
+     * @default current root
      */
     dir?: string;
     /**
      * setting cachefile dir
-     * @default 当前根目录
+     * @default current root
      */
     cacheDir?: string;
     /**

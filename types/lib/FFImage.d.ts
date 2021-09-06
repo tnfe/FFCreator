@@ -1,5 +1,5 @@
 declare namespace FFCreatorSpace {
-  interface FFImageConf extends Omit<FFNodeConf, 'type'> {
+  interface FFImageConf extends FFNodeCommonConf {
     path: string;
     resetPos?: boolean;
     resetXY?: boolean;

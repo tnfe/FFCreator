@@ -1,4 +1,8 @@
 declare namespace FFCreatorSpace {
+
+  /** common extends props */
+  type FFNodeCommonConf = Pick<FFNodeConf, 'x' | 'y' | 'scale' | 'rotate' | 'opacity'>
+
   interface FFNodeConf extends FFBaseConf {
     /**
      * 配置种类
@@ -145,16 +149,16 @@ declare namespace FFCreatorSpace {
      * @param delay - delay of animation
      */
     addEffect(
-      name: Pick<FFEffectConf, 'type'>,
-      time: Pick<FFEffectConf, 'time'>,
-      delay: Pick<FFEffectConf, 'time'>,
+      name: EffectTypes,
+      time: number,
+      delay: number,
     ): void;
 
     /**
-     * @todo 参数类型
+     * Add a FFAnimate animation
      * @param animation
      */
-    addAnimate(animation): void;
+    addAnimate(animation: FFAnimation | FFAnimationConf): void;
 
     /**
      * All resources materials and actions are ready
