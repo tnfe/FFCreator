@@ -18,6 +18,7 @@ describe('timeline/timeline', () => {
 
   const timeline = new Timeline(60);
   timeline.annotate(createScenes());
+
   test('update: Timeline update function ', () => {
     expect(timeline.duration).toBe(16.5);
   });
