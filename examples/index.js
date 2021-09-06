@@ -57,7 +57,7 @@ const choices = [
     value: 'preload',
   },
   {
-    name: 'Set rfps high-speed rendering',
+    name: 'Set fps high-speed rendering',
     value: 'fps',
   },
   {

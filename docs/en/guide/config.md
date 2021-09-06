@@ -5,8 +5,7 @@
 | ----------------- | ----------- | ------ | ------------ ------------ |
 | width | w | number | video width |
 | height | h | number | video height |
-| fps | None | number (default 24) | Video frame rate |
-| rfps | renderFps | number (default 60) | ffcreator rendering frequency (the higher the frequency, the better the video quality) |
+| fps | None | number (default 30) | Video frame rate |
 | outputDir | dir | string | Video output path |
 | cacheDir | None | string | Cache directory |
 | output | out | string | Output file name (not required, no need to fill in in FFCenter mode) |

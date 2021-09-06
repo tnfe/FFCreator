@@ -1,3 +1,6 @@
+## v4.5.3
+* Fix the scale error when FFVideo uses animation.
+
 ## v4.5.1
 * Fix the background problem of FFSubtitle when there is no text.
 * Add the initScale property, fix the problem of animation reset size.

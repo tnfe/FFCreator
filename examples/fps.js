@@ -21,7 +21,7 @@ const createFFTask = () => {
   const creator = new FFCreator({
     cacheDir,
     outputDir,
-    rfps: 30,
+    fps: 24,
     crf: 28,
     width,
     height,
