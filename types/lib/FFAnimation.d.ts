@@ -63,6 +63,8 @@ declare namespace FFCreatorSpace {
     | 'fadeOutRightBig'
     | 'fadeOutUpBig'
     | 'fadeOutDownBig'
+    | 'blurIn'
+    | 'blurOut'
     | 'backIn'
     | 'backOut'
     | 'backInLeft'

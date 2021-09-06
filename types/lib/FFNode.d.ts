@@ -1,7 +1,6 @@
 declare namespace FFCreatorSpace {
-
   /** common extends props */
-  type FFNodeCommonConf = Pick<FFNodeConf, 'x' | 'y' | 'scale' | 'rotate' | 'opacity' | 'duration'>
+  type FFNodeCommonConf = Pick<FFNodeConf, 'x' | 'y' | 'scale' | 'rotate' | 'opacity' | 'duration'>;
 
   interface FFNodeConf extends FFBaseConf {
     /**
@@ -39,12 +38,39 @@ declare namespace FFCreatorSpace {
     preload?: boolean;
   }
 
+  /**
+   * from the link
+   * https://github.com/drawcall/inkpaint/blob/master/src/const.js
+   * @todo support toUpperCase()
+   */
+  type AblendTypes =
+    | 'NORMAL'
+    | 'ADD'
+    | 'MULTIPLY'
+    | 'SCREEN'
+    | 'OVERLAY'
+    | 'DARKEN'
+    | 'LIGHTEN'
+    | 'COLOR_DODGE'
+    | 'COLOR_BURN'
+    | 'HARD_LIGHT'
+    | 'SOFT_LIGHT'
+    | 'DIFFERENCE'
+    | 'EXCLUSION:'
+    | 'HUE'
+    | 'SATURATION'
+    | 'COLOR'
+    | 'LUMINOSITY'
+    | 'NORMAL_NPM'
+    | 'ADD_NPM'
+    | 'SCREEN_NPM';
+
   class FFAnimation {}
 
   class FFAnimations {}
 
   /**
-   * FFNode Class - FFCreator displays the basic class of the object,
+   * FFNode Class - FFCreator displays the basic class of the obj
    * Other display objects need to inherit from this class.
    *
    * @example
@@ -64,7 +90,7 @@ declare namespace FFCreatorSpace {
     /**
      * Set display object registration center
      */
-    setAnchor(anchor: number): void;
+    setAnchor(anchorX: number, anchorY?: number): void;
 
     /**
      * Set display object scale
@@ -156,11 +182,10 @@ declare namespace FFCreatorSpace {
      * @param time - time of animation
      * @param delay - delay of animation
      */
-    addEffect(
-      name: EffectTypes,
-      time: number,
-      delay: number,
-    ): void;
+    addEffect(name: EffectTypes, time: number, delay: number): void;
+
+    addEffect(name: EffectTypes[], time: number, delay: number): void;
+    addEffect(conf: { type: EffectTypes; time: number; delay?: number }): void;
 
     /**
      * Add a FFAnimate animation
@@ -182,5 +207,7 @@ declare namespace FFCreatorSpace {
      * Start rendering
      */
     start(): void;
+
+    addBlend(blend: AblendTypes): void;
   }
 }

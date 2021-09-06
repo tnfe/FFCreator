@@ -5,6 +5,9 @@ declare namespace FFCreatorSpace {
     resetXY?: boolean;
     effect?: FFEffectConf;
     animate?: FFAnimationConf;
+    alpha?: number;
+    width?: number;
+    height?: number;
   }
 
   /**
