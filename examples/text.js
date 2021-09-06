@@ -153,7 +153,8 @@ of FFText`,
     x: width / 2,
     y: 360,
   });
-  text5.addEffect('backInBottom', 1, 2);
+  // backInBottom not support in effects.js
+  text5.addEffect('backInDown', 1, 2);
   text5.setStyle({
     fontFamily: ['Microsoft YaHei', 'Helvetica', 'Tahoma'],
     fontSize: 32,
