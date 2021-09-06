@@ -45,5 +45,4 @@ describe('utils/fs', () => {
     await FS.writeFileAsync({ dir: '/', name: 'test.raw' });
     expect(fs.outputFile).toHaveBeenCalled();
   });
-
 });
