@@ -5,8 +5,7 @@
 | ----------------- | ----------- | ------ | ------------------------ |
 | width          | w               |  number         | 视频宽度                              |
 | height         | h                |    number        | 视频高度                            |
-| fps          | 无                  |  number (默认30)         | 视频帧频    |
-| rfps          | renderFps          |    number (默认60)       | ffcreator渲染频率 (频率越高视频质量越好) |
+| fps          | rfps                  |  number (默认30)         | 视频帧频    |
 | outputDir      | dir                 | string            | 视频输出路径          |
 | cacheDir          | 无              |     string    | 缓存目录                        |
 | output          | out           | string       | 输出文件名(非必须, 在FFCenter模式下不需要填写)                     |
