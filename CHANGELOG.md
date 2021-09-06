@@ -1,3 +1,7 @@
+## v5.0.3
+* Remove the renderFps configuration option, unify rfps and fps.
+* Rendering performance increased by 60%, time increased by 1/3.
+
 ## v4.5.3
 * Fix the scale error when FFVideo uses animation.
 
