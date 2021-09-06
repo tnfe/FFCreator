@@ -5,6 +5,7 @@
 
 declare namespace FFCreatorSpace {
   interface FFCreatorConf extends ConfOptions {
+    log?: boolean;
   }
 
   interface FFCreatorEventMap {
@@ -153,5 +154,11 @@ declare namespace FFCreatorSpace {
      * @param effectConf the new effect value
      */
     createEffect(name: string, effectConf: FFAnimationConf): void;
+
+    /**
+     * Set as the first frame cover page image
+     * @param cover the cover face image path
+     */
+    setCover(cover: string): void;
   }
 }

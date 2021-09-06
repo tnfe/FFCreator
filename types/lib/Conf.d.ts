@@ -20,7 +20,9 @@ declare namespace FFCreatorSpace {
      * bitrate set bitrate for ffmpeg
      * @default null
      */
-    vb?: null;
+    vb?: string;
+
+    cover?: string;
     /**
      * @default false
      */
@@ -30,6 +32,14 @@ declare namespace FFCreatorSpace {
      * @default false
      */
     debug?: boolean;
+    /**
+     * @default true
+     */
+    preload?: boolean;
+    /**
+     * @default false
+     */
+    antialias?: boolean;
     /**
      * whether audio loop
      * @default false
@@ -139,6 +149,14 @@ declare namespace FFCreatorSpace {
      * @default 1mb
      */
     size?: string;
+    /**
+     * @default medium
+     */
+    clarity?: string;
+    /**
+     * @default medium
+     */
+    renderClarity?: string;
   }
 
   /**

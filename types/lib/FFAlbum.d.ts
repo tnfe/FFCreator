@@ -1,6 +1,9 @@
 declare namespace FFCreatorSpace {
-  interface FFAlbumConf extends FFImageConf {
+  interface FFAlbumConf extends Omit<FFImageConf, 'path'> {
     list: string[];
+    width: number;
+    height?: number;
+    showCover?: boolean;
   }
 
   /**
@@ -38,5 +41,7 @@ declare namespace FFCreatorSpace {
      * @param transition  transition typev @default 'random'
      */
     setTransition(transition: 'random' | EffectTypes): void;
+
+    getTotalDuration(): number;
   }
 }

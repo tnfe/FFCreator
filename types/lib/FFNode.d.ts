@@ -1,7 +1,7 @@
 declare namespace FFCreatorSpace {
 
   /** common extends props */
-  type FFNodeCommonConf = Pick<FFNodeConf, 'x' | 'y' | 'scale' | 'rotate' | 'opacity'>
+  type FFNodeCommonConf = Pick<FFNodeConf, 'x' | 'y' | 'scale' | 'rotate' | 'opacity' | 'duration'>
 
   interface FFNodeConf extends FFBaseConf {
     /**
@@ -29,6 +29,14 @@ declare namespace FFCreatorSpace {
      * @default 1
      */
     opacity?: number;
+    /**
+     * @default 0
+     */
+    duration?: number;
+    /**
+     * @default false
+     */
+    preload?: boolean;
   }
 
   class FFAnimation {}
