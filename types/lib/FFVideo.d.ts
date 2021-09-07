@@ -2,7 +2,7 @@ declare namespace FFCreatorSpace {
   interface FFVideoConf extends FFImageConf {
     width: number;
     ss?: string | number;
-    to?: string | number
+    to?: string | number;
   }
 
   /**
