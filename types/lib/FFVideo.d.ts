@@ -1,6 +1,6 @@
 declare namespace FFCreatorSpace {
   interface FFVideoConf extends FFImageConf {
-    width: number | string;
+    width: number;
   }
 
   /**

@@ -6,6 +6,7 @@
 declare namespace FFCreatorSpace {
   interface FFCreatorConf extends ConfOptions {
     log?: boolean;
+    audio?: FFAudioConf | string;
   }
 
   interface FFCreatorEventMap {
@@ -160,5 +161,21 @@ declare namespace FFCreatorSpace {
      * @param cover the cover face image path
      */
     setCover(cover: string): void;
+
+    /**
+     * Create new effect and add to effects object
+     * @param name the new effect name
+     * @param params the new effect value
+     */
+    createEffect(
+      name: string,
+      params: {
+        from: Record<string, any>;
+        to: Record<string, any>;
+        ease?: AnamiationEaseTypes;
+        time?: number;
+        delay?: number;
+      },
+    ): void;
   }
 }

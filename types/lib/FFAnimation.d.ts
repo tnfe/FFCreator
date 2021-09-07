@@ -122,7 +122,8 @@ declare namespace FFCreatorSpace {
     | 'moveingUp'
     | 'moveingBottom'
     | 'fadingIn'
-    | 'fadingOut';
+    | 'fadingOut'
+    | string;
 
   /**
    * effect 相关配置
