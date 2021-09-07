@@ -4,13 +4,13 @@ const path = require('path');
 const colors = require('colors')
 
 const createFFTask = () => {
-    const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
-    const img1 = path.join(__dirname, './assets/imgs/album/01.jpeg');
-    const img2 = path.join(__dirname, './assets/imgs/album/02.jpeg');
-    const img3 = path.join(__dirname, './assets/imgs/album/03.jpeg');
-    const img4 = path.join(__dirname, './assets/imgs/album/04.jpeg');
-    const img5 = path.join(__dirname, './assets/imgs/album/05.jpeg');
-    const audio = path.join(__dirname, './assets/audio/03.wav');
+    const logo2 = path.join(__dirname, '../../examples/assets/imgs/logo/logo2.png');
+    const img1 = path.join(__dirname, '../../examples/assets/imgs/album/01.jpeg');
+    const img2 = path.join(__dirname, '../../examples/assets/imgs/album/02.jpeg');
+    const img3 = path.join(__dirname, '../../examples/assets/imgs/album/03.jpeg');
+    const img4 = path.join(__dirname, '../../examples/assets/imgs/album/04.jpeg');
+    const img5 = path.join(__dirname, '../../examples/assets/imgs/album/05.jpeg');
+    const audio = path.join(__dirname, '../../examples/assets/audio/03.wav');
     const outputDir = path.join(__dirname, './output/');
     const cacheDir = path.join(__dirname, './cache/');
 

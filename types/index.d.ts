@@ -13,6 +13,7 @@
 /// <reference path="./lib/FFAnimation.d.ts" />
 /// <reference path="./lib/FFAudio.d.ts" />
 /// <reference path="./lib/FFVideo.d.ts" />
+/// <reference path="./lib/FFVideoAlbum.d.ts" />
 /// <reference path="./lib/FFAlbum.d.ts" />
 /// <reference path="./lib/FFSubtitle.d.ts" />
 /// <reference path="./lib/FFScene.d.ts" />

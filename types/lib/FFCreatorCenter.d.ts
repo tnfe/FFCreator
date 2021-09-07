@@ -109,6 +109,8 @@ declare namespace FFCreatorSpace {
      * reset all tasks
      */
     resetTasks(): void;
+
+    getInfo(): string;
   }
 
   const FFCreatorCenter:FFCreatorCenter;

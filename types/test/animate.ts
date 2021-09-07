@@ -4,16 +4,16 @@ const path = require('path');
 const colors = require('colors');
 
 const createFFTask = () => {
-    const bg1 = path.join(__dirname, './assets/imgs/bg/h01.jpg');
-    const bg2 = path.join(__dirname, './assets/imgs/bg/h04.jpg');
-    const logo1 = path.join(__dirname, './assets/imgs/logo/logo1.png');
-    const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
-    const cover = path.join(__dirname, './assets/imgs/cover/cover2.jpg');
-    const dragon = path.join(__dirname, './assets/imgs/dragon.png');
-    const mario = path.join(__dirname, './assets/imgs/mario.png');
-    const elephant = path.join(__dirname, './assets/imgs/elephant.png');
-    const money = path.join(__dirname, './assets/imgs/gif/m.gif');
-    const audio = path.join(__dirname, './assets/audio/02.wav');
+    const bg1 = path.join(__dirname, '../../examples/assets/imgs/bg/h01.jpg');
+    const bg2 = path.join(__dirname, '../../examples/assets/imgs/bg/h04.jpg');
+    const logo1 = path.join(__dirname, '../../examples/assets/imgs/logo/logo1.png');
+    const logo2 = path.join(__dirname, '../../examples/assets/imgs/logo/logo2.png');
+    const cover = path.join(__dirname, '../../examples/assets/imgs/cover/cover2.jpg');
+    const dragon = path.join(__dirname, '../../examples/assets/imgs/dragon.png');
+    const mario = path.join(__dirname, '../../examples/assets/imgs/mario.png');
+    const elephant = path.join(__dirname, '../../examples/assets/imgs/elephant.png');
+    const money = path.join(__dirname, '../../examples/assets/imgs/gif/m.gif');
+    const audio = path.join(__dirname, '../../examples/assets/audio/02.wav');
     const outputDir = path.join(__dirname, './output/');
     const cacheDir = path.join(__dirname, './cache/');
 

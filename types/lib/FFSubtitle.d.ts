@@ -1,8 +1,14 @@
 /// <reference path="FFNode.d.ts" />
 declare namespace FFCreatorSpace {
-  interface FFSubtitleConf extends Omit<FFNodeConf, 'type'> {
-    text: string;
+  interface FFSubtitleConf {
+    text?: string;
+    comma?: boolean;
+    backgroundColor?: string;
+    color?: string;
+    fontSize?: number;
     style?: Record<string, any>;
+    x?: number;
+    y?: number;
   }
 
   /**
@@ -15,6 +21,9 @@ declare namespace FFCreatorSpace {
    *     subtitle.setText(text);
    */
   class FFSubtitle extends FFNode {
+
+    frameBuffer: number;
+
     constructor(conf: FFSubtitleConf);
 
     /**
