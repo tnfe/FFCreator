@@ -5,9 +5,9 @@ import { FFCreator, FFImage, FFScene, FFText } from 'ffcreator';
 
 const width = 600;
 const height = 400;
-const logo1 = path.join(__dirname, './assets/imgs/logo/logo1.png');
-const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
-const audio = path.join(__dirname, './assets/audio/01.wav');
+const logo1 = path.join(__dirname, '../../examples/assets/imgs/logo/logo1.png');
+const logo2 = path.join(__dirname, '../../examples/assets/imgs/logo/logo2.png');
+const audio = path.join(__dirname, '../../examples/assets/audio/01.wav');
 const outputDir = path.join(__dirname, './output/');
 const cacheDir = path.join(__dirname, './cache/');
 
