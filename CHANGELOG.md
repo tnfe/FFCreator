@@ -1,3 +1,18 @@
+## v5.0.3
+* Remove the renderFps configuration option, unify rfps and fps.
+* Rendering performance increased by 60%, time increased by 1/3.
+
+## v4.5.3
+* Fix the scale error when FFVideo uses animation.
+
+## v4.5.1
+* Fix the background problem of FFSubtitle when there is no text.
+* Add the initScale property, fix the problem of animation reset size.
+
+## v4.3.3
+* FFAudio supports the interception and playback of long audio.
+* When the ffmpeg command is abnormal, kill the process.
+
 ## v4.2.6
 * Add FFVideoAlbum Component. Support multiple video stitching into one album.
 * Optimize ffmpeg command performance.

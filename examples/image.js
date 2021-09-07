@@ -26,6 +26,7 @@ const createFFTask = () => {
     //log: true,
     highWaterMark: '3mb',
     parallel: 8,
+    fps: 30,
     audio,
   });
 

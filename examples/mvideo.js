@@ -22,7 +22,7 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    rfps: 24,
+    fps: 24,
     log: false,
     debug: true,
     highWaterMark: '3mb',

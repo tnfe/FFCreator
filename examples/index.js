@@ -42,7 +42,7 @@ const choices = [
   },
   {
     name: 'Custom animation effect demo',
-    value: 'effect',
+    value: 'custom',
   },
   {
     name: 'Various ways to add animation',
@@ -57,7 +57,7 @@ const choices = [
     value: 'preload',
   },
   {
-    name: 'Set rfps high-speed rendering',
+    name: 'Set fps high-speed rendering',
     value: 'fps',
   },
   {
