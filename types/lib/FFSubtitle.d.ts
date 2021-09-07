@@ -21,7 +21,6 @@ declare namespace FFCreatorSpace {
    *     subtitle.setText(text);
    */
   class FFSubtitle extends FFNode {
-
     frameBuffer: number;
 
     constructor(conf: FFSubtitleConf);

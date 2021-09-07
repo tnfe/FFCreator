@@ -21,7 +21,6 @@ declare namespace FFCreatorSpace {
    *
    */
   interface FFCreatorCenter {
-
     /**
      * Close logger switch
      */
@@ -113,5 +112,5 @@ declare namespace FFCreatorSpace {
     getInfo(): string;
   }
 
-  const FFCreatorCenter:FFCreatorCenter;
+  const FFCreatorCenter: FFCreatorCenter;
 }
