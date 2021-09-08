@@ -1,3 +1,8 @@
+## v5.2.2
+* Add a more complete TS type, and the corresponding detection command test-typings and test cases, and install the corresponding ts-node environment.
+* Fix the problem that the animation type added by the addEffect method in example/text.js does not exist in the backInBottom in effects.js.
+* In addition, some uncertain types are marked with todo.
+
 ## v5.0.3
 * Remove the renderFps configuration option, unify rfps and fps.
 * Rendering performance increased by 60%, time increased by 1/3.
