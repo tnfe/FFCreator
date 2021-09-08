@@ -1,39 +1,30 @@
+import { FFAudio, FFCreator, FFGifImage, FFImage, FFScene, FFText } from 'ffcreator';
 const path = require('path');
 const colors = require('colors');
-const startAndListen = require('./listen');
-const {
-  FFCreatorCenter,
-  FFGifImage,
-  FFText,
-  FFAudio,
-  FFScene,
-  FFImage,
-  FFCreator,
-} = require('../');
 
 const createFFTask = () => {
-  const bg1 = path.join(__dirname, './assets/imgs/bg/h04.jpg');
-  const bg2 = path.join(__dirname, './assets/imgs/bg/h05.jpg');
-  const logo1 = path.join(__dirname, './assets/imgs/logo/logo1.png');
-  const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
-  const cover = path.join(__dirname, './assets/imgs/cover/cover2.jpg');
-  const money = path.join(__dirname, './assets/imgs/gif/m.gif');
-  const audio = path.join(__dirname, './assets/audio/long.mp3');
-  const font1 = path.join(__dirname, './assets/font/font1.ttf');
-  const font2 = path.join(__dirname, './assets/font/font2.ttf');
+  const bg1 = path.join(__dirname, '../../examples/assets/imgs/bg/h04.jpg');
+  const bg2 = path.join(__dirname, '../../examples/assets/imgs/bg/h05.jpg');
+  const logo1 = path.join(__dirname, '../../examples/assets/imgs/logo/logo1.png');
+  const logo2 = path.join(__dirname, '../../examples/assets/imgs/logo/logo2.png');
+  const cover = path.join(__dirname, '../../examples/assets/imgs/cover/cover2.jpg');
+  const money = path.join(__dirname, '../../examples/assets/imgs/gif/m.gif');
+  const audio = path.join(__dirname, '../../examples/assets/audio/02.wav');
+  const font1 = path.join(__dirname, '../../examples/assets/font/font1.ttf');
+  const font2 = path.join(__dirname, '../../examples/assets/font/font2.ttf');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
 
   // create creator instance
   const width = 800;
   const height = 600;
+
   const creator = new FFCreator({
-    cover,
     cacheDir,
     outputDir,
     width,
     height,
-    parallel: 8
+    parallel: 8,
   });
 
   creator.addAudio(
@@ -47,13 +38,11 @@ const createFFTask = () => {
     }),
   );
 
-  // create FFScene
   const scene1 = new FFScene();
   const scene2 = new FFScene();
 
-  // add scene1 background
-  const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
-  scene1.addChild(fbg1);
+  const fb1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
+  scene1.addChild(fb1);
 
   // add fmoney image
   const fmoney = new FFGifImage({ path: money, x: 100, y: 200 });
@@ -72,8 +61,7 @@ const createFFTask = () => {
   scene1.addChild(text1);
 
   const text2 = new FFText({
-    text: `Effects and animation
-of FFText`,
+    text: `Effects and animation of FFText`,
     color: '#333333',
     x: width / 2,
     y: 200,
@@ -151,7 +139,6 @@ of FFText`,
     x: width / 2,
     y: 360,
   });
-  // backInBottom not support in effects.js
   text5.addEffect('backInDown', 1, 2);
   text5.setStyle({
     fontFamily: ['Microsoft YaHei', 'Helvetica', 'Tahoma'],
@@ -191,4 +178,4 @@ of FFText`,
   return creator;
 };
 
-module.exports = () => startAndListen(() => FFCreatorCenter.addTask(createFFTask));
+
