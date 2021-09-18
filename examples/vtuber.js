@@ -83,7 +83,7 @@ const createFFTask = () => {
 
   const fvtuber = new FFVtuber({ path: vtuber, x: 0, y: height, width: 480, height: 480 });
   fvtuber.setAnchor(0, 1);
-  fvtuber.setCutoutColor(100, 150);
+  fvtuber.setCutoutColor(110, 130);
   scene1.addChild(fvtuber);
   //fvtuber.addEffect(['fadeInUp', 'blurIn', 'zoomIn'], 1, 5);
 
