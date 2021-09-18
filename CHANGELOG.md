@@ -1,3 +1,12 @@
+## v5.5.2
+* Upgrade FFVtuber, now it supports green screen video vtuber.
+* remove DateUtil.toSeconds.
+* change DateUtil.toMilliseconds method.
+
+## v5.2.7
+* Fix audio fadeIn time bug
+* Modify some typescript type files
+
 ## v5.2.2
 * Add a more complete TS type, and the corresponding detection command test-typings and test cases, and install the corresponding ts-node environment.
 * Fix the problem that the animation type added by the addEffect method in example/text.js does not exist in the backInBottom in effects.js.
