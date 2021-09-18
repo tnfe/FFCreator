@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFScene, FFVideo, FFText, FFImage, FFCreator } = require('../');
+const { FFCreatorCenter, FFScene, FFVideo, FFImage, FFCreator } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/h03.jpg');

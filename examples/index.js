@@ -65,6 +65,10 @@ const choices = [
     value: 'mvideo',
   },
   {
+    name: 'Simple 2d virtual anchor',
+    value: 'vtuber',
+  },
+  {
     name: 'Clear all caches and videos',
     value: 'clear',
     func: clearAllFiles,
