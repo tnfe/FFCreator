@@ -29,7 +29,7 @@ const createFFTask = () => {
 
   // add custom effect
   creator.createEffect('customEffect1', {
-    from: { alpha: 0, y: 350, rotate: Math.PI / 2, scale: 0.3 },
+    from: { alpha: 0, y: 350, rotate: 2 * Math.PI, scale: 0.3 },
     to: { alpha: 1, y: 200, rotate: 0, scale: 1 },
     ease: 'Back.Out',
   });
