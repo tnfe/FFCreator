@@ -1,6 +1,6 @@
 {
   "name": "ffcreator",
-  "version": "5.3.6",
+  "version": "5.4.5",
   "description": "FFCreator is a lightweight and flexible short video production library",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
