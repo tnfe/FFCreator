@@ -108,7 +108,7 @@ const video = new FFVideo({ path, x: 300, y: 50, width: 300, height: 200 });
 video.addEffect("zoomIn", 1, 0);
 scene.addChild(video);
 
-creator.output(path.join(__dirname, "../output/example.mp4"););
+creator.output(path.join(__dirname, "../output/example.mp4"));
 creator.start();        // Start processing
 creator.closeLog();     // Close log (including perf)
 
