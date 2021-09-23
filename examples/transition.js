@@ -36,7 +36,7 @@ const transitionDemoTask = () => {
     creator.addChild(scene);
   }
 
-  creator.openLog();
+  //creator.openLog();
   creator.start();
 
   creator.on('start', () => {
