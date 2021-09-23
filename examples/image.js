@@ -53,7 +53,7 @@ const createFFTask = () => {
 
   // add mars ball
   const fmars = new FFImage({ path: mars, x: width / 2, y: height / 2 });
-  fmars.addEffect('rotateIn', 1, 0.8);
+  fmars.addEffect(['rollIn', 'zoomIn'], 1.8, 0.8);
   scene1.addChild(fmars);
 
   // add rock image
