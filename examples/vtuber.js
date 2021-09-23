@@ -89,7 +89,7 @@ const createFFTask = () => {
 
   const fvtuber2 = new FFVtuber({
     path: human,
-    x: 500,
+    x: 450,
     y: height,
     mode: 'frame',
     width: 480,
