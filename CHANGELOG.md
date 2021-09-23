@@ -1,3 +1,8 @@
+## v5.5.6
+* FFVtuber supports dual types of sequence frame and video.
+* Delete the addVtuber method of FFCreator.
+* Fix the gap problem of scene switching.
+
 ## v5.5.2
 * Upgrade FFVtuber, now it supports green screen video vtuber.
 * remove DateUtil.toSeconds.

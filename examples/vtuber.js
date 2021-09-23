@@ -21,6 +21,7 @@ const createFFTask = () => {
   const dragon = path.join(__dirname, './assets/imgs/dragon.png');
   const mario = path.join(__dirname, './assets/imgs/mario.png');
   const vtuber = path.join(__dirname, './assets/video/vtuber.mp4');
+  const human = path.join(__dirname, './assets/imgs/frames/h%d.png');
   const money = path.join(__dirname, './assets/imgs/gif/m.gif');
   const audio = path.join(__dirname, './assets/audio/02.wav');
   const outputDir = path.join(__dirname, './output/');
@@ -56,7 +57,7 @@ const createFFTask = () => {
   scene1.addChild(fmoney);
 
   // add FFText Component
-  const text = new FFText({ text: 'VTuber Demo', x: width / 2, y: 130, fontSize: 40 });
+  const text = new FFText({ text: '两种类型 VTuber', x: width / 2, y: 130, fontSize: 40 });
   text.setColor('#ffffff');
   text.setBackgroundColor('#bc05a9');
   // 多个动画效果组合
@@ -85,6 +86,18 @@ const createFFTask = () => {
   fvtuber.setAnchor(0, 1);
   fvtuber.setCutoutColor(110, 130);
   scene1.addChild(fvtuber);
+
+  const fvtuber2 = new FFVtuber({
+    path: human,
+    x: 500,
+    y: height,
+    mode: 'frame',
+    width: 480,
+    height: 295,
+  });
+  fvtuber2.setAnchor(0, 1);
+  fvtuber2.setPath(human, 1, 24);
+  scene1.addChild(fvtuber2);
   //fvtuber.addEffect(['fadeInUp', 'blurIn', 'zoomIn'], 1, 5);
 
   // add logo
