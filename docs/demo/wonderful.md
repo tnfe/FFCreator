@@ -26,3 +26,9 @@
 <video controls="controls" width="320" height="568" >
   <source type="video/mp4" src="./_media/video/wonder/dw.mp4"></source>
 </video>
+
+- #### 数据可视化
+
+<video controls="controls" width="320" height="568" >
+  <source type="video/mp4" src="./_media/video/wonder/chart.mp4"></source>
+</video>

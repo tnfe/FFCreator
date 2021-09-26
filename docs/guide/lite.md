@@ -1,15 +1,14 @@
-![img](../_media/logo/logo2.png)
-
 # FFCreatorLite
 
 > `FFCreatorLite`是`FFCreator`套装中的 lite 版本。当您要大量处理视频同时又追求更快的速度时, `FFCreatorLite`也许是更好的选择。
 
-FFCreator [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)
+![img](../_media/logo/logo2.png)
+
 FFCreatorLite [https://github.com/tnfe/FFCreatorLite](https://github.com/tnfe/FFCreatorLite)
 
 ## 介绍
 
-不要把`FFCreatorLite`简单理解为`FFCreator`的精简版或者功能阉割版，事实上这两者的实现原理完全不同。`FFCreatorLite`具备`FFCreator`80%的功能，但是处理速度却更快(快到你无法想象)并且安装异常简单。所以请您根据实际的使用情况，来选择具体使用哪个版本的库。
+不要把`FFCreatorLite`简单理解为`FFCreator`的精简版或者功能阉割版，事实上这两者的实现原理完全不同。`FFCreatorLite`具备`FFCreator`80%的功能，但是处理速度却更快(快到你无法想象)并且安装异常简单。并且`FFCreatorLite`支持对直播流加入背景音乐和装饰动画以及标题文字再推出。所以请您根据实际的使用情况，来选择具体使用哪个版本的库。
 
 - `FFCreator`使用`opengl`来处理图形渲染并使用`shader`后处理来生成转场效果，最后使用`FFmpeg`合成视频。
 - `FFCreatorLite`则完全基于`FFmpeg`开发，通过拼接`FFmpeg`命令参数来生成动画和视频。事实上编写它花费了更多的时间, 因为这并不是一项简单的工作。
