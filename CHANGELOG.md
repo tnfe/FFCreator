@@ -1,3 +1,9 @@
+## v6.1.2
+* Add FFChart component, support most demos of echarts.js. Data visualization video can be made
+* Support the synthesis of dynamic data change charts.
+* Fix the problem of setScale initialization.
+* Refactor the setFont and registerFont functions.
+
 ## v5.5.6
 * FFVtuber supports dual types of sequence frame and video.
 * Delete the addVtuber method of FFCreator.
