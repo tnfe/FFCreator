@@ -37,6 +37,10 @@ const choices = [
     value: 'transition',
   },
   {
+    name: 'Chart animation rendering video',
+    value: 'chart',
+  },
+  {
     name: 'Animation of video clips',
     value: 'video',
   },

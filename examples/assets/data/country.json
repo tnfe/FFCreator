@@ -1,0 +1,21 @@
+{
+  "Australia": { "color": "#007608", "name": "澳洲" },
+  "Canada": { "color": "#41ad00", "name": "加拿大" },
+  "China": { "color": "#ffde00", "name": "中国" },
+  "Cuba": { "color": "#69009a", "name": "古巴" },
+  "Finland": { "color": "#003580", "name": "芬兰" },
+  "France": { "color": "#ed2939", "name": "法国" },
+  "Germany": { "color": "#ad9300", "name": "德国" },
+  "Iceland": { "color": "#003897", "name": "冰岛" },
+  "India": { "color": "#f93", "name": "印度" },
+  "Japan": { "color": "#bc002d", "name": "日本" },
+  "North Korea": { "color": "#024fa2", "name": "朝鲜" },
+  "South Korea": { "color": "#ad9300", "name": "韩国" },
+  "New Zealand": { "color": "#00247d", "name": "新西兰" },
+  "Norway": { "color": "#ef2b2d", "name": "挪威" },
+  "Poland": { "color": "#dc143c", "name": "波兰" },
+  "Russia": { "color": "#d52b1e", "name": "俄罗斯" },
+  "Turkey": { "color": "#e30a17", "name": "土耳其" },
+  "United Kingdom": { "color": "#00247d", "name": "英国" },
+  "United States": { "color": "#b22234", "name": "美国" }
+}
