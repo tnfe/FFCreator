@@ -22,7 +22,7 @@
 
 `FFCreator`是一种轻量又简单的解决方案，只需要很少的依赖和较低的机器配置就可以快速开始工作。并且它模拟实现了[`animate.css`](https://animate.style/)90%的动画效果，您可以轻松地把 web 页面端的动画效果转为视频。
 
-当您要大量处理视频同时又不需要特别酷炫的过渡动画时, `FFCreatorLite`也许是更好的选择, 详情请点击[**这里**](https://github.com/tnfe/FFCreatorLite)。
+当您要大量处理视频片段并且追求更快合成速度的时候, `FFCreatorLite`也许是更好的选择, 详情请点击[**这里**](https://github.com/tnfe/FFCreatorLite)。
 
 #### 更多介绍请查看[这里](https://tnfe.github.io/FFCreator/#/README)
 
@@ -34,16 +34,16 @@
 - 支持近百种场景炫酷过渡动画效果。
 - 支持图片、声音、视频剪辑、文本等元素。
 - 支持字幕组件、可以将字幕与语音 tts 结合合成音频新闻。
+- 支持图表组件，可以制作数据可视化类视频。
 - 支持简单（可扩展）的虚拟主播，您可以制作自己的虚拟主播。
 - 包含`animate.css`90%的动画效果，可以将 css 动画转换为视频。
-- [`FFCreatorLite`](https://github.com/tnfe/FFCreatorLite) 具有更快的速度，有时它比`FFCreator`更适合你使用。
 
 ## Demo
 
 <p align="center">
   <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/01.gif?raw=true" /></a>
   <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
-  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/04.gif?raw=true" /></a>
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/05.gif?raw=true" /></a>
   <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
   <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/03.gif?raw=true" /></a>
 </p>

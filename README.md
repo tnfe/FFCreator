@@ -21,7 +21,7 @@ Nowadays, short video is an increasingly popular form of media communication. Li
 
 `FFCreator` is a lightweight and flexible solution that requires few dependencies and low machine configuration to start working quickly. And it simulates 90% animation effects of [`animate.css`](https://animate.style/). You can easily convert the animation effects on the web page side into videos.
 
-When you need to process a lot of video without special cool transition animations, `FFCreatorLite` is a better choice, please click [**here**](https://github.com/tnfe/FFCreatorLite) for details.
+When you need to process a lot of video clips and need faster synthesis speed, `FFCreatorLite` is a better choice, please click [**here**](https://github.com/tnfe/FFCreatorLite) for details.
 
 #### For more introduction, please see [here](https://tnfe.github.io/FFCreator/#/README)
 
@@ -34,15 +34,15 @@ When you need to process a lot of video without special cool transition animatio
 - Support picture, sound, video clips, text and other elements.
 - Contains most animation effects of [`animate.css`](https://animate.style/), css animation is converted to video.
 - Support subtitle components, can combine subtitles to speech to produce audio news.
+- Support chart components, you can make data visualization videos.
 - Support simple (expandable) `VTuber`, you can add `YouTuber` based on sequence frames.
-- [`FFCreatorLite`](https://github.com/tnfe/FFCreatorLite) has faster speed, sometimes it is more suitable for you than `FFCreator`.
 
 ## Demo
 
 <p align="center">
   <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/01.gif?raw=true" /></a>
   <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
-  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/04.gif?raw=true" /></a>
+  <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/05.gif?raw=true" /></a>
   <img width="2%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/foo.png?raw=true" />
   <a href="https://tnfe.github.io/FFCreator/#/demo/normal"><img width="30%" src="https://github.com/tnfe/FFCreator/blob/master/docs/_media/imgs/demo/03.gif?raw=true" /></a>
 </p>
