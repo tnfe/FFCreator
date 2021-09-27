@@ -62,7 +62,7 @@ fchart.addEffect(['rotateIn', 'zoomIn'], 1.2, 1);
 
 ### 动态图表
 
-如何给`FFChart`增加动画呢? `FFChart`提供`update`方法, 它是一个定时更新函数它的作用类似于`setInterval`函数。你可以传入一个更新钩子函数, 第二个参数为间隔时间。
+如何给`FFChart`增加动画呢? `FFChart`提供了`update`方法来更新数据, 它是一个定时执行函数其作用类似于`setInterval`。你可以传入一个更新钩子函数, 第二个参数为间隔时间。
 
 > 注: 这里还要注意调整`animationDuration`以及`animationDurationUpdate`等选项的数值, 来和`updateTime`保持步调一直。
 
@@ -76,9 +76,9 @@ fchart.update(chart => {
 
 ### 立刻动画
 
-当然你还会发现一个问题, 就是调用了 update 但是动画并没有立刻执行。这是因为它是定时间隔函数没有立即去调用钩子。不过很多时候你也许想要的就是这个效果。
+当然你还会发现一个问题, 就是调用了 update 但是动画并没有立刻执行。这是因为`update`是定时间隔函数并不会立即去调用钩子函数执行。当然很多时候用户想要的就是这种效果。
 
-如果想要立刻执行动画, 请调用`updateNow`
+如果想要立刻执行图表动画, 那么请调用`updateNow`
 
 ```javascript
 fchart.update(() => {}, 1000);
