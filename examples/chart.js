@@ -53,7 +53,8 @@ const createFFTask = async () => {
   ///////////////////////////////////////////////////////////////////////////////////
   //
   //    FFChart Demo
-  //    https://echarts.apache.org/examples/zh/editor.html?c=bar-race-country
+  //    文档: https://tnfe.github.io/FFCreator/#/guide/chart
+  //    配置: https://echarts.apache.org/examples/zh/editor.html?c=bar-race-country
   //
   ///////////////////////////////////////////////////////////////////////////////////
   const updateFrequency = 1000;

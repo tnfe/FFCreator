@@ -58,6 +58,8 @@ fchart.setOption(option);
 fchart.addEffect(['rotateIn', 'zoomIn'], 1.2, 1);
 ```
 
+一个DEMO的源代码[https://github.com/tnfe/FFCreator/blob/master/examples/chart.js](https://github.com/tnfe/FFCreator/blob/master/examples/chart.js)
+
 ### 动态图表
 
 如何给`FFChart`增加动画呢? `FFChart`提供`update`方法, 它是一个定时更新函数它的作用类似于`setInterval`函数。你可以传入一个更新钩子函数, 第二个参数为间隔时间。
