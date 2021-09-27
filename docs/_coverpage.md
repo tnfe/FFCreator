@@ -8,4 +8,4 @@
 - 人人都能视频制作
 
 [GitHub](https://github.com/tnfe/FFCreator)
-[Get Started](guide/installation.md)
+[Get Started](guide/introduce.md)

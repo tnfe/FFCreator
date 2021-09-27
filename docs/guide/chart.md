@@ -58,7 +58,7 @@ fchart.setOption(option);
 fchart.addEffect(['rotateIn', 'zoomIn'], 1.2, 1);
 ```
 
-一个DEMO的源代码[https://github.com/tnfe/FFCreator/blob/master/examples/chart.js](https://github.com/tnfe/FFCreator/blob/master/examples/chart.js)
+一个DEMO的源代码 [https://github.com/tnfe/FFCreator/blob/master/examples/chart.js](https://github.com/tnfe/FFCreator/blob/master/examples/chart.js)
 
 ### 动态图表
 
