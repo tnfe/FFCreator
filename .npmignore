@@ -3,6 +3,7 @@
 
 # testing
 /coverage
+/.github
 
 # misc
 .DS_Store
@@ -20,4 +21,5 @@ yarn-error.log*
 /test
 /logo
 /examples
-lib/.DS_Store
+/lib/.DS_Store
+/*/.DS_Store
