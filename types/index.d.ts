@@ -1,4 +1,4 @@
-// Type definitions for FFCreator v5.0.3
+// Type definitions for FFCreator v6.1.5
 // Project: https://github.com/tnfe/FFCreator
 // Definitions by: javaswing <https://github.com/javaswing>
 // TypeScript Version: 4.2

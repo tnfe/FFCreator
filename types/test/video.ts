@@ -3,12 +3,12 @@ const colors = require('colors');
 import { FFCreator, FFImage, FFScene, FFVideo } from 'ffcreator';
 
 const createFFTask = () => {
-    const bg1 = path.join(__dirname, './assets/imgs/bg/h03.jpg');
-    const bg2 = path.join(__dirname, './assets/imgs/bg/h02.jpg');
-    const logo1 = path.join(__dirname, './assets/imgs/logo/logo1.png');
-    const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
-    const dragon = path.join(__dirname, './assets/imgs/dragon.png');
-    const video1 = path.join(__dirname, './assets/video/video1.mp4');
+    const bg1 = path.join(__dirname, '../../examples/assets/imgs/bg/h03.jpg');
+    const bg2 = path.join(__dirname, '../../examples/assets/imgs/bg/h02.jpg');
+    const logo1 = path.join(__dirname, '../../examples/assets/imgs/logo/logo1.png');
+    const logo2 = path.join(__dirname, '../../examples/assets/imgs/logo/logo2.png');
+    const dragon = path.join(__dirname, '../../examples/assets/imgs/dragon.png');
+    const video1 = path.join(__dirname, '../../examples/assets/video/video1.mp4');
     const outputDir = path.join(__dirname, './output/');
     const cacheDir = path.join(__dirname, './cache/');
 
