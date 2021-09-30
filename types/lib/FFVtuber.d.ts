@@ -4,7 +4,7 @@ declare namespace FFCreatorSpace {
     /**
      * @default video
      */
-    mode?: 'video' | string;
+    mode?: 'video' | 'frame';
     x: number;
     y: number;
     width: number;
