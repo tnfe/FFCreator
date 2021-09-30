@@ -23,5 +23,6 @@
 /// <reference path="./lib/FFTween.d.ts" />
 /// <reference path="./lib/FFCreatorCenter.d.ts" />
 
-
 export = FFCreatorSpace;
+
+export as namespace ffcreator;

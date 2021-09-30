@@ -1,12 +1,14 @@
 
+/// <reference path="./echartsUtil.d.ts" />
+
 declare namespace FFCreatorSpace {
-  interface FFChartConf {
+  export interface FFChartConf {
     /**
      * echart theme
      * @see  https://echarts.apache.org/zh/download-theme.html
      */
     theme: 'light' | 'dark' | string;
-    option?: any;
+    option?: echartsSpace.EChartsOption;
     /**
      * @default false
      */
@@ -35,8 +37,7 @@ declare namespace FFCreatorSpace {
    * @since v6.0
    *
    */
-  class FFChart extends FFImage {
-
+   class FFChart extends FFImage {
     constructor(conf: FFChartConf);
     /**
      * Set echarts instance option value
