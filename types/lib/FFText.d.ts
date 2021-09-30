@@ -43,5 +43,7 @@ declare namespace FFCreatorSpace {
      * Set Text horizontal center function
      */
     alignCenter(): void;
+
+    setWrap(warpWidth: number): void;
   }
 }
