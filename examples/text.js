@@ -4,6 +4,7 @@ const startAndListen = require('./listen');
 const {
   FFCreatorCenter,
   FFGifImage,
+  FFRect,
   FFText,
   FFAudio,
   FFScene,
@@ -33,7 +34,7 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    parallel: 8
+    parallel: 8,
   });
 
   creator.addAudio(
@@ -54,6 +55,17 @@ const createFFTask = () => {
   // add scene1 background
   const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
   scene1.addChild(fbg1);
+
+  const frect = new FFRect({
+    color: '#f6b900',
+    width: 300,
+    height: 200,
+    x: width / 2,
+    y: height / 2,
+  });
+  frect.setColor('#044EC5');
+  frect.addEffect('rotateIn', 1, 1);
+  scene1.addChild(frect);
 
   // add fmoney image
   const fmoney = new FFGifImage({ path: money, x: 100, y: 200 });
