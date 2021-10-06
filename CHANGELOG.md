@@ -1,3 +1,8 @@
+## v6.2.1
+* Add FFRect component, A solid color rectangle component.
+* add FFVideo loop Options.
+* Modify some configuration options.
+
 ## v6.1.2
 * Add FFChart component, support most demos of echarts.js. Data visualization video can be made
 * Support the synthesis of dynamic data change charts.
