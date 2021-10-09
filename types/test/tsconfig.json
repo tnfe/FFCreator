@@ -11,11 +11,15 @@
       ]
     },
     "lib": [
-      "es2016"
+      "es2016",
+      "DOM"
     ]
   },
   "include": [
     "../index.d.ts",
     "./**/*.ts"
+  ],
+  "exclude": [
+    "../../node_modules"
   ]
 }
