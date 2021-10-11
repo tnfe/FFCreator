@@ -19,6 +19,7 @@
 /// <reference path="./lib/FFScene.d.ts" />
 /// <reference path="./lib/FFVtuber.d.ts" />
 /// <reference path="./lib/FFChart.d.ts" />
+/// <reference path="./lib/FFRect.d.ts" />
 /// <reference path="./lib/FFLogger.d.ts" />
 /// <reference path="./lib/FFTween.d.ts" />
 /// <reference path="./lib/FFCreatorCenter.d.ts" />
