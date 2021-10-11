@@ -1,5 +1,5 @@
 declare namespace FFCreatorSpace {
-  interface FFAudioConf {
+  interface FFAudioConfProps {
     path: string;
     /**
      * same path
@@ -30,6 +30,8 @@ declare namespace FFCreatorSpace {
      */
     startTime?: number;
   }
+
+  type FFAudioConf = FFAudioConfProps| string;
 
   /**
    *  FFAudio - audio component-can be used to play sound

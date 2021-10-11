@@ -1,4 +1,4 @@
-import { FFAudio, FFCreator, FFGifImage, FFImage, FFScene, FFText } from 'ffcreator';
+import { FFAudio, FFCreator, FFGifImage, FFImage, FFRect, FFScene, FFText } from 'ffcreator';
 const path = require('path');
 const colors = require('colors');
 
@@ -43,6 +43,17 @@ const createFFTask = () => {
 
   const fb1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
   scene1.addChild(fb1);
+
+  const frect = new FFRect({
+    color: '#f6b900',
+    width: 300,
+    height: 200,
+    x: width / 2,
+    y: height / 2,
+  });
+  frect.setColor('#044EC5');
+  frect.addEffect('rotateIn', 1, 1);
+  scene1.addChild(frect);
 
   // add fmoney image
   const fmoney = new FFGifImage({ path: money, x: 100, y: 200 });

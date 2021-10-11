@@ -1,7 +1,6 @@
 /// <reference path="FFCon.d.ts" />
 /// <reference path="Conf.d.ts" />
 /// <reference path="FFBase.d.ts" />
-/// <reference path="FFVtuber.d.ts" />
 
 declare namespace FFCreatorSpace {
   interface FFCreatorConf extends ConfOptions {
@@ -83,12 +82,6 @@ declare namespace FFCreatorSpace {
      * @param args FFAudio or audio config
      */
     addAudio(args: FFAudio | FFAudioConf): void;
-
-    /**
-     * add vtuber
-     * @param vtuber
-     */
-    addVtuber(vtuber: FFVtuber): void;
 
     /**
      * set width and height

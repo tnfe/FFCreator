@@ -1,4 +1,4 @@
-// Type definitions for FFCreator v5.0.3
+// Type definitions for FFCreator v6.2.1
 // Project: https://github.com/tnfe/FFCreator
 // Definitions by: javaswing <https://github.com/javaswing>
 // TypeScript Version: 4.2
@@ -18,10 +18,12 @@
 /// <reference path="./lib/FFSubtitle.d.ts" />
 /// <reference path="./lib/FFScene.d.ts" />
 /// <reference path="./lib/FFVtuber.d.ts" />
+/// <reference path="./lib/FFChart.d.ts" />
+/// <reference path="./lib/FFRect.d.ts" />
 /// <reference path="./lib/FFLogger.d.ts" />
 /// <reference path="./lib/FFTween.d.ts" />
 /// <reference path="./lib/FFCreatorCenter.d.ts" />
 
-
-
 export = FFCreatorSpace;
+
+export as namespace ffcreator;

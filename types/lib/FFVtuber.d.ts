@@ -1,54 +1,53 @@
 declare namespace FFCreatorSpace {
-  interface FFVtuberConf extends Omit<FFImageConf, 'resetPos' | 'resetXY' | 'effect' | 'animate'> {}
+  interface FFVtuberConf {
+    path: string;
+    /**
+     * @default video
+     */
+    mode?: 'video' | 'frame';
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    start?: number;
+    end?: number;
+    /**
+     * color rgb value min
+     */
+    min?: number;
+    /**
+     * same min
+     */
+    colormin?: number;
+    /**
+     * color rgb value max
+     */
+    max?: number;
+    /**
+     * same max
+     */
+    colormax?: number;
+  }
 
   /**
    * FFVtuber - A simple virtual anchor component
    *
    * @example
    *
-   *     const vtuber = new FFVtuber({ x: 320, y: 520 });
-   *     vtuber.setPath(vpath, 1, 7);    // 从第1-7.png
-   *     vtuber.setSpeed(6);
+   *     const vtuber = new FFVtuber({ path, x: 320, y: 520, mode: 'video' });
+   *     vtuber.setCutoutColor(90, 200);
    *
    */
-  class FFVtuber extends FFImage {
+  class FFVtuber extends FFVideo {
     constructor(conf: FFVtuberConf);
 
     /**
-     * Get a cloned object
+     * Turn on rgb cutout
+     * @param min
+     * @param max
      */
-    clone(): FFVtuber;
+    setCutoutColor(min: number, max: number): void;
 
-    /**
-     * Set up an animated sprite texture
-     * @param texture
-     * @param json
-     */
-    setTexturePacker(texture: string, json: string): void;
-
-    /**
-     * Set up an animated sprite texture
-     * @param texture
-     * @param json
-     */
-    setTexture(texture: string, json: string): void;
-
-    /**
-     * Set component playback speed
-     * @param speed
-     */
-    setSpeed(speed: number): void;
-
-    /**
-     * Set animation schedule cycle
-     * [[0, 3.2], [0, 5]]
-     * @param period
-     */
-    setPeriod(period: number[]): void;
-
-    /**
-     * Get animation schedule cycle
-     */
-    getPeriod(): number[];
+    setPath(path: string, start: number, end: number): void;
   }
 }
