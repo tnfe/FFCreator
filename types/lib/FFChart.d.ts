@@ -1,5 +1,5 @@
 
-/// <reference path="./echartsUtil.d.ts" />
+/// <reference path="./EchartsUtil.d.ts" />
 
 declare namespace FFCreatorSpace {
   export interface FFChartConf {

@@ -22,13 +22,6 @@ declare namespace FFCreatorSpace {
     constructor(conf: FFVideoConf);
 
     /**
-     * Set start/end time
-     * @param startTime
-     * @param endTime
-     */
-    setTimes(startTime: number, endTime: number): void;
-
-    /**
      * whether to play sound
      * @param isAudio
      * @default true
@@ -57,6 +50,6 @@ declare namespace FFCreatorSpace {
      * Set video codec
      * @param codec
      */
-    setCodec(codec: 'libx264' | 'libvpx-vp9'): void;
+    setCodec(codec: 'libx264' | 'libvpx-vp9' | string): void;
   }
 }
