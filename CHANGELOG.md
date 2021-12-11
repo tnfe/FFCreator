@@ -1,3 +1,8 @@
+## v6.3.6
+* Modify the stream rendering parallel to be reduced from 5 to 3 to improve performance.
+* Fix the event problem of ffcreatorcenter.
+* add FFLogger.error to creator.on('complete'.
+
 ## v6.2.1
 * Add FFRect component, A solid color rectangle component.
 * add FFVideo loop Options.
