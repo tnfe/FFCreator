@@ -47,3 +47,5 @@ examples/output
 # testing
 coverage/**
 dwt*
+
+package-lock*
