@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  parser: "babel-eslint",
   parserOptions: {
     parser: require.resolve('babel-eslint'),
     ecmaVersion: 2018,
