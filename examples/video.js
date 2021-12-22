@@ -54,7 +54,7 @@ const createFFTask = () => {
   scene1.addChild(fdragon);
 
   // add logo
-  const flogo1 = new FFImage({ path: logo2, x: width / 2, y: 50 });
+  const flogo1 = new FFImage({ path: logo1, x: width / 2, y: 50 });
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
