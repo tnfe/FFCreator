@@ -14,8 +14,8 @@ const createFFTask = () => {
   const cacheDir = path.join(__dirname, './cache/');
 
   // create creator instance
-  const width = 800;
-  const height = 600;
+  const width = 600;
+  const height = 300;
   const creator = new FFCreator({
     cacheDir,
     outputDir,
@@ -25,7 +25,6 @@ const createFFTask = () => {
     log: true,
     highWaterMark: '3mb',
   });
-
   // create FFScene
   const scene1 = new FFScene();
   const scene2 = new FFScene();
@@ -37,20 +36,23 @@ const createFFTask = () => {
   // add bottom cloud
   const fvideo = new FFVideo({
     path: video1,
-    width: width * 0.7,
-    height: 423 * 0.7,
+    width: height * 0.5,
+    height: height * 0.5,
+    fit: 'cover',
     x: width / 2,
     y: height / 2,
     ss: '00:00:03',
     to: '00:00:13',
   });
+  fvideo.addEffect('backInUp', 0.5, 0.5);
+  // fvideo.setScale(0.3);
   fvideo.setAudio(true);
   scene1.addChild(fvideo);
 
   // add dragon image
-  const fdragon = new FFImage({ path: dragon, x: 100, y: height / 2 + 100 });
-  fdragon.setScale(0.7);
-  fdragon.addEffect('fadeInUp', 1, 3);
+  const fdragon = new FFImage({ path: dragon, x: 100, y: height / 2 - 30 });
+  fdragon.setScale(0.5);
+  fdragon.addEffect('fadeInUp', 1, 0.5);
   scene1.addChild(fdragon);
 
   // add logo
@@ -58,7 +60,7 @@ const createFFTask = () => {
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(8);
+  scene1.setDuration(3);
   scene1.setTransition('Magnifier', 1.5);
   creator.addChild(scene1);
 
@@ -72,7 +74,7 @@ const createFFTask = () => {
   flogo2.addEffect('zoomIn', 1, 1.2);
   scene2.addChild(flogo2);
 
-  scene2.setDuration(5);
+  scene2.setDuration(3);
   creator.addChild(scene2);
 
   creator.start();

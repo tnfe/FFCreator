@@ -30,7 +30,7 @@
     "ffmpeg-probe": "^1.0.6",
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^9.0.1",
-    "get-pixels": "^3.3.2",
+    "get-pixels": "github:miravideo/get-pixels",
     "gl-buffer": "^2.1.2",
     "gl-texture2d": "^2.1.0",
     "gl-transition": "^1.13.0",

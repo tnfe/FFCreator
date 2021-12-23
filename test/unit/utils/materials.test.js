@@ -15,10 +15,10 @@ describe('utils/materials', () => {
     const result = materials.getFrame();
     expect(result).toBe('');
   });
-  test('clone: Return a cloned Materials object ', () => {
-    const result = materials.clone();
-    expect(result).toBeInstanceOf(Materials);
-  });
+  // test('clone: Return a cloned Materials object ', () => {
+  //   const result = materials.clone();
+  //   expect(result).toBeInstanceOf(Materials);
+  // });
   test('destroy', () => {
     materials.destroy();
     expect(materials.info).toBeNull();
