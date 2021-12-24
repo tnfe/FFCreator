@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFScene, FFImage, FFCreator } = require('../');
+const { FFCreatorCenter, FFScene, FFImage, FFCreator, FFVideo } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/05.jpg');
@@ -11,6 +11,7 @@ const createFFTask = () => {
   const mars = path.join(__dirname, './assets/imgs/mars.png');
   const rock = path.join(__dirname, './assets/imgs/rock.png');
   const title = path.join(__dirname, './assets/imgs/title.png');
+  const vtuber = path.join(__dirname, './assets/video/vtuber.mp4');
   const audio = path.join(__dirname, './assets/audio/05.wav');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
@@ -50,6 +51,11 @@ const createFFTask = () => {
     ease: 'Back.Out',
   });
   scene1.addChild(fcloud);
+
+  const fvtuber = new FFVideo({ path: vtuber, x: 0, y: height, width: width / 2, height: width / 2 });
+  fvtuber.setAnchor(0, 1);
+  fvtuber.setCutoutColor(110, 130);
+  scene1.addChild(fvtuber);
 
   // add mars ball
   const fmars = new FFImage({ path: mars, x: width / 2, y: height / 2 });
