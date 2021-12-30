@@ -41,6 +41,58 @@ const createFFTask = () => {
   const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
   scene1.addChild(fbg1);
 
+  const fimg1 = new FFImage({
+    path: bg2,
+    x: width / 2,
+    y: 0,
+    width: 150,
+    height: 150,
+    id: 'img_cover',
+    // default should be cover
+  });
+  fimg1.setAnchor(0.5, 0);
+  fimg1.setScale(0.5);
+  scene1.addChild(fimg1);
+
+  const fimg2 = new FFImage({
+    path: bg2,
+    x: width / 2,
+    y: (height / 2) - 150,
+    width: 150,
+    height: 150,
+    fit: 'none',
+    id: 'img_none',
+  });
+  fimg2.setAnchor(0.5);
+  fimg2.setScale(0.5);
+  scene1.addChild(fimg2);
+
+  const fimg3 = new FFImage({
+    path: bg2,
+    x: width / 2,
+    y: (height / 2) + 150,
+    width: 150,
+    height: 150,
+    fit: 'fill',
+    id: 'img_fill',
+  });
+  fimg3.setAnchor(0.5);
+  fimg3.setScale(0.5);
+  scene1.addChild(fimg3);
+
+  const fimg4 = new FFImage({
+    path: bg2,
+    x: width / 2,
+    y: height,
+    width: 150,
+    height: 150,
+    fit: 'contain',
+    id: 'img_contain',
+  });
+  fimg4.setAnchor(0.5, 1);
+  fimg4.setScale(0.5);
+  scene1.addChild(fimg4);
+
   // add bottom cloud
   const fcloud = new FFImage({ path: cloud, x: width });
   fcloud.setAnchor(1);
@@ -52,7 +104,7 @@ const createFFTask = () => {
   });
   scene1.addChild(fcloud);
 
-  const fvtuber = new FFVideo({ path: vtuber, x: 0, y: height, width: width / 2, height: width / 2 });
+  const fvtuber = new FFVideo({ path: vtuber, x: 0, y: height, width: width / 2, height: width / 4, fit: "cover" });
   fvtuber.setAnchor(0, 1);
   fvtuber.setCutoutColor(110, 130);
   scene1.addChild(fvtuber);

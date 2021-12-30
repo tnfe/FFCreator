@@ -50,6 +50,7 @@ const createFFTask = () => {
   const fcat = new FFGifImage({ path: cat, x: width / 2, y: height / 2 - 50, id: 'cat' });
   fcat.addEffect('zoomIn', 2, 1);
   fcat.setScale(0.3);
+  fcat.setSpeed(0.5);
   scene1.addChild(fcat);
 
   const fheart = new FFGifImage({ path: heart, x: width / 2, y: height / 2 - 100, id: 'heart' });
@@ -62,6 +63,7 @@ const createFFTask = () => {
   fgirl.addEffect('backInUp', 1.2, 0.5);
   fgirl.setAnchor(0.5, 1);
   fgirl.setScale(0.5);
+  fgirl.setSpeed(2);
   scene1.addChild(fgirl);
 
   // add logo
@@ -69,7 +71,7 @@ const createFFTask = () => {
   flogo1.setScale(0.35);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(8);
+  scene1.setDuration(3);
   scene1.setTransition('ButterflyWaveScrawler', 1.5);
   creator.addChild(scene1);
 
@@ -83,7 +85,7 @@ const createFFTask = () => {
   flogo2.addEffect('fadeInDown', 1, 1.2);
   scene2.addChild(flogo2);
 
-  scene2.setDuration(5);
+  scene2.setDuration(2);
   creator.addChild(scene2);
   creator.start();
   //creator.openLog();
