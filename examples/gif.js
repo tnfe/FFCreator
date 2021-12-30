@@ -50,6 +50,7 @@ const createFFTask = () => {
   const fcat = new FFGifImage({ path: cat, x: width / 2, y: height / 2 - 50, id: 'cat' });
   fcat.addEffect('zoomIn', 2, 1);
   fcat.setScale(0.3);
+  fcat.setSpeed(0.5);
   scene1.addChild(fcat);
 
   const fheart = new FFGifImage({ path: heart, x: width / 2, y: height / 2 - 100, id: 'heart' });
@@ -62,6 +63,7 @@ const createFFTask = () => {
   fgirl.addEffect('backInUp', 1.2, 0.5);
   fgirl.setAnchor(0.5, 1);
   fgirl.setScale(0.5);
+  fgirl.setSpeed(2);
   scene1.addChild(fgirl);
 
   // add logo
