@@ -71,7 +71,7 @@ const createFFTask = () => {
   flogo1.setScale(0.35);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(8);
+  scene1.setDuration(3);
   scene1.setTransition('ButterflyWaveScrawler', 1.5);
   creator.addChild(scene1);
 
@@ -85,7 +85,7 @@ const createFFTask = () => {
   flogo2.addEffect('fadeInDown', 1, 1.2);
   scene2.addChild(flogo2);
 
-  scene2.setDuration(5);
+  scene2.setDuration(2);
   creator.addChild(scene2);
   creator.start();
   //creator.openLog();

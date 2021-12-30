@@ -65,10 +65,6 @@ const choices = [
     value: 'fps',
   },
   {
-    name: 'Multiple video stitching animation',
-    value: 'mvideo',
-  },
-  {
     name: 'Clear all caches and videos',
     value: 'clear',
     func: clearAllFiles,
