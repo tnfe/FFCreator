@@ -29,6 +29,7 @@
     "ffmpeg-probe": "^1.0.6",
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^9.0.1",
+    "opencv4nodejs": "github:wandenberg/opencv4nodejs",
     "get-pixels": "github:miravideo/get-pixels",
     "gl-buffer": "^2.1.2",
     "gl-texture2d": "^2.1.0",
