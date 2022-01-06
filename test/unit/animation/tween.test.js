@@ -30,6 +30,7 @@ describe('animate/tween', () => {
       addAnimate: jest.fn(function(obj) {
         this.animations.push(obj);
       }),
+      root: () => { return { tweenGroup: '1' } }
     };
   });
   test('from: should add from animation', () => {
