@@ -79,8 +79,6 @@ declare namespace FFCreatorSpace {
    */
   class FFNode extends FFBase {
     index: number;
-    offsetX: number;
-    offsetY: number;
     duration: number;
     anchor: number;
     animations: FFAnimation;
@@ -109,13 +107,6 @@ declare namespace FFCreatorSpace {
      * @param duration 1
      */
     setDuration(duration: number): void;
-
-    /**
-     * set offsetx offsetY 偏移量  影响最终x y
-     * @param offsetX
-     * @param offSetY
-     */
-    setOffset(offsetX: number, offSetY: number): void;
 
     /**
      * Set display object x,y position
