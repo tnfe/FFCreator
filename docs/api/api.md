@@ -7,7 +7,6 @@
     * [.setScale(scale)](#FFNode+setScale)
     * [.setRotate(rotate)](#FFNode+setRotate)
     * [.setDuration(duration)](#FFNode+setDuration)
-    * [.setOffset(duration)](#FFNode+setOffset)
     * [.setXY(x, y)](#FFNode+setXY)
     * [.setOpacity(opacity)](#FFNode+setOpacity)
     * [.setWH(width, height)](#FFNode+setWH)
@@ -77,18 +76,6 @@ Set display object rotate
 <a name="FFNode+setDuration"></a>
 
 ### ffNode.setDuration(duration)
-Set the duration of node in the scene
-
-**Kind**: instance method of [<code>FFNode</code>](#FFNode)  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| duration | <code>number</code> | 
-
-<a name="FFNode+setOffset"></a>
-
-### ffNode.setOffset(duration)
 Set the duration of node in the scene
 
 **Kind**: instance method of [<code>FFNode</code>](#FFNode)  
