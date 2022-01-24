@@ -20,7 +20,8 @@ const createFFTask = () => {
   const cover = path.join(__dirname, './assets/imgs/cover/cover2.jpg');
   const money = path.join(__dirname, './assets/imgs/gif/m.gif');
   const audio = path.join(__dirname, './assets/audio/long.mp3');
-  const font1 = path.join(__dirname, './assets/font/font1.ttf');
+  // const font1 = path.join(__dirname, './assets/font/font1.ttf');
+  const font1 = path.join(__dirname, './assets/font/庞门正道标题体.ttf');
   const font2 = path.join(__dirname, './assets/font/font2.ttf');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
@@ -74,14 +75,34 @@ const createFFTask = () => {
   scene1.addChild(fmoney);
 
   // add FFText Component
-  const text1 = new FFText({ text: 'FFText组件demo', x: width / 2, y: 130, fontSize: 40 });
+  const text1 = new FFText({ text: 'FFText组件demo', x: width / 2, y: 130,  });
   text1.setColor('#ffffff');
   text1.setBackgroundColor('#bc05a9');
   text1.addEffect('fadeInUp', 1, 0.5);
   text1.alignCenter();
-  text1.setFont(font1);
-  text1.setStyle({ padding: 10 });
+  // text1.setFont(font1);
+  text1.setStyle({
+    padding: 10,
+    fontFamily: 'Arial',
+    fontSize: 26,
+  });
   scene1.addChild(text1);
+
+  const text11 = new FFText({ text: 'FFText组件demo', x: width / 2, y: 200,  });
+  text11.setColor('#ffffff');
+  text11.setBackgroundColor('#bc05a9');
+  text11.addEffect('fadeInUp', 1, 0.5);
+  text11.alignCenter();
+  // text11.setFont(font1);
+  text11.setStyle({
+    padding: 10,
+    fontFamily: 'Arial',
+    fontSize: 26,
+    fontStyle: 'italic',
+    fontWeight: 'bold'
+  });
+  scene1.addChild(text11);
+
 
   const text2 = new FFText({
     text: `Effects and animation
