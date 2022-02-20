@@ -1,6 +1,6 @@
 # 为 FFCreator 做出贡献
 
-欢迎您 [提出问题](https://github.com/tnfe/FFCreator/issues) 或 [merge requests](https://github.com/tnfe/FFCreator/merge_requests)， 建议您在为 FFCreator 做出贡献前先阅读以下 FFCreator 贡献指南。
+欢迎您 [提出问题](https://github.com/tnfe/FFCreator/issues) 或 [merge requests](https://github.com/tnfe/FFCreator/pulls)， 建议您在为 FFCreator 做出贡献前先阅读以下 FFCreator 贡献指南。
 
 ## issues
 
@@ -16,7 +16,7 @@
 
 ## Merge Requests
 
-我们十分期待您通过 [Merge Requests](https://github.com/tnfe/FFCreator/merge_requests) 让 FFCreator 变的更加完善。
+我们十分期待您通过 [Merge Requests](https://github.com/tnfe/FFCreator/pulls) 让 FFCreator 变的更加完善。
 
 ### 分支管理
 
