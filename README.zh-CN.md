@@ -22,7 +22,9 @@
 
 `FFCreator`是一种轻量又简单的解决方案，只需要很少的依赖和较低的机器配置就可以快速开始工作。并且它模拟实现了[`animate.css`](https://animate.style/)90%的动画效果，您可以轻松地把 web 页面端的动画效果转为视频。
 
-当您要大量处理视频片段并且追求更快合成速度的时候, `FFCreatorLite`也许是更好的选择, 详情请点击[**这里**](https://github.com/tnfe/FFCreatorLite)。
+使用`FFCreator`和`vue.js`，可以开发可视化拖拽搭建短视频的web项目，使用就像h5搭建工具一样的简单，可以查看[**这里**](https://github.com/tnfe/shida)。
+
+当您要大量处理视频片段并且追求更快合成速度的时候，`FFCreatorLite`也许是更好的选择，详情请点击[**这里**](https://github.com/tnfe/FFCreatorLite)。
 
 #### 更多介绍请查看[这里](https://tnfe.github.io/FFCreator/#/README)
 

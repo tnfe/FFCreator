@@ -1,6 +1,6 @@
 # Contribute to FFCreator
 
-You are welcome to [ask questions](https://github.com/tnfe/FFCreator/issues) or [merge requests](https://github.com/tnfe/FFCreator/pull_requests), I suggest you contribute to FFCreator First read the following FFCreator contribution guide.
+You are welcome to [ask questions](https://github.com/tnfe/FFCreator/issues) or [merge requests](https://github.com/tnfe/FFCreator/pulls), I suggest you contribute to FFCreator First read the following FFCreator contribution guide.
 
 ## issues
 
@@ -16,7 +16,7 @@ The statement of the problem should be as detailed as possible and can include r
 
 ## Merge Requests
 
-We look forward to your [Merge Requests](https://github.com/tnfe/FFCreator/merge_requests) to make FFCreator more perfect.
+We look forward to your [Merge Requests](https://github.com/tnfe/FFCreator/pulls) to make FFCreator more perfect.
 
 ### Branch Management
 

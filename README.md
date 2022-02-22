@@ -21,6 +21,8 @@ Nowadays, short video is an increasingly popular form of media communication. Li
 
 `FFCreator` is a lightweight and flexible solution that requires few dependencies and low machine configuration to start working quickly. And it simulates 90% animation effects of [`animate.css`](https://animate.style/). You can easily convert the animation effects on the web page side into videos.
 
+Using `FFCreator` and `vue.js`, you can develop a web project that builds video by dragging and dropping, just as the h5 building tool. You can check it [**here**](https://github.com/tnfe/shida).
+
 When you need to process a lot of video clips and need faster synthesis speed, `FFCreatorLite` is a better choice, please click [**here**](https://github.com/tnfe/FFCreatorLite) for details.
 
 #### For more introduction, please see [here](https://tnfe.github.io/FFCreator/#/README)
