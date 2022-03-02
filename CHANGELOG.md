@@ -1,3 +1,8 @@
+## v6.5.1
+* Added FFExtras class, you can freely expand the graphics.
+* Upgrade update function.
+* add setBlur method.
+
 ## v6.3.6
 * Modify the stream rendering parallel to be reduced from 5 to 3 to improve performance.
 * Fix the event problem of ffcreatorcenter.
