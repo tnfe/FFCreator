@@ -110,6 +110,8 @@ declare namespace FFCreatorSpace {
     resetTasks(): void;
 
     getInfo(): string;
+
+    getResultFile(id: string): unknown;
   }
 
   const FFCreatorCenter: FFCreatorCenter;
