@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFScene, FFImage, FFCreator, FFVideo } = require('../');
+const { FFCreatorCenter, FFScene, FFImage, FFCreator, FFVideo, FFTransition } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/05.jpg');
@@ -136,8 +136,11 @@ const createFFTask = () => {
   scene1.addChild(flogo1);
 
   scene1.setDuration(8);
-  scene1.setTransition('InvertedPageCurl', 1.5);
+  // scene1.setTransition('InvertedPageCurl', 1.5);
   creator.addChild(scene1);
+
+  // const trans = new FFTransition({name: 'InvertedPageCurl', duration: 1.5});
+  // creator.addChild(trans);
 
   // add scene2 background
   const fbg2 = new FFImage({ path: bg2, x: width / 2, y: height / 2 });

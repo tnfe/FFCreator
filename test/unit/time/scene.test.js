@@ -5,18 +5,18 @@ const FFVideo = require('@/node/video');
 describe('time/scene', () => {
   test('scene: default start/duration/end ', () => {
     const scene = new FFScene({});
-    scene.parent = { start: 0, duration: NaN };
+    scene.parent = { startTime: 0, duration: NaN };
 
     const clip = new FFClip({});
     scene.addChild(clip);
 
-    expect(clip.start).toBe(0);
+    expect(clip.startTime).toBe(0);
     expect(clip.duration).toBe(1);
-    expect(clip.end).toBe(1);
+    expect(clip.endTime).toBe(1);
 
-    expect(scene.start).toBe(0);
+    expect(scene.startTime).toBe(0);
     expect(scene.duration).toBe(1);
-    expect(scene.end).toBe(1);
+    expect(scene.endTime).toBe(1);
 
     clip.conf.duration = 5;
     scene.annotate();
@@ -32,7 +32,7 @@ describe('time/scene', () => {
 
   test('scene: default start/duration/end with video', () => {
     const scene = new FFScene({});
-    scene.parent = { start: 0, duration: NaN };
+    scene.parent = { startTime: 0, duration: NaN };
 
     const video = new FFVideo({ start: 1 });
     video.material = { length: 3 };
@@ -64,7 +64,7 @@ describe('time/scene', () => {
 
   test('scene: duration change', () => {
     const scene = new FFScene({ duration: 10 });
-    scene.parent = { start: 0, duration: NaN };
+    scene.parent = { startTime: 0, duration: NaN };
 
     const video = new FFVideo({});
     video.material = { length: 3 };
