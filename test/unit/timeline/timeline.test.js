@@ -1,36 +1,28 @@
 const Timeline = require('@/timeline/timeline');
+const FFCreator = require('@/creator');
 const FFScene = require('@/node/scene');
+const FFTransition = require('@/animate/transition');
 
 describe('timeline/timeline', () => {
   const fps = 60;
-  const rootConf = () => fps;
-  const createScenes = () => {
-    const scene1 = new FFScene();
-    scene1.setDuration(8);
-    scene1.rootConf = rootConf;
-    scene1.setTransition('InvertedPageCurl', 1.5);
-
-    const scene2 = new FFScene();
-    scene2.rootConf = rootConf;
-    scene2.setDuration(10);
-
-    return [scene1, scene2];
-  };
-
-  let delta = 0;
-  let time = 0;
-  const mockCreator = {
-    conf: { getVal: rootConf },
-    timeUpdate: (_delta, _time) => {
-      time = _time;
-      delta = _delta;
-    }
-  };
+  const mockCreator = new FFCreator({fps});
+  mockCreator.addChild(new FFScene({ duration: 5 }));
+  mockCreator.addChild(new FFTransition({ duration: 1.5 }));
+  mockCreator.addChild(new FFScene({ duration: 5 }));
   const timeline = new Timeline(mockCreator);
-  timeline.annotate(createScenes());
+  mockCreator.initSpine();
+  mockCreator.allNodes.map(x => x.annotate());
 
-  test('update: Timeline update function ', () => {
-    expect(timeline.duration).toBe(16.5);
+  let delta = 0, time = 0;
+  mockCreator.timeUpdate = (_delta, _time) => {
+    time = _time;
+    delta = _delta;
+  }
+
+  test('annotate: duration', () => {
+    timeline.annotate();
+    expect(timeline.duration).toBe(8.5);
+    expect(mockCreator.duration).toBe(8.5);
   });
 
   test('nextFrame: Next Frame run ', () => {
@@ -55,7 +47,7 @@ describe('timeline/timeline', () => {
 
   test('framesNum: remove callback hook ', () => {
     timeline.nextFrame(20);
-    expect(timeline.framesNum).toBe(990);
+    expect(timeline.framesNum).toBe(fps*8.5);
     expect(timeline.frame).toBe(61);
     expect(time).toBe(undefined);
     expect(delta).toBe(20);

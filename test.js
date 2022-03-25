@@ -1,19 +1,16 @@
 'use strict';
 
-const FFClip = require('./lib/node/clip');
+const FFClip = require('./lib/core/clip');
 const FFScene = require('./lib/node/scene');
 
-const clip = new FFClip({
-    duration: 2,
-});
-clip.prevSibling = {
-    end: 5,
-}
-clip.parent = {
-    start: 0,
-    duration: 10,
-}
-const scene = new FFScene();
+const scene = new FFScene({});
+scene.parent = { startTime: 0, duration: NaN };
 
-console.log(clip.start, clip.duration, clip.end);
+const clip = new FFClip({});
+scene.addChild(clip);
+
+clip.conf.duration = 5;
+scene.annotate();
+console.log('--------');
+console.log(clip.startTime, clip.duration, clip.endTime);
 // console.log(scene.start);
