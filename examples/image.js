@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFScene, FFImage, FFCreator, FFVideo, FFTransition } = require('../');
+const { FFCreatorCenter, FFScene, FFImage, FFCreator, FFVideo, FFTransition, FFAudio } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/05.jpg');
@@ -12,7 +12,8 @@ const createFFTask = () => {
   const rock = path.join(__dirname, './assets/imgs/rock.png');
   const title = path.join(__dirname, './assets/imgs/title.png');
   const vtuber = path.join(__dirname, './assets/video/vtuber.mp4');
-  const audio = path.join(__dirname, './assets/audio/05.wav');
+  const audio = path.join(__dirname, './assets/audio/01.wav');
+  const audio_bg = path.join(__dirname, './assets/audio/05.wav');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
 
@@ -24,11 +25,11 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    //log: true,
+    log: true,
     highWaterMark: '3mb',
     parallel: 8,
     fps: 30,
-    audio,
+    audio_bg,
   });
 
   // create FFScene
@@ -150,6 +151,8 @@ const createFFTask = () => {
   flogo2.setScale(0.9);
   flogo2.addEffect('fadeInDown', 1, 1.2);
   scene2.addChild(flogo2);
+
+  scene2.addAudio(new FFAudio({src: audio, fadeOut: 1.5}));
 
   scene2.setDuration(5);
   creator.addChild(scene2);
