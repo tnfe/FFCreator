@@ -1,7 +1,7 @@
 const path = require('path');
 const colors = require('colors');
 const startAndListen = require('./listen');
-const { FFCreatorCenter, FFAudio, FFScene, FFImage, FFGifImage, FFCreator } = require('../');
+const { FFCreatorCenter, FFAudio, FFScene, FFImage, FFGifImage, FFCreator, FFTransition } = require('../');
 
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/06.jpg');
@@ -71,9 +71,12 @@ const createFFTask = () => {
   flogo1.setScale(0.35);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(3);
-  scene1.setTransition('ButterflyWaveScrawler', 1.5);
+  scene1.setDuration(5);
+  // scene1.setTransition('ButterflyWaveScrawler', 1.5);
   creator.addChild(scene1);
+
+  const trans = new FFTransition({name: 'ButterflyWaveScrawler', duration: 1.5});
+  creator.addChild(trans);
 
   // add scene2 background
   const fbg2 = new FFImage({ path: bg2, x: width / 2, y: height / 2 });
