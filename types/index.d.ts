@@ -17,6 +17,7 @@
 /// <reference path="./lib/FFAlbum.d.ts" />
 /// <reference path="./lib/FFSubtitle.d.ts" />
 /// <reference path="./lib/FFScene.d.ts" />
+/// <reference path="./lib/FFTransition.d.ts" />
 /// <reference path="./lib/FFVtuber.d.ts" />
 /// <reference path="./lib/FFChart.d.ts" />
 /// <reference path="./lib/FFRect.d.ts" />
