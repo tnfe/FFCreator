@@ -43,6 +43,7 @@ const createFFTask = () => {
     y: height / 2,
     ss: '00:00:03',
     to: '00:00:13',
+    blur: 10,
   });
   fvideo.addEffect('backInUp', 0.5, 0.5);
   // fvideo.setScale(0.3);

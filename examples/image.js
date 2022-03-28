@@ -25,11 +25,12 @@ const createFFTask = () => {
     outputDir,
     width,
     height,
-    log: true,
+    // log: true,
     highWaterMark: '3mb',
     parallel: 8,
     fps: 30,
     audio_bg,
+    // render: 'canvas',
   });
 
   // create FFScene
@@ -40,6 +41,7 @@ const createFFTask = () => {
 
   // add scene1 background
   const fbg1 = new FFImage({ path: bg1, x: width / 2, y: height / 2 });
+  fbg1.setBlur(10);
   scene1.addChild(fbg1);
 
   const fimg1 = new FFImage({
@@ -136,7 +138,7 @@ const createFFTask = () => {
   flogo1.setScale(0.5);
   scene1.addChild(flogo1);
 
-  scene1.setDuration(8);
+  scene1.setDuration(3);
   // scene1.setTransition('InvertedPageCurl', 1.5);
   creator.addChild(scene1);
 
@@ -154,7 +156,7 @@ const createFFTask = () => {
 
   scene2.addAudio(new FFAudio({src: audio, fadeOut: 1.5}));
 
-  scene2.setDuration(5);
+  scene2.setDuration(3);
   creator.addChild(scene2);
 
   creator.start();
