@@ -51,6 +51,7 @@ const createFFTask = () => {
     width: 150,
     height: 150,
     id: 'img_cover',
+    blur: 10,
     // default should be cover
   });
   fimg1.setAnchor(0.5, 0);
