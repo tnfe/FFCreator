@@ -5,7 +5,7 @@ const FFVideo = require('@/node/video');
 describe('time/scene', () => {
   test('scene: default start/duration/end ', () => {
     const scene = new FFScene({});
-    scene.parent = { startTime: 0, duration: NaN };
+    scene.parent = { startTime: 0, absStartTime: 0, duration: NaN };
 
     const clip = new FFClip({});
     scene.addChild(clip);
@@ -32,18 +32,18 @@ describe('time/scene', () => {
 
   test('scene: default start/duration/end with video', () => {
     const scene = new FFScene({});
-    scene.parent = { startTime: 0, duration: NaN };
+    scene.parent = { startTime: 0, absStartTime: 0, duration: NaN };
 
     const video = new FFVideo({ start: 1 });
-    video.material = { length: 3 };
+    video.material = { getDuration: () => 3 };
     scene.addChild(video);
 
     const video2 = new FFVideo({});
-    video2.material = { length: 5 };
+    video2.material = { getDuration: () => 5 };
     scene.addChild(video2);
 
     const video3 = new FFVideo({ loop: true });
-    video3.material = { length: 8 }; // 循环的video，不能撑开parent
+    video3.material = { getDuration: () => 8 }; // 循环的video，不能撑开parent
     scene.addChild(video3);
 
     scene.annotate();
@@ -64,18 +64,18 @@ describe('time/scene', () => {
 
   test('scene: duration change', () => {
     const scene = new FFScene({ duration: 10 });
-    scene.parent = { startTime: 0, duration: NaN };
+    scene.parent = { startTime: 0, absStartTime: 0, duration: NaN };
 
     const video = new FFVideo({});
-    video.material = { length: 3 };
+    video.material = { getDuration: () => 3 };
     scene.addChild(video);
 
     const video2 = new FFVideo({});
-    video2.material = { length: 5 };
+    video2.material = { getDuration: () => 5 };
     scene.addChild(video2);
 
     const video3 = new FFVideo({ loop: true });
-    video3.material = { length: 8 }; // 循环的video，不能撑开parent
+    video3.material = { getDuration: () => 8 }; // 循环的video，不能撑开parent
     scene.addChild(video3);
 
     scene.annotate();

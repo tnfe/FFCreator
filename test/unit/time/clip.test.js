@@ -1,4 +1,5 @@
 const FFClip = require('@/core/clip');
+const FFSpine = require('@/node/spine');
 
 describe('time/clip', () => {
   test('clip: default start/duration/end ', () => {
@@ -12,6 +13,24 @@ describe('time/clip', () => {
     expect(clip.startTime).toBe(3);
     expect(clip.duration).toBe(7);
     expect(clip.endTime).toBe(10);
+  });
+
+  test('clip: absStartTime/absEndTime offset by parent ', () => {
+    const clip = new FFClip({ start: 3, duration: 3 });
+    const spine = new FFSpine({});
+    spine.addChild(clip);
+
+    const subClip = new FFClip({ duration: 5 });
+    clip.addChild(subClip);
+
+    const sub2Clip = new FFClip({ duration: 10 });
+    subClip.addChild(sub2Clip);
+
+    spine.annotate();
+    expect(spine.duration).toBe(6);
+    expect(clip.absStartTime).toBe(3);
+    expect(subClip.absStartTime).toBe(3);
+    expect(sub2Clip.absStartTime).toBe(3);
   });
 
   test('clip: start change', () => {

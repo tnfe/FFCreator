@@ -4,13 +4,13 @@ const FFClip = require('@/core/clip');
 describe('time/audio', () => {
   test('audio: default start/duration/end with loop default false', () => {
     const audio = new FFAudio({});
-    audio.material = { length: 3 };
+    audio.material = { getDuration: () => 3 };
     audio.parent = { startTime: 0, duration: 10 }
     expect(audio.startTime).toBe(0);
     expect(audio.duration).toBe(3);
     expect(audio.endTime).toBe(3);
 
-    audio.material.length = 13;
+    audio.material = { getDuration: () => 13 };
     expect(audio.duration).toBe(13);
     expect(audio.endTime).toBe(13);
 
@@ -32,13 +32,13 @@ describe('time/audio', () => {
 
   test('audio: default start/duration/end with loop set true', () => {
     const audio = new FFAudio({ loop: true });
-    audio.material = { length: 3 };
+    audio.material = { getDuration: () => 3 };
     audio.parent = { startTime: 0, duration: 10 }
     expect(audio.startTime).toBe(0);
     expect(audio.duration).toBe(10);
     expect(audio.endTime).toBe(10);
 
-    audio.material.length = 13;
+    audio.material = { getDuration: () => 13 };
     expect(audio.duration).toBe(10);
     expect(audio.endTime).toBe(10);
 
@@ -60,7 +60,7 @@ describe('time/audio', () => {
 
   test('audio: set duration over material length', () => {
     const audio = new FFAudio({ duration: 10 });
-    audio.material = { length: 6 };
+    audio.material = { getDuration: () => 6 };
     audio.parent = { startTime: 0, duration: NaN };
     expect(audio.duration).toBe(10);
 

@@ -51,3 +51,6 @@ dwt*
 
 package-lock*
 yarn.lock
+
+cache
+output

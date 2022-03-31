@@ -4,13 +4,13 @@ const FFClip = require('@/core/clip');
 describe('time/video', () => {
   test('video: default start/duration/end with loop default false', () => {
     const video = new FFVideo({});
-    video.material = { length: 3 };
+    video.material = { getDuration: () => 3 };
     video.parent = { startTime: 0, duration: 10 }
     expect(video.startTime).toBe(0);
     expect(video.duration).toBe(3);
     expect(video.endTime).toBe(3);
 
-    video.material.length = 13;
+    video.material = { getDuration: () => 13 };
     expect(video.duration).toBe(13);
     expect(video.endTime).toBe(13);
 
@@ -32,7 +32,7 @@ describe('time/video', () => {
 
   test('video: default start/duration/end with loop set true', () => {
     const video = new FFVideo({ loop: true });
-    video.material = { length: 3 };
+    video.material = { getDuration: () => 3 };
     video.parent = { startTime: 0, duration: 10 }
     expect(video.startTime).toBe(0);
     expect(video.duration).toBe(10);
@@ -60,7 +60,7 @@ describe('time/video', () => {
 
   test('video: set duration over material length', () => {
     const video = new FFVideo({ duration: 10 });
-    video.material = { length: 6 };
+    video.material = { getDuration: () => 6 };
     video.parent = { startTime: 0, duration: NaN };
     expect(video.duration).toBe(10);
 
