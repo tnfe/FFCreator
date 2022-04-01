@@ -37,6 +37,7 @@
     "gl-transition": "^1.13.0",
     "gl-transitions": "^1.43.0",
     "howler": "^2.2.3",
+    "html2canvas": "^1.4.1",
     "left-pad": "^1.3.0",
     "lodash": "^4.17.20",
     "mtempy": "^1.0.0",

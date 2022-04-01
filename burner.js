@@ -20,6 +20,13 @@ const value = `
       <gif id="g1z2" src="https://mira-1255830993.cos.ap-shanghai.myqcloud.com/lab/zhaojun/assets/imgs/gif/girl.gif"
         width="30rpx" x="130rpx" y="100rpx" zIndex="2" blur="3"/>  
     </image>
+    <richtext width="100rpx" height="100rpx" x="100rpx" y="100rpx" color="#00ff99" id="t1z3" zIndex="3">
+      <html style="color:white;width:100px">
+        rich <span style="color:red">text</span> ~ <br />
+        is coool<br />
+        who let the dogs out!!!
+      </html>
+    </richtext>
     <spine>
       <scene background="#096" duration="5">
         <video path="https://mira-1255830993.cos.ap-shanghai.myqcloud.com/public2/190204084208765161.mp4"
