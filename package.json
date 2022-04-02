@@ -43,6 +43,7 @@
     "mtempy": "^1.0.0",
     "ndarray": "^1.0.19",
     "node-fetch": "^3.2.3",
+    "node-html-to-image": "^3.2.4",
     "rmfr": "^2.0.0",
     "siz": "^1.2.2"
   },
