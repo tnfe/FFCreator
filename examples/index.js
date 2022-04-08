@@ -73,6 +73,10 @@ const choices = [
     value: 'vtuber',
   },
   {
+    name: 'Render AE Lottie animations file',
+    value: 'lottie',
+  },
+  {
     name: 'Clear all caches and videos',
     value: 'clear',
     func: clearAllFiles,
