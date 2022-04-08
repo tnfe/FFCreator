@@ -5,7 +5,8 @@ const { FFCreatorCenter, FFScene, FFImage, FFLottie, FFCreator } = require('../'
 
 const createFFTask = () => {
   const logo2 = path.join(__dirname, './assets/imgs/logo/logo2.png');
-  const img6 = path.join(__dirname, './assets/lottie/images/img1.png');
+  const img1 = path.join(__dirname, './assets/lottie/images/img1.png');
+  const img2 = path.join(__dirname, './assets/lottie/images/img2.png');
   const file1 = path.join(__dirname, './assets/lottie/data1.json');
   const file2 = path.join(__dirname, './assets/lottie/data2.json');
   const outputDir = path.join(__dirname, './output/');
@@ -49,7 +50,8 @@ const createFFTask = () => {
     loop: true,
   });
   flottie2.addEffect('fadeInDown', 1, 12);
-  flottie2.replaceAsset('img_6', img6);
+  flottie2.replaceAsset('image_1', img1);
+  flottie2.replaceAsset('image_6', img2);
   scene.addChild(flottie2);
 
   // add logo image
