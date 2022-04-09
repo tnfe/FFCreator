@@ -7,6 +7,7 @@
   - [<span class="iconfont icon-book"></span> 如何使用](guide/useage.md)
   - [<span class="iconfont icon-pack"></span> 关于动画](guide/animate.md)
   - [<span class="iconfont icon-intro1"></span> 数据可视化](guide/chart.md)
+  - [<span class="iconfont icon-router"></span> AE Lottie动画](guide/lottie.md)
   - [<span class="iconfont icon-merge"></span> koa中使用](guide/koa.md)
   - [<span class="iconfont icon-nut"></span> 关于Lite版](guide/lite.md)
   - [<span class="iconfont icon-component"></span> 基本配置](guide/config.md)

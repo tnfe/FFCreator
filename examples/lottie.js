@@ -27,7 +27,7 @@ const createFFTask = () => {
 
   // create FFScene
   const scene = new FFScene();
-  scene.setBgColor('#000000');
+  scene.setBgColor('#6ab7b0');
 
   // add lottie comp
   const flottie1 = new FFLottie({

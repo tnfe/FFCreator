@@ -1,3 +1,7 @@
+## v6.6.1
+* Added FFLottie class to support rendering lottie animation files.
+* Add FFLottie's example demo file. https://github.com/drawcall/lottie-node
+
 ## v6.5.1
 * Added FFExtras class, you can freely expand the graphics.
 * Upgrade update function.

@@ -7,6 +7,7 @@
   - [<span class="iconfont icon-book"></span> How to use](en/guide/useage.md)
   - [<span class="iconfont icon-pack"></span> About animation](en/guide/animate.md)
   - [<span class="iconfont icon-intro1"></span> Data visualization](en/guide/chart.md)
+  - [<span class="iconfont icon-router"></span> Lottie Animation](en/guide/lottie.md)
   - [<span class="iconfont icon-merge"></span> Used in koa](en/guide/koa.md)
   - [<span class="iconfont icon-nut"></span> About Lite version](en/guide/lite.md)
   - [<span class="iconfont icon-component"></span> About Lite version](en/guide/config.md)
