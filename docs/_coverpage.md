@@ -1,6 +1,6 @@
 ![logo](_media/logo/logo.png)
 
-# FFCreator <small>1.1.0</small>
+# FFCreator <small>6.6.3</small>
 
 > 一个轻量的nodejs短视频加工库
 
