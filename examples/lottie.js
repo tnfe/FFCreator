@@ -44,8 +44,8 @@ const createFFTask = () => {
   const flottie2 = new FFLottie({
     x: width / 2,
     y: height / 2,
-    width: 600,
-    height: 600,
+    width: width,
+    height: width,
     file: file2,
     loop: true,
   });
