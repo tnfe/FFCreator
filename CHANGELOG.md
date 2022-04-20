@@ -1,3 +1,7 @@
+## v6.6.6
+* Modified highWaterMark from 1mb to 512kb.
+* Update lottie-node version, support more text styles.
+
 ## v6.6.1
 * Added FFLottie class to support rendering lottie animation files.
 * Add FFLottie's example demo file. https://github.com/drawcall/lottie-node
