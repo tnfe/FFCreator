@@ -41,3 +41,11 @@ source: [https://github.com/tnfe/FFCreator/blob/master/examples/video.js](https:
 <video controls="controls" width="400" height="300" >
     <source type="video/mp4" src="./_media/video/normal/05.mp4"></source>
 </video>
+
+- #### 数据可视化
+
+source: [https://github.com/tnfe/FFCreator/blob/master/examples/chart.js](https://github.com/tnfe/FFCreator/blob/master/examples/chart.js)
+
+<video controls="controls" width="320" height="568" >
+  <source type="video/mp4" src="./_media/video/wonder/chart.mp4"></source>
+</video>
