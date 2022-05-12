@@ -10,6 +10,7 @@
   - [<span class="fa fa-bar-chart"></span> 数据可视化](guide/chart.md)
   - [<span class="fa fa-hand-spock-o"></span> Lottie动画](guide/lottie.md)
   - [<span class="fa fa-television"></span> koa中使用](guide/koa.md)
+  - [<span class="fa fa-camera"></span> 视频影集](guide/video.md)
   - [<span class="fa fa-bicycle"></span> 关于Lite版](guide/lite.md)
 
 - __<span class="iconfont icon-alert"></span> 案例展示__
