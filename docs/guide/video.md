@@ -19,3 +19,7 @@
 4. 搭建nodejs server服务，开发用户上传图片、选择模版、浏览作品列表等功能。
 
 5. 参照[代码](https://github.com/tnfe/FFCreator/blob/master/examples/lottie.js)并替换图片占位进行视频合成，还可以添加背景音乐。视频合成完毕通知用户，FFCreator合成速度非常快。
+
+<video controls="controls" width="560" height="420" >
+  <source type="video/mp4" src="./_media/video/wonder/l2.mp4"></source>
+</video>
