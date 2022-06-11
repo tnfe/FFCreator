@@ -73,7 +73,10 @@ declare namespace FFCreatorSpace {
      * whether default output options
      * @default true
      */
-    defaultOutputOptions?: boolean;
+    defaultOutputOptions?: {
+      merge?: boolean;
+      options: string[];
+    } | null;
     /**
      * setting fps
      * @default 24
