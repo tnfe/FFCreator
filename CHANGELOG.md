@@ -1,3 +1,7 @@
+## v6.7.1
+* defaultOptions supports adding custom ffmpeg commands.
+* Upgrade lottie version to remove initialization getapi.
+
 ## v6.6.6
 * Modified highWaterMark from 1mb to 512kb.
 * Update lottie-node version, support more text styles.
