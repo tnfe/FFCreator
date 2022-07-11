@@ -89,7 +89,7 @@ image.addAnimate({
 
 ### 使用
 
-`addAnimate`支持从 A 到 B 的缓动动画, 您可以设置`from`、`to`属性。
+使用`setTransition`来设置场景切换动画, 还可以设置过度时间。
 
 ```javascript
 scene.setDuration(5);
