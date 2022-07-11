@@ -11,7 +11,7 @@
 随之而来，如何让用户可以快速生产一个短视频；或者产品平台如何利用已有的图片、视频、音乐素材批量合成大量视频就成为一个技术难点。
 
 `FFCreator`是一种轻量又简单的解决方案，只需要很少的依赖和较低的机器配置就可以快速开始工作。它基于`node.js`开发, 普通前端工程师既可以轻松上手。
-并且它模拟实现了[`animate.css`](https://animate.style/)90%的动画效果，您可以轻松地把 web 页面端的动画效果转为视频。
+并且它模拟实现了[`animate.css`](https://animate.style/)90%的动画效果，您可以轻松地把 web 页面端的动画效果转为视频。FFCreator的图形渲染部分使用的是渲染引擎 _inkpaint_ [https://github.com/drawcall/inkpaint](https://github.com/drawcall/inkpaint)。
 
 ##### github: [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)
 
