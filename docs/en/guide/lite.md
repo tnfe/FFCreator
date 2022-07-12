@@ -4,8 +4,8 @@
 
 > `FFCreatorLite` is the lite version of the `FFCreator` package. When you need to process a lot of video without special cool transition animation, `FFCreatorLite` may be a better choice.
 
-FFCreator [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)  
-FFCreatorLite [https://github.com/tnfe/FFCreatorLite](https://github.com/tnfe/FFCreatorLite)
+FFCreator [https://github.com/tnfe/FFCreator](https://github.com/tnfe/FFCreator)
+FFCreatorLite [https://github.com/drawcall/FFCreatorLite](https://github.com/drawcall/FFCreatorLite)
 
 ## Introduction
 

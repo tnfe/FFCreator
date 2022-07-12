@@ -24,7 +24,7 @@
 
 使用`FFCreator`和`vue.js`，可以开发可视化拖拽搭建短视频的web项目，使用就像h5搭建工具一样的简单，可以查看[**这里**](https://github.com/tnfe/shida)。
 
-当您要大量处理视频片段并且追求更快合成速度的时候，`FFCreatorLite`也许是更好的选择，详情请点击[**这里**](https://github.com/tnfe/FFCreatorLite)。
+当您要大量处理视频片段并且追求更快合成速度的时候，`FFCreatorLite`也许是更好的选择，详情请点击[**这里**](https://github.com/drawcall/FFCreatorLite)。
 
 #### 更多介绍请查看[这里](https://tnfe.github.io/FFCreator/#/README)
 
