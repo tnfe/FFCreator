@@ -32,3 +32,9 @@
 <video controls="controls" width="320" height="568" >
   <source type="video/mp4" src="./_media/video/wonder/bobao.mov"></source>
 </video>
+
+- #### 文字动画
+
+<video controls="controls" width="560" height="420" >
+  <source type="video/mp4" src="./_media/video/wonder/textani.mov"></source>
+</video>
