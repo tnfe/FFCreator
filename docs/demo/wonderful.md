@@ -35,6 +35,6 @@
 
 - #### 文字动画
 
-<video controls="controls" width="560" height="420" >
+<video controls="controls" width="560" height="370" >
   <source type="video/mp4" src="./_media/video/wonder/textani.mov"></source>
 </video>
