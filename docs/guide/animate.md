@@ -71,11 +71,11 @@ creator.createEffect('customEffect', {
 
 ```javascript
 image.addAnimate({
-    from: { x:200, scale: .1, opacity: 0 },
-    to: { x:100, scale: 1, opacity:1 },
-    time = 1,
-    delay = 1.2,
-    ease = 'Quadratic.In'
+    from: { x:200, scale: .1, alpha: 0 },
+    to: { x:100, scale: 1, alpha:1 },
+    time: 1,
+    delay: 1.2,
+    ease: 'Quadratic.In'
 });
 ```
 
