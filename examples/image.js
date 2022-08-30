@@ -88,6 +88,8 @@ const createFFTask = () => {
   const flogo2 = new FFImage({ path: logo2, x: width / 2, y: height / 2 - 80 });
   flogo2.setScale(0.9);
   flogo2.addEffect('fadeInDown', 1, 1.2);
+  // 9s remove
+  flogo2.remove(9);
   scene2.addChild(flogo2);
 
   scene2.setDuration(5);
