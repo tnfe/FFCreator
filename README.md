@@ -128,7 +128,7 @@ creator.on('complete', e => {
 });
 ```
 
-#### For a more detailed tutorial, please check [here](https://tnfe.github.io/FFCreator/#/guide/useage)
+#### Some great open source projects developed based on FFCreator and excellent tutorial articles  [here](https://github.com/tnfe/awesome-ffcreator)
 
 ### About Audio
 

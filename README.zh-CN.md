@@ -131,7 +131,7 @@ creator.on('complete', e => {
 });
 ```
 
-#### 更详细的教程请查看[这里](https://tnfe.github.io/FFCreator/#/guide/useage)
+#### 一些基于FFCreator开发的优秀开源项目以及教程文章[这里](https://github.com/tnfe/awesome-ffcreator)
 
 ### 关于声音
 
