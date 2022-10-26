@@ -9,6 +9,8 @@ declare namespace FFCreatorSpace {
 
     setDuration(num: number): void;
 
+    setFilter(filter: FFFilter): void;
+
     addAudio(args: FFAudioConf): void;
 
     /**
