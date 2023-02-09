@@ -82,9 +82,13 @@ const createFFTask = () => {
     fontSize: 24,
     x: width / 2,
     y: height / 2 + 300,
+    // 1. srt方式
     path: srt,
   });
+
+  // 2. 纯文本方式
   // subtitle.setText(title);
+
   subtitle.setFont(font1);
   subtitle.setSpeech(tts); // 语音配音-tts
   subtitle.frameBuffer = 24;
