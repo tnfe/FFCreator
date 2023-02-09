@@ -21,6 +21,7 @@ const createFFTask = () => {
   const logo = path.join(__dirname, './assets/imgs/logo/logo2.png');
   const font1 = path.join(__dirname, './assets/font/font1.ttf');
   const tts = path.join(__dirname, './assets/audio/tts.wav');
+  const srt = path.join(__dirname, './assets/data/tts.srt');
   const outputDir = path.join(__dirname, './output/');
   const cacheDir = path.join(__dirname, './cache/');
 
@@ -81,8 +82,9 @@ const createFFTask = () => {
     fontSize: 24,
     x: width / 2,
     y: height / 2 + 300,
+    path: srt,
   });
-  subtitle.setText(title);
+  // subtitle.setText(title);
   subtitle.setFont(font1);
   subtitle.setSpeech(tts); // 语音配音-tts
   subtitle.frameBuffer = 24;
