@@ -1,3 +1,8 @@
+## v7.0.1
+* Add support for output transparent video.
+* Add scene time detection function.
+* Add srt file format support.
+  
 ## v6.7.1
 * defaultOptions supports adding custom ffmpeg commands.
 * Upgrade lottie version to remove initialization getapi.
