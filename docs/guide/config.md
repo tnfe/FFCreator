@@ -8,6 +8,7 @@
 | fps          | rfps                  |  number (默认30)         | 视频帧频    |
 | outputDir      | dir                 | string            | 视频输出路径          |
 | cacheDir          | 无              |     string    | 缓存目录                        |
+| transparent          | 无              |     boolean (默认false)    | 是否启用透明背景（用于生成透明通道视频） |
 | output          | out           | string       | 输出文件名(非必须, 在FFCenter模式下不需要填写)                     |
 | parallel          | frames    | number （默认5）      | 并行渲染                     |
 | highWaterMark          | size     | string (默认1mb)               | node.js [highWaterMark](http://nodejs.cn/api/stream/buffering.html)                          |

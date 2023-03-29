@@ -8,6 +8,7 @@
 | fps | None | number (default 30) | Video frame rate |
 | outputDir | dir | string | Video output path |
 | cacheDir | None | string | Cache directory |
+| transparent | None | boolean (default false) | Whether to enable transparent background (used to generate transparent channel video) |
 | output | out | string | Output file name (not required, no need to fill in in FFCenter mode) |
 | parallel | frames | number (default 5) | parallel rendering |
 | highWaterMark | size | string (default 1mb) | node.js [highWaterMark](http://nodejs.cn/api/stream/buffering.html) |
