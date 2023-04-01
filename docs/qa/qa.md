@@ -11,7 +11,10 @@ foundgyp: Call to 'pkg-config --libs-only-l x11 xi xext' returned exit status 1 
 #### 解决
 
 ```shell
+# Centos
 yum install libXi-devel libXinerama-devel libX11-devel
+# Ubuntu
+apt-get install libxi-dev libxinerama-dev libx11-dev
 ```
 
 ---
