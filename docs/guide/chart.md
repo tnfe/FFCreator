@@ -40,10 +40,13 @@ const option = {
 
 初始化`FFChart`并且设置`option`以及`theme`主题, 这里可以参考 https://echarts.apache.org/zh/api.html 官方文档。
 
+> 注: `optionOpts`可以参考 https://echarts.apache.org/zh/api.html#echartsInstance.setOption 官方文档, 将`lazyUpdate`设置为 `true` , 再次生成的图表（有默认动画）就会有动画效果啦。
+
 ```javascript
 const fchart = new FFChart({
   theme: 'dark',
   option: option,
+  optionOpts: optionOpts,
   x: width / 2,
   y: height / 2 + 50,
   width: 700,
