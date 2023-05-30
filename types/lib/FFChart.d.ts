@@ -9,6 +9,7 @@ declare namespace FFCreatorSpace {
      */
     theme: 'light' | 'dark' | string;
     option?: echartsSpace.EChartsOption;
+    optionOpts?: echartsSpace.SetOptionOpts
     /**
      * @default false
      */
@@ -24,7 +25,7 @@ declare namespace FFCreatorSpace {
    *
    * @example
    *
-   *    const fchart = new FFChart({ theme: 'dark', option, width: 600, height: 450 });
+   *    const fchart = new FFChart({ theme: 'dark', option, optionOpts, width: 600, height: 450 });
    *    fchart.addEffect(['rotateIn', 'zoomIn'], 1.2, 1);
    *    fchart.update(chart => {
    *        ....
@@ -42,7 +43,7 @@ declare namespace FFCreatorSpace {
     /**
      * Set echarts instance option value
      */
-    setOption(option: any): void;
+    setOption(option: any, opts?: echartsSpace.SetOptionOpts): void;
 
     /**
      * Set text font file path

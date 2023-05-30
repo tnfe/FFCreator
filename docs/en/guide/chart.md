@@ -40,10 +40,13 @@ const option = {
 
 Initialize `FFChart` and set `option` and `theme` theme, here you can refer to https://echarts.apache.org/zh/api.html official document.
 
+> 注: `optionOpts`,you can refer to https://echarts.apache.org/zh/api.html#echartsInstance.setOption official document, `lazyUpdate` set to `true` , then the regenerate chart can have animation effect。
+
 ```javascript
 const fchart = new FFChart({
   theme: 'dark',
   option: option,
+  optionOpts: optionOpts,
   x: width / 2,
   y: height / 2 + 50,
   width: 700,
