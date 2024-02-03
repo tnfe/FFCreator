@@ -61,6 +61,6 @@ declare namespace FFCreatorSpace {
      */
     bubble(eventer: unknown): void;
 
-    destory(): void;
+    destroy(): void;
   }
 }

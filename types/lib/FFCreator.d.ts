@@ -155,6 +155,8 @@ declare namespace FFCreatorSpace {
      */
     setCover(cover: string): void;
 
+    destroy():void;
+
     /**
      * Create new effect and add to effects object
      * @param name the new effect name
