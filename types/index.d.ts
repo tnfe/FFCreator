@@ -3,7 +3,6 @@
 // Definitions by: javaswing <https://github.com/javaswing>
 // TypeScript Version: 4.2
 
-
 /// <reference path="./lib/FFCreator.d.ts" />
 /// <reference path="./lib/FFNode.d.ts" />
 /// <reference path="./lib/FFText.d.ts" />
@@ -24,6 +23,8 @@
 /// <reference path="./lib/FFLogger.d.ts" />
 /// <reference path="./lib/FFTween.d.ts" />
 /// <reference path="./lib/FFCreatorCenter.d.ts" />
+/// <reference path="./lib/FFFilter.d.ts" />
+/// <reference path="./lib/FilterManager.d.ts" />
 
 export = FFCreatorSpace;
 
