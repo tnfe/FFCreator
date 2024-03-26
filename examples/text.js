@@ -10,6 +10,7 @@ const {
   FFScene,
   FFImage,
   FFCreator,
+  FFmpegUtil,
 } = require('../');
 
 const createFFTask = () => {
@@ -194,10 +195,27 @@ of FFText`,
   });
 
   creator.on('complete', e => {
-    console.log(
-      colors.magenta(`FFCreator completed: \n USEAGE: ${e.useage} \n PATH: ${e.output} `),
-    );
-    console.log(colors.green(`\n --- You can press the s key or the w key to restart! --- \n`));
+    setTimeout(async () => {
+      await FFmpegUtil.captureVideoFrame({
+        input: e.output,
+        output: `${outputDir}face.jpg`,
+        frame: 5,
+      });
+      console.log(colors.green(`\n --- Screenshot: ${outputDir}face.jpg --- \n`));
+
+      await FFmpegUtil.convertVideoToGif({
+        input: e.output,
+        output: `${outputDir}video.gif`,
+        fps: 15,
+        width: 200,
+      });
+      console.log(colors.green(`\n --- gif: ${outputDir}video.gif --- \n`));
+
+      console.log(
+        colors.magenta(`FFCreator completed: \n USEAGE: ${e.useage} \n PATH: ${e.output} `),
+      );
+      console.log(colors.green(`\n --- You can press the s key or the w key to restart! --- \n`));
+    }, 100);
   });
 
   return creator;

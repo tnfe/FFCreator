@@ -1,3 +1,7 @@
+## v7.3.5
+* Add FFmpegUtil captureVideoFrame function. 
+* Add FFmpegUtil convertVideoToGif function.
+  
 ## v7.0.1
 * Add support for output transparent video.
 * Add scene time detection function.
