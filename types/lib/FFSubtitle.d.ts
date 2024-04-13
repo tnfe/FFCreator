@@ -9,6 +9,7 @@ declare namespace FFCreatorSpace {
     style?: Record<string, any>;
     x?: number;
     y?: number;
+    path?: string;
   }
 
   /**
