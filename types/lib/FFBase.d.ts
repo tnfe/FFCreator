@@ -43,5 +43,7 @@ declare namespace FFCreatorSpace {
      * @return {object|any} root node
      */
     rootConf(key: string, val: any): any | object;
+
+    defer(cb: Function): void;
   }
 }
