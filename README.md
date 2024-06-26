@@ -23,8 +23,6 @@ Nowadays, short video is an increasingly popular form of media communication. Li
 
 Using `FFCreator` and `vue.js`, you can develop a web project that builds video by dragging and dropping, just as the h5 building tool. You can check it [**here**](https://github.com/tnfe/shida).
 
-When you need to process a lot of video clips and need faster synthesis speed, `FFCreatorLite` is a better choice, please click [**here**](https://github.com/drawcall/FFCreatorLite) for details.
-
 If you want to generate a wonderful video more simply and intelligently, you might want to try this node.js framework [**FFAIVideo**](https://github.com/drawcall/FFAIVideo) that generates short videos using popular AI LLM.
 
 #### For more introduction, please see [here](https://tnfe.github.io/FFCreator/#/README)
