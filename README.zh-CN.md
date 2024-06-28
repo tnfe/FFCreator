@@ -24,7 +24,7 @@
 
 使用`FFCreator`和`vue.js`，可以开发可视化拖拽搭建短视频的web项目，使用就像h5搭建工具一样的简单，可以查看[**这里**](https://github.com/tnfe/shida)。
 
-如果您想以更简单、更智能的方式生成精彩的视频短片，那么您可以想尝试[**FFAIVideo**](https://github.com/drawcall/FFAIVideo)这个Node.js项目。它利用目前行业流行的AI大模型（LLM）来自动生成短视频，让您的视频合成更加便捷、智能。
+如果您想以更简单、更智能的方式生成精彩的视频短片，那么您可以想尝试 [**FFAIVideo**](https://github.com/drawcall/FFAIVideo) 这个Node.js项目。它利用目前行业流行的AI大模型（LLM）来自动生成短视频，让您的视频合成更加便捷、智能。
 
 #### 更多介绍请查看[这里](https://tnfe.github.io/FFCreator/#/README)
 
