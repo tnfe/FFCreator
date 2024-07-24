@@ -38,6 +38,10 @@ declare namespace FFCreatorSpace {
   class FFCreator extends FFCon {
     constructor(conf: FFCreatorConf);
 
+    inCenter: boolean;  
+    destroyed: boolean;  
+    cleanAllCache: boolean;  
+
     on<K extends keyof FFCreatorEventMap>(name: K, fn: (ev: FFCreatorEventMap[K]) => any): void;
 
     /**
