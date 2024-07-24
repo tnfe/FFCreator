@@ -142,6 +142,8 @@ declare namespace FFCreatorSpace {
      */
     static setFFprobePath(path: string): void;
 
+    static setFFPath(): void;
+
     /**
      * Create new effect and add to effects object
      * @param name the new effect name

@@ -8,6 +8,8 @@ declare namespace FFCreatorSpace {
 
     setFFprobePath(path: string): void;
 
+    setFFPath(): void;
+
     createCommand(conf?: { threads?: number }): any;
 
     interceptVideo(options: { video: string; ss: string; to: string; output: string }): void;

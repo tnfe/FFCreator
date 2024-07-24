@@ -3,6 +3,8 @@ const colors = require('colors');
 const startAndListen = require('./listen');
 const { FFCreatorCenter, FFAudio, FFScene, FFImage, FFGifImage, FFCreator } = require('../');
 
+FFCreator.setFFPath();
+
 const createFFTask = () => {
   const bg1 = path.join(__dirname, './assets/imgs/bg/06.jpg');
   const bg2 = path.join(__dirname, './assets/imgs/bg/01.jpeg');

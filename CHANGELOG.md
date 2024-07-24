@@ -1,3 +1,8 @@
+## v7.5.1
+* Modify the usage from ffmpeg-probe to ffmpeg.ffprobe approach.
+* Add a setFFPath method to set the path to ffmpeg on your machine.
+* Increase the number of catch logs for better error handling and debugging.
+  
 ## v7.3.5
 * Add FFmpegUtil captureVideoFrame function. 
 * Add FFmpegUtil convertVideoToGif function.

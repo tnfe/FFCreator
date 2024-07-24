@@ -98,6 +98,8 @@ declare namespace FFCreatorSpace {
      */
     setFFprobePath(path: string): void;
 
+    setFFPath(): void;
+
     /**
      * get task progress by task id
      * @param id
