@@ -123,3 +123,17 @@ at FFTransition.createTransition
 这种情况请使用 FFCreatorLite。
 
 `FFCreatorLite`并不是`FFCreator`的简化版，它是纯粹的ffmpeg实现。在视频加工方面`FFCreatorLite`的速度非常快，而且也能支持`FFCreator`大多数功能。
+
+---
+
+#### ✿8. 报错Cannot find ffprobe
+
+```shell
+Error: Cannot find ffprobe
+    at xxx/node_modules/fluent-ffmpeg@2.1.3/node_modules/fluent-ffmpeg/lib/ffprobe.js:145:31
+    at xxx/node_modules/fluent-ffmpeg@2.1.3/node_modules/fluent-ffmpeg/lib/capabilities.js:194:9
+```
+
+#### 解决
+
+项目初始化时设置ffmpeg及ffprobe的路径，`FFCreator.setFFPath();`。
