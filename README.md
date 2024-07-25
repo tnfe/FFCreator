@@ -188,6 +188,9 @@ highWaterMark: '6mb',
 pool: true,
 ```
 
+### About FFmpeg
+At the initiation of your project, you can ensure seamless operation by configuring the path for ffmpeg using either `FFCreator.setFFPath()`, `setFFmpegPath(path: string)`, or `setFFprobePath(path: string)`. This ensures that the project can access the necessary ffmpeg utilities for its execution. For more comprehensive ffmpeg configuration options, please refer to the configuration page.
+
 ## Installation
 
 ### 1. Install `node-canvas` and `headless-gl` dependencies
