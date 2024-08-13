@@ -3,9 +3,15 @@
 /// <reference path="FFBase.d.ts" />
 
 declare namespace FFCreatorSpace {
+  type RenderedData = Buffer | Uint8Array;
+  type DataTransformer = (
+    data: RenderedData | null | undefined,
+  ) => RenderedData | Promise<RenderedData>;
+
   interface FFCreatorConf extends ConfOptions {
     log?: boolean;
     audio?: FFAudioConf | string;
+    transformers?: DataTransformer[];
   }
 
   interface FFCreatorEventMap {

@@ -47,3 +47,6 @@ examples/output
 # testing
 coverage/**
 dwt*
+
+*.local
+*.local.*
