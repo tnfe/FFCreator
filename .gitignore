@@ -47,3 +47,4 @@ examples/output
 # testing
 coverage/**
 dwt*
+yarn.lock
