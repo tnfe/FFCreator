@@ -27,7 +27,7 @@
     "@xsstomy/subsrt": "^1.0.0",
     "browser-or-node": "^1.3.0",
     "colors": "^1.4.0",
-    "echarts": "5.1.2",
+    "echarts": "5.5.1",
     "eventemitter3": "^4.0.7",
     "ffmpeg-probe": "^1.0.6",
     "ffprobe-installer": "^2.1.5",
